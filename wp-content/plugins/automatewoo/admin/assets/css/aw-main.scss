@@ -1,0 +1,194 @@
+$grey-text-light: #9d9d9d;
+$grey-very-light: #f5f5f5;
+$grey-very-light-border: #f2f2f2;
+$grey-light-border: #E1E1E1;
+$grey-border: #ccc;
+$grey-very-light-border: #eee;
+$blue-light: #45bce2;
+$blue: #0085ba;
+$white: #ffffff;
+$black: #000000;
+$red: #e61802;
+$red-light: #F55E4F;
+
+@import 'mixins';
+@import 'loader';
+@import 'icons';
+@import 'switch';
+@import 'actions';
+@import 'reports';
+@import 'modal';
+@import 'tables';
+@import 'variables';
+@import 'settings';
+@import 'admin-menu';
+@import 'fields';
+@import 'rules';
+@import 'workflow-list';
+
+
+body.post-type-aw_workflow {
+
+	#pageparentdiv {
+		display: none;
+	}
+
+	#aw_trigger_box,
+	#aw_actions_box,
+	#aw_options_box,
+	#aw_variables_box {
+
+		&.loading {
+			.inside,
+			h3.hndle {
+				opacity: .45;
+			}
+
+			@include loader();
+		}
+
+	}
+
+
+	.postbox {
+
+		h3.hndle {
+			cursor: default !important;
+		}
+
+		.handlediv {
+			&:before {
+
+				right: 12px;
+				font: 400 20px/1 dashicons;
+				speak: none;
+				display: inline-block;
+				padding: 8px 10px;
+				top: 0;
+				position: relative;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				text-decoration: none !important;
+
+				content: '\f142';
+			}
+		}
+
+		&.closed {
+			.handlediv {
+				&:before {
+					content: '\f140';
+				}
+			}
+		}
+	}
+}
+
+
+#post-body .automatewoo-metabox.postbox {
+
+	h3.hndle {
+		border-bottom: 1px solid $grey-light-border;
+		padding: 9px 15px;
+	}
+	
+	&.no-drag .hndle {
+		cursor: default;
+	}
+
+	.inside {
+		padding: 0;
+		margin: 0;
+	}
+}
+
+
+.automatewoo-metabox.postbox {
+
+	.automatewoo-metabox-footer {
+		padding: 9px 15px;
+		background: $grey-very-light;
+		border-top: 1px solid $grey-light-border;
+		text-align: right;
+	}
+
+	.automatewoo-metabox-pad {
+		padding: 12px 18px;
+	}
+
+	h2.hndle small {
+		font-weight: normal;
+		padding-left: 1px;
+	}
+
+}
+
+
+
+.automatewoo-notice {
+	position: relative;
+	transition: opacity .2s ease;
+
+	p {
+		transition: opacity .2s ease;
+	}
+
+	&.loading {
+		opacity: .65;
+
+		p {
+			opacity: .6;
+		}
+
+		@include loader();
+	}
+}
+
+
+.automatewoo-upgrade-loader {
+	display: inline-block;
+	position: relative;
+	width: 40px;
+	height: 13px;
+	opacity: 0.55;
+
+	@include loader( 20px );
+}
+
+
+.automatewoo-info-box {
+	background: #E4E4E4;
+	padding: 12px 16px 14px;
+	border: 1px solid #CCCCCC;
+}
+
+
+dl.automatewoo-meta-data {
+	margin: 0;
+	@include clearfix();
+
+	dt,
+	dd {
+		display: inline-block;
+		float: left;
+		margin: 0 0 .8em;
+		padding: 0;
+	}
+
+	dt {
+		font-weight: bold;
+		clear: left;
+		padding-right: 0.5em;
+	}
+
+	dd {
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	a {
+		text-decoration: none;
+	}
+}
+

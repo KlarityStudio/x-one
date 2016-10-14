@@ -1,0 +1,84 @@
+.automatewoo-reports-page.wrap {
+	h2.nav-tab-wrapper {
+		margin-bottom: 11px;
+	}
+
+	#poststuff {
+		padding-top: 0;
+	}
+
+	.aw-before-report-output {
+		margin-bottom: 11px;
+	}
+}
+
+
+.woocommerce-reports-wide table.automatewoo-report-table {
+
+	tr th {
+		padding: 10px 10px 11px;
+		font-size: 14px;
+	}
+
+	tr td {
+		padding: 10px;
+	}
+
+
+	.check-column {
+		padding-left: 3px;
+	}
+
+	.column-queued_event_id {
+		width: 130px;
+	}
+
+	.column-actions {
+		width: 155px;
+	}
+
+
+	&.conversions {
+		.column-order,
+		.column-log,
+		.column-total {
+			width: 9%;
+		}
+	}
+
+
+	&.carts {
+		.column-id {
+			width: 9%;
+		}
+	}
+
+
+	&.guests {
+		.column-id {
+			width: 9%;
+		}
+	}
+
+
+	&.logs {
+		.column-id {
+			width: 9%;
+		}
+
+		.column-time {
+			width: 200px;
+		}
+
+		.column-actions {
+			width: 9%;
+			text-align: right;
+		}
+	}
+
+}
+
+
+.aw-before-report-output {
+
+}
