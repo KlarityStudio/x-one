@@ -66,10 +66,10 @@ function kommerce_setup() {
 	) );
 
   add_theme_support( 'custom-logo', array(
-  	'height'      => 100,
-  	'width'       => 400,
-  	'flex-height' => true,
-  	'flex-width'  => true,
+  	'height'      => 50,
+  	'width'       => 100,
+  	'flex-height' => false,
+  	'flex-width'  => false,
   	'header-text' => array( 'kommerce', 'A responsive ecommerce site' ),
   ) );
 
@@ -148,3 +148,97 @@ function kommerce_scripts() {
 	wp_enqueue_script('kommerce_initJS');
 }
 add_action( 'wp_enqueue_scripts', 'kommerce_scripts' );
+
+function carousel_scripts() {
+  wp_enqueue_script( 'owl.carousel', get_template_directory_uri() . '/_build/js/min/owl.carousel-min.js', array('jquery'), '20120206', true );
+  wp_enqueue_script( 'effects', get_template_directory_uri() . '/_build/js/min/effects-min.js', array('jquery'), '20120206', true );
+}
+add_action( 'wp_enqueue_scripts', 'carousel_scripts' );
+
+add_image_size( 'carousel-pic', 480, 320, true );
+
+// Custom control for carousel category
+
+if (class_exists('WP_Customize_Control')) {
+  class WP_Customize_Category_Control extends WP_Customize_Control {
+
+    public function render_content() {
+
+      $dropdown = wp_dropdown_categories(
+        array(
+          'name'              => '_customize-dropdown-category-' . $this->id,
+          'echo'              => 0,
+          'show_option_none'  => __( '&mdash; Select &mdash;' ),
+          'option_none_value' => '0',
+          'selected'          => $this->value(),
+
+        )
+      );
+
+      $dropdown = str_replace( '<select', '<select ' . $this->get_link(), $dropdown );
+
+      printf(
+        '<label class="customize-control-select"><span class="customize-control-title">%s</span> %s</label>',
+        $this->label,
+        $dropdown
+      );
+    }
+  }
+}
+
+// Register slider customizer section
+
+add_action( 'customize_register' , 'carousel_options' );
+
+function carousel_options( $wp_customize ) {
+
+$wp_customize->add_section(
+    'carousel_section',
+    array(
+        'title'     => 'Carousel settings',
+        'priority'  => 202,
+        'capability'  => 'edit_theme_options',
+    )
+);
+
+$wp_customize->add_setting(
+    'carousel_setting',
+     array(
+    'default'   => '',
+  )
+);
+
+$wp_customize->add_control(
+    new WP_Customize_category_Control(
+        $wp_customize,
+        'carousel_category',
+        array(
+            'label'    => 'Category',
+            'settings' => 'carousel_setting',
+            'section'  => 'carousel_section'
+        )
+    )
+);
+
+$wp_customize->add_setting(
+    'count_setting',
+     array(
+    'default'   => '6',
+
+  )
+);
+
+$wp_customize->add_control(
+    new WP_Customize_Control(
+        $wp_customize,
+        'carousel_count',
+        array(
+            'label'          => __( 'Number of posts', 'theme_name' ),
+            'section'        => 'carousel_section',
+            'settings'       => 'count_setting',
+            'type'           => 'text',
+        )
+    )
+);
+
+}
