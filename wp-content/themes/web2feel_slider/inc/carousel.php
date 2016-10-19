@@ -1,7 +1,7 @@
 <div id="slider">
 
 	<?php
-
+	
 	$carousel_cat = get_theme_mod('carousel_setting');
 	$carousel_count = get_theme_mod('count_setting');
 
@@ -13,9 +13,9 @@
 		<h3> <?php the_title();?> </h3>
 	</div>
 
-	<?php
+	<?php 
 		endwhile;
-	 	wp_reset_postdata();
+	 	wp_reset_postdata(); 
 	?>
 
 </div>

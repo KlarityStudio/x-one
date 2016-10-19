@@ -411,6 +411,31 @@ template {
 [hidden] {
   display: none; }
 
+.home-content {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 10px; }
+  .home-content aside {
+    max-width: 400px;
+    min-width: 250px;
+    background-color: #eee;
+    padding: 20px;
+    margin-right: 20px; }
+    .home-content aside ul {
+      padding: 0; }
+      .home-content aside ul li {
+        list-style: none; }
+        .home-content aside ul li ul {
+          padding-left: 20px; }
+    .home-content aside a {
+      color: #4a4a4a;
+      text-decoration: none; }
+
 /*
  * 	Core Owl Carousel CSS File
  *	v1.3.3

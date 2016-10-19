@@ -1,0 +1,108 @@
+body{
+	background: #dfdfdf;
+	padding: 30px 30px;
+}
+
+#page{
+	background: #fff;
+}
+
+#primary, #secondary{
+	padding: 20px 25px;
+	position: relative;
+}
+#primaryafter{
+	content: "";
+	display: block;
+	width:1px;
+	height:calc( 100% - 20px);
+	position: absolute;
+	right: -15px;
+	top:20px;
+	background: #ddd;
+}
+#masthead{
+	border-bottom: 1px solid #ddd;
+}
+.site-branding{
+	padding: 0px 25px;
+}
+.site-branding h1{
+	margin:40px 0px 10px;
+	text-transform: uppercase;
+
+}
+.site-branding h1 a{
+	color: #000;
+}
+#slider{
+	padding:10px 20px;
+}
+.post{
+
+}
+h2.entry-title, h1.entry-title{
+	margin: 5px 0px;
+	font-size: 30px;
+	line-height: 1.2;
+}
+h2.entry-title a, h1.entry-title{
+	color: #222;
+}
+.entry-meta, .entry-footer{
+	color: #888;
+}
+.entry-footer span{
+	margin-right:10px;
+}
+img.feature-img{
+	margin:0px 20px 20px 0px;
+	float: left;
+}
+.widget {
+  margin-bottom: 30px;
+  margin-top:15px;
+}
+h2.widget-title{
+	margin-top:0px;
+}
+.widget ul {
+  list-style: none;
+  margin: 0px 0px;
+  padding: 0px 0px;
+}
+.widget ul li {
+  list-style: none;
+  margin: 5px 0px 0px 0px;
+  padding: 0px 0px 5px 0px;
+}
+.posts-navigation, .post-navigation{
+	border-top:1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	padding:20px 10px;
+}
+ol.comment-list{
+	margin:0px 0px;
+	padding:0px 0px;
+}
+ol.comment-list li{
+	margin:0px 0px 20px 0px;
+	padding:20px 0px 0px 0px;
+}
+.vcard img{
+	float: left;
+	margin:0px 20px 0px 0px;
+}
+.comment-meta{
+	margin-bottom: 20px;
+	font-size: 14px;
+}
+.comment-metadata{
+	font-size: 12px;
+}
+.site-footer{
+	border-top:1px solid #ddd;
+}
+.site-info{
+	margin:50px 25px;
+}
