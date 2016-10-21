@@ -52,6 +52,9 @@
     	register_nav_menus( array(
     		'secondary' => esc_html__( 'Footer', 'kommerce' ),
     	) );
+      register_nav_menus( array(
+        'megaMenu' => esc_html__( 'Mega Menu', 'kommerce'),
+      ) );
 
     	/*
     	 * Switch default core markup for search form, comment form, and comments
