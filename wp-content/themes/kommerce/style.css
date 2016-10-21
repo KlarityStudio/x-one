@@ -411,30 +411,17 @@ template {
 [hidden] {
   display: none; }
 
-.home-content {
+body {
+  padding: 0 10px; }
+
+main {
   display: -webkit-box;
   display: -moz-box;
   display: box;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
-  display: flex;
-  padding: 0 10px; }
-  .home-content aside {
-    max-width: 400px;
-    min-width: 250px;
-    background-color: #eee;
-    padding: 20px;
-    margin-right: 20px; }
-    .home-content aside ul {
-      padding: 0; }
-      .home-content aside ul li {
-        list-style: none; }
-        .home-content aside ul li ul {
-          padding-left: 20px; }
-    .home-content aside a {
-      color: #4a4a4a;
-      text-decoration: none; }
+  display: flex; }
 
 /*
  * 	Core Owl Carousel CSS File
@@ -579,11 +566,76 @@ template {
   background: url(AjaxLoader.gif) no-repeat center center; }
 
 header .header-image {
-  width: 100vw;
   height: 400px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
-header .logo img {
-  max-width: 100px;
-  max-height: 50px; }
+
+footer {
+  background-color: #eee;
+  text-align: center;
+  margin-top: 20px; }
+  footer #menu-footer {
+    padding-left: 0;
+    display: inline-block;
+    margin-bottom: 0; }
+    footer #menu-footer li {
+      float: left;
+      list-style: none;
+      margin: 0 5px; }
+      footer #menu-footer li a {
+        color: #4a4a4a;
+        text-decoration: none; }
+
+header nav {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: distribute;
+  -moz-box-pack: distribute;
+  box-pack: distribute;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  justify-content: space-around;
+  -ms-flex-pack: distribute;
+  width: 100%; }
+  header nav > div {
+    height: 50px; }
+  header nav .logo {
+    margin: auto 0; }
+    header nav .logo a {
+      height: inherit; }
+      header nav .logo a img {
+        height: inherit; }
+  header nav .menu {
+    display: inline-block;
+    padding-left: 0; }
+    header nav .menu li {
+      float: left;
+      margin: 0 10px;
+      list-style: none; }
+      header nav .menu li a {
+        color: #4a4a4a;
+        text-decoration: none; }
+
+.sidebar {
+  max-width: 400px;
+  min-width: 250px;
+  background-color: #eee;
+  padding: 20px;
+  margin-right: 20px; }
+  .sidebar ul {
+    padding: 0; }
+    .sidebar ul li {
+      list-style: none; }
+      .sidebar ul li ul {
+        padding-left: 20px; }
+  .sidebar a {
+    color: #4a4a4a;
+    text-decoration: none; }

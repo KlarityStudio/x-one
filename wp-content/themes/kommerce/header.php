@@ -11,7 +11,7 @@
       <?php get_template_part('includes/modules/module', 'navBar'); ?>
       <div class="header-image" style="background-image:url(<?php echo header_image(); ?>)" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>"/>
     </header>
+    <section>
+      <?php get_template_part('includes/modules/module', 'slider'); ?>
+    </section>
   		<main id="main" class="site-main" role="main">
-        <section>
-          <?php get_template_part('includes/modules/module', 'slider'); ?>
-        </section>

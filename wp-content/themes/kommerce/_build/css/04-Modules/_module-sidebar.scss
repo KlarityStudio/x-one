@@ -1,0 +1,20 @@
+.sidebar{
+  max-width: 400px;
+  min-width: 250px;
+  background-color: #eee;
+  padding: 20px;
+  margin-right: 20px;
+  ul{
+    padding: 0;
+    li{
+      list-style: none;
+      ul{
+        padding-left: 20px;
+      }
+    }
+  }
+  a{
+    color: #4a4a4a;
+    text-decoration: none;
+  }
+}

@@ -1,17 +1,10 @@
 header{
   .header-image{
-    width: 100vw;
     height: 400px;
     background:{
       size: cover;
       position: center;
       repeat: no-repeat;
-    }
-  }
-  .logo{
-    img{
-      max-width: 100px;
-      max-height: 50px;
     }
   }
 }

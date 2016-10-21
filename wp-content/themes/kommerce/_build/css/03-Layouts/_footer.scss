@@ -1,0 +1,19 @@
+footer{
+  background-color: #eee;
+  text-align: center;
+  margin-top: 20px;
+  #menu-footer{
+    padding-left: 0;
+    display: inline-block;
+    margin-bottom: 0;
+    li{
+      float: left;
+      list-style: none;
+      margin: 0 5px;
+      a{
+        color: #4a4a4a;
+        text-decoration: none;
+      }
+    }
+  }
+}
