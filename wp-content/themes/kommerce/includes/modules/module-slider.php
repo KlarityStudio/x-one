@@ -1,4 +1,4 @@
-<div id="slider">
+<div id="slider" class="owl-carousel">
 
 	<?php
 

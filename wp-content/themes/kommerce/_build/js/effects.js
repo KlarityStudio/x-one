@@ -2,12 +2,24 @@
 	$(function(){
     carousel();
   });
+
   function carousel(){
-    window.console.log('home');
-    $("#slider").owlCarousel({
-        items : 4,
-        itemsDesktop : [1199,3],
-        itemsDesktopSmall : [979,3],
-    });
+		$('.owl-carousel').owlCarousel({
+	    loop:true,
+	    margin:10,
+	    nav:true,
+	    responsive:{
+        0:{
+          items:1
+        },
+        600:{
+          items:3
+        },
+        1000:{
+          items:5
+        }
+	    }
+		});
   }
+
 }) (jQuery);

@@ -73,8 +73,7 @@
       	'header-text' => array( 'kommerce', 'A responsive ecommerce site' ),
       ) );
 
-    /* Added Header theme support for the customizer - Uncomment if needed */
-
+    /* Added Header theme support for the customizer*/
     add_theme_support( 'custom-background' );
 
     function custom_background_size( $wp_customize ) {
@@ -152,8 +151,6 @@
 
 
   function carousel_scripts() {
-    wp_enqueue_style( 'owl.carousel', get_template_directory_uri() . '/_build/css/owl.carousel.css' );
-    wp_enqueue_style( 'owl.theme', get_template_directory_uri() . '/_build/css/owl.theme.css' );
     wp_enqueue_script( 'owl.carousel', get_template_directory_uri() . '/_build/js/owl.carousel.js', array('jquery'), '20120206', true );
     wp_enqueue_script( 'effects', get_template_directory_uri() . '/_build/js/effects.js', array('jquery'), '20120206', true );
   }
@@ -162,7 +159,6 @@
   add_image_size( 'carousel-pic', 480, 320, true );
 
   // Custom control for carousel category
-
   if (class_exists('WP_Customize_Control')) {
     class WP_Customize_Category_Control extends WP_Customize_Control {
       public function render_content() {
@@ -186,7 +182,6 @@
   }
 
   // Register slider customizer section
-
   add_action( 'customize_register' , 'carousel_options' );
 
   function carousel_options( $wp_customize ) {
@@ -240,7 +235,6 @@
   }
 
  //Register sidebar
-
  add_action( 'widgets_init', 'kommerce_widgets_init' );
   function kommerce_widgets_init() {
     register_sidebar( array(
