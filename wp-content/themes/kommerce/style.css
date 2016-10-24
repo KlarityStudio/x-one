@@ -411,9 +411,6 @@ template {
 [hidden] {
   display: none; }
 
-body {
-  padding: 0 10px; }
-
 main {
   display: -webkit-box;
   display: -moz-box;
@@ -677,7 +674,8 @@ header nav {
   -o-justify-content: space-around;
   justify-content: space-around;
   -ms-flex-pack: distribute;
-  width: 100%; }
+  width: 100%;
+  background-color: #fff; }
   header nav > div {
     height: 50px; }
   header nav .logo {
@@ -696,6 +694,45 @@ header nav {
       header nav .menu li a {
         color: #4a4a4a;
         text-decoration: none; }
+  header nav.sticky {
+    position: fixed;
+    z-index: 100;
+    -webkit-filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, 0.5));
+    opacity: 0.8;
+    -webkit-transition: all, 0.3s ease-in-out;
+    -moz-transition: all, 0.3s ease-in-out;
+    transition: all, 0.3s ease-in-out; }
+    header nav.sticky:hover {
+      opacity: 1;
+      -webkit-transition: all, 0.3s ease-in-out;
+      -moz-transition: all, 0.3s ease-in-out;
+      transition: all, 0.3s ease-in-out; }
+header #mega-menu-wrap-primary {
+  width: 60%; }
+header #mega-menu-primary {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  display: flex !important;
+  -webkit-box-pack: distribute;
+  -moz-box-pack: distribute;
+  box-pack: distribute;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  justify-content: space-around;
+  -ms-flex-pack: distribute;
+  height: 100% !important; }
+  header #mega-menu-primary li {
+    line-height: 50px !important; }
+  header #mega-menu-primary a {
+    line-height: inherit !important; }
 
 #slider {
   height: 250px;

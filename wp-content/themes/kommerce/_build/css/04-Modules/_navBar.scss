@@ -3,6 +3,7 @@ header{
     @include display(flex);
     @include justify-content(space-around);
     width: 100%;
+    background-color: #fff;
     >div{
       height: 50px;
     }
@@ -28,6 +29,34 @@ header{
           text-decoration: none;
         }
       }
+    }
+
+    &.sticky{
+      position: fixed;
+      z-index: 100;
+      @include filter(drop-shadow(0px 0px 7px rgba(0,0,0,0.5)));
+      opacity: 0.8;
+      @include transition(all, 0.3s ease-in-out);
+      &:hover{
+        opacity: 1;
+        @include transition(all, 0.3s ease-in-out);
+      }
+    }
+  }
+  #mega-menu-wrap-primary{
+    width: 60%;
+  }
+  #mega-menu-primary{
+    @include display(flex);
+    display: flex !important;
+    @include justify-content(space-around);
+    height: 100% !important;
+
+    li{
+      line-height: 50px !important;
+    }
+    a{
+      line-height: inherit !important;
     }
   }
 }
