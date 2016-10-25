@@ -4,7 +4,7 @@ header{
     @include justify-content(space-around);
     width: 100%;
     background-color: #fff;
-    position: fixed;
+
     >div{
       height: 50px;
     }
@@ -33,6 +33,7 @@ header{
     }
 
     &.sticky{
+      position: fixed;
       z-index: 100;
       @include filter(drop-shadow(0px 0px 7px rgba(0,0,0,0.5)));
       opacity: 0.9;
@@ -42,9 +43,18 @@ header{
         @include transition(all, 0.3s ease-in-out);
       }
     }
+    #mega-menu-item-132{
+      >ul {
+        >li{
+          > a{
+            cursor: default !important;
+          }
+        }
+      }
+    }
   }
   #mega-menu-wrap-primary{
-    width: 60%;
+    width: auto;
   }
   #mega-menu-primary{
     @include display(flex);

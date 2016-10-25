@@ -2,6 +2,7 @@
 	$(function(){
 		productFilter();
 		stickyNav();
+		shopBrandMenu();
   });
 
 	function productFilter(){
@@ -39,6 +40,16 @@
 		    $('nav').removeClass("sticky");
 		  }
 		});
-		
+
+	}
+
+	function shopBrandMenu(){
+		var $menuFirstChilds = $('#mega-menu-item-132').children('.mega-sub-menu'),
+				$link = $menuFirstChilds.children('li');
+
+		$link .children('a').on('click', function(e){
+			window.console.log('click');
+			e.preventDefault();
+		});
 	}
 }) (jQuery);
