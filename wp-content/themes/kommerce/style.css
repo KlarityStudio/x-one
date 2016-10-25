@@ -760,3 +760,17 @@ header #mega-menu-primary {
 .single-product #pa_phones, .single-product #picker_pa_material {
   opacity: 0.8;
   pointer-events: none; }
+
+.cart-count {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center; }
+  .cart-count a {
+    margin-left: 5px;
+    text-decoration: none;
+    color: #4a4a4a; }

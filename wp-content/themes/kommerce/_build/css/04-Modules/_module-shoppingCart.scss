@@ -1,0 +1,9 @@
+.cart-count{
+  @include display(flex);
+  align-items: center;
+  a{
+    margin-left: 5px;
+    text-decoration: none;
+    color: #4a4a4a;
+  }
+}
