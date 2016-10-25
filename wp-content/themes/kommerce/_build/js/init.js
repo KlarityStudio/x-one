@@ -44,9 +44,17 @@
 	}
 
 	function shopBrandMenu(){
-		var $menuFirstChilds = $('#mega-menu-item-132').children('.mega-sub-menu'),
+		var $shopNavLinks = $('#mega-menu-primary').find('a'),
+				$menuFirstChilds = $('#mega-menu-item-132').children('.mega-sub-menu'),
 				$link = $menuFirstChilds.children('li');
 
+		$shopNavLinks.on('click', function(e){
+
+			if ($(this).text().indexOf('Shop') !== -1) {
+				e.preventDefault();
+			}
+
+		});
 		$link .children('a').on('click', function(e){
 			window.console.log('click');
 			e.preventDefault();
