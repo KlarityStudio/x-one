@@ -21,6 +21,9 @@ get_header();
 			if( is_front_page() ){
           get_template_part( 'includes/pages/page', 'home' );
 					}
+			elseif(is_page('shop-by-brands')) {
+				get_template_part( 'includes/pages/page', 'shopBrand' );
+			}
 			else {
 				get_template_part( 'includes/pages/page' );
 			}
