@@ -144,6 +144,7 @@
    * Enqueue scripts and styles.
    */
   function kommerce_scripts() {
+    wp_enqueue_style('poppins-font','https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700', false);
   	wp_enqueue_style( 'kommerce-style', get_stylesheet_uri() );
   	wp_register_script('kommerce_initJS', get_template_directory_uri() . '/_build/js/min/init-min.js', array('jquery'),'1.0.0', true);
   	wp_enqueue_script('kommerce_initJS');

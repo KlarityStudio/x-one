@@ -49,15 +49,15 @@
 				$link = $menuFirstChilds.children('li');
 
 		$shopNavLinks.on('click', function(e){
-
 			if ($(this).text().indexOf('Shop') !== -1) {
 				e.preventDefault();
 			}
-
 		});
+
 		$link .children('a').on('click', function(e){
 			window.console.log('click');
 			e.preventDefault();
 		});
 	}
+
 }) (jQuery);
