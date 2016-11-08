@@ -1,0 +1,116 @@
+.category-section{
+    text-align: center;
+    margin: 70px auto;
+
+    section{
+        max-width: 1400px;
+        margin: auto;
+    }
+    .category-header-image{
+        width: 100vw;
+        height: 450px;
+        background:{
+            image: url('/wp-content/themes/kommerce/_build/images/cables-image.png ');
+            position: center;
+            size: cover;
+            repeat: no-repeat;
+        }
+    }
+    &.category-cases{
+        .category-header-image{
+            background-image: url('/wp-content/themes/kommerce/_build/images/cases-image.png');
+        }
+    }
+    h1{
+        font-size: 51px;
+        margin-top: 60px;
+    }
+    .button-wrapper{
+        margin-top: 60px;
+        a{
+            color: #fff;
+            background-color: $baseBlue;
+            padding:10px 20px;
+            border-radius: 25px;
+            width: 220px;
+            font-weight: 500;
+        }
+    }
+    .product-list{
+        width: initial;
+        margin: 100px auto;
+        .products{
+            .product{
+                padding: 20px;
+                @include transition( all, 0.3s, ease-in-out);
+                h3{
+                    text-align: left;
+                    color: $baseGrey;
+                    font-size: 14px;
+                    margin-bottom: 20px;
+                    position: relative;
+                    &:after{
+                        content:"View";
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: $baseBlue;
+                        position: absolute;
+                        top: 50px;
+                        left: 0px;
+                        opacity: 0;
+                        @include transition( all, 0.3s, ease-in-out);
+
+                    }
+                }
+                .price, .woocommerce-Price-amount{
+                    margin-top: 30px;
+                    font-size: 18px;
+                    text-align: left;
+                    font-weight: 600;
+                }
+                .ajax_add_to_cart, .add_to_cart_button{
+                    background-color: $baseBlue;
+                    border-radius: 25px;
+                    color: #fff;
+                    position: relative;
+                    right: -59px;
+                    opacity: 0;
+                    font-size: 14px;
+                    font-weight: medium;
+                    text-transform: uppercase;
+                    @include transform( translateY(50px) );
+                    @include transition(all, 0.3s, ease-in-out);
+                }
+                &:hover{
+                    box-shadow: 0 20px 100px 0 rgba(000, 000, 000, 0.25);
+                    @include transition( all, 0.3s, ease-in-out);
+                    
+                    h3:after{
+                        opacity: 1;
+                        @include transition( all, 0.3s, ease-in-out);
+                    }
+                    .ajax_add_to_cart, .add_to_cart_button{
+                        opacity: 1;
+                        @include transform( translateY( 0 ) );
+                        @include transition( all, 0.3s, ease-in-out );
+                    }
+                }
+
+                img{
+                    width: 80%;
+                    margin: 0 auto 16px auto;
+                }
+            }
+        }
+    }
+}
+.video-wrapper{
+    @include outer-container(1400px);
+
+    &.video-screen-protectors{
+        iframe{
+            @include span-columns(2 of 4);
+        }
+    }
+}
+

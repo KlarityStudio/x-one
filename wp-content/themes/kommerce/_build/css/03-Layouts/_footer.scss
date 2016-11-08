@@ -1,7 +1,24 @@
 footer{
-  background-color: #eee;
+  background-color: $baseGrey;
   text-align: center;
   margin-top: 20px;
+  @include display(flex);
+  @include outer-container(100vw);
+
+  nav{
+    @include span-columns(2 of 4);
+    &:after{
+        content:"";
+        @include span-columns(1 of 4);
+        position: absolute;
+    }
+  }
+    .copyright{
+        @include  span-columns(1 of 4);
+        p{
+            color: #fff;
+        }   
+  }
   #menu-footer{
     padding-left: 0;
     display: inline-block;
@@ -11,7 +28,7 @@ footer{
       list-style: none;
       margin: 0 5px;
       a{
-        color: #4a4a4a;
+        color: #fff;
         text-decoration: none;
       }
     }
