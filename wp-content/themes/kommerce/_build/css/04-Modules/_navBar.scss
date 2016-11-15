@@ -69,4 +69,38 @@ header{
       line-height: inherit !important;
     }
   }
+    .cart-menu{
+        position: relative;
+        .cart-count{
+            height: inherit;
+            ul{
+                background-color: #fff;
+                position: absolute;
+                bottom: -118px;
+                padding: 20px;
+                box-shadow: 0 0 0 rgba(000, 000, 000, 0.0);
+                opacity: 0;
+                @include transition(all, 0.3s, ease-in-out);
+                li{
+                    margin: 10px 0;
+                    a{
+                        color: $baseGrey;
+                        opacity: 0.8;
+                        @include transition(all, 0.3s, ease-in-out);
+                        &:hover{
+                            opacity: 1;
+                            @include transition(all, 0.3s, ease-in-out);
+                        }
+                    }
+                }
+
+                &.active{
+                    box-shadow: 0 0 0 rgba(000, 000, 000, 0.5);
+                    opacity: 1;
+                    height: initial;
+                    @include transition(all, 0.3s, ease-in-out);
+                }
+            }
+        }
+    }
 }

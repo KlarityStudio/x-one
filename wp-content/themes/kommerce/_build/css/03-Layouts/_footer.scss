@@ -1,5 +1,9 @@
+$lineHeight : 50px;
+
 footer{
+  overflow: hidden;  
   background-color: $baseGrey;
+  height: 50px;
   text-align: center;
   margin-top: 20px;
   @include display(flex);
@@ -7,30 +11,47 @@ footer{
 
   nav{
     @include span-columns(2 of 4);
-    &:after{
-        content:"";
-        @include span-columns(1 of 4);
-        position: absolute;
-    }
   }
     .copyright{
         @include  span-columns(1 of 4);
         p{
             color: #fff;
+            line-height: 50px;
         }   
   }
   #menu-footer{
     padding-left: 0;
     display: inline-block;
     margin-bottom: 0;
+    height: 50px;
+
     li{
+      line-height: $lineHeight;  
       float: left;
       list-style: none;
       margin: 0 5px;
+      position: relative;
+
       a{
         color: #fff;
         text-decoration: none;
-      }
+        padding-right: 10px;
+        &:after{
+            content: "";
+            position: absolute;
+            border-right: 2px solid #fff;
+            top: calc(#{$lineHeight}/2 - 20px/2);
+            height: 20px;
+            margin-left: 10px;
+        }
+    }
+         &:last-of-type{
+            a{
+                &:after{
+                height: 0;
+                }
+            }  
+        }
     }
   }
 }

@@ -37,7 +37,6 @@ get_header( 'shop' ); ?>
      *
      * @hooked woocommerce_get_sidebar - 10
      */
-    do_action( 'woocommerce_sidebar' );
   ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 

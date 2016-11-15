@@ -12,22 +12,24 @@ if ( $terms ) { ?>
 
     <ul class="product-cats">
 
-     <?php foreach ( $terms as $term ) {
-  			$src = wp_get_attachment_image_src( get_post_thumbnail_id($term->ID), array( 5600, 1000), false);
+        <?php foreach ( $terms as $term ) {
+            $src = wp_get_attachment_image_src( get_post_thumbnail_id($term->ID), array( 5600, 1000), false);
             $description = wc_format_content( term_description($term) )
-          ?>
-        <a href=" <?php echo esc_url( get_term_link( $term ) ); ?>" class="<?php $term->slug; ?>">
-          <li class="category">
-              <div class="category-image">
-                  <?php  woocommerce_subcategory_thumbnail( $term ); ?>
-              </div>
-              <h2><?php echo $term->name; ?></h2>
-              <div class="">
-                  <?php echo $term->description; ?>
-              </div>
-          </li>
-        </a>
-  <?php } ?>
+            ?>
+            <a href=" <?php echo esc_url( get_term_link( $term ) ); ?>" class="<?php $term->slug; ?>">
+                <li class="category">
+                    <div class="category-image">
+                        <?php  woocommerce_subcategory_thumbnail( $term ); ?>
+                    </div>
+                    <div class="product-information">
+                        <h2><?php echo $term->name; ?></h2>
+                        <div class="">
+                            <?php echo $term->description; ?>
+                        </div>
+                    </div>
+                </li>
+            </a>
+        <?php } ?>
 
     </ul>
 

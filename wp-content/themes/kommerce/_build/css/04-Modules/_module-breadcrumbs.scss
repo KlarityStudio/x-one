@@ -1,0 +1,15 @@
+.archive, .page, .single{
+    main{
+        #content{
+
+        }
+        .woocommerce-breadcrumb{
+            background-color: $baseBlue;
+            padding: 15px 40px;
+            color: #fff;
+            a{
+                color: #ffffff;
+            }
+        }
+    }
+}

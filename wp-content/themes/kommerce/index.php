@@ -17,6 +17,7 @@ get_header();
 	if ( have_posts() ) :
 
 		/* Start the Loop */
+
 		while ( have_posts() ) : the_post();
 			if( is_front_page() ){
           get_template_part( 'includes/pages/page', 'home' );
@@ -28,7 +29,6 @@ get_header();
 				get_template_part( 'includes/pages/page' );
 			}
 		endwhile;
-
 	endif;
 
 get_footer();

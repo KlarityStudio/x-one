@@ -1,4 +1,33 @@
 #slider{
-  height: 250px;
-  overflow: hidden;
+    height: 100%;
+    overflow: hidden;
+    width: 100vw;
+
+    .item{
+        height: inherit;
+        width: 100vw;
+        margin: 0;
+        @include display(flex);
+        @include flex-direction(column);
+        .feature-image{
+            img{
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+        .product-spec-wrapper{
+            >div{
+                max-width: 1400px;
+                margin: auto;
+                @include display(flex);
+                @include justify-content(space-around);
+                .product-spec{
+                    img{
+                        width: 119px;
+                        padding: 85px 0;
+                    }
+                }
+            }
+        }
+    }
 }
