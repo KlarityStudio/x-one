@@ -50,22 +50,22 @@ $woocommerce_loop['columns'] = apply_filters( 'woocommerce_related_products_colu
 
 if ( $products->have_posts() ) : ?>
 <?php $cat_count = sizeof( get_the_terms( $post->ID, 'product_cat' ) ); ?>
-	<div class="related products">
-
-		<h2><?php _e( 'Related Products', 'woocommerce' ); ?></h2>
+	<section class="related products related-products">
 
 		<ul class="products">
-			<li>
-				<h2>You Might also like</h2>
-				<div class="">
-					Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus.
+			<li class="description">
+				<h1>You Might also like</h1>
+				<div class="latest-product-blurb">
+					<p>
+						SEO text. Sound that is designed to bring you music the way the artists intended it – honest, clean and with passion.
+					</p>
 				</div>
-				<div class="">
+				<div class="parent-category-link">
 					<?php $term = get_the_terms( $post->ID, 'product_cat' );
 
 					foreach ($term as $t) {
 						$category_link = get_category_link( $t->term_id );
-						echo '<a href="'. $category_link.'">Back to Category <span class="back-icon"></span</a>';
+						echo '<p><a href="'. $category_link.'">Back to Category <span class="back-icon"></span></a></p>';
 					}
 					?>
 				</div>
@@ -79,7 +79,8 @@ if ( $products->have_posts() ) : ?>
 
 		<?php woocommerce_product_loop_end(); ?>
 
-	</div>
+		</ul>
+	</section>
 
 <?php endif;
 

@@ -5,6 +5,7 @@
 		shopBrandMenu();
         cartMenu();
 		categoryInfoSlider();
+		phoneMakeText();
   });
 
 	function productFilter(){
@@ -88,7 +89,6 @@
 					'height':'118px'
 
 				});
-
 			},
 			mouseleave: function () {
 				$(this).find('.product-information > div').css({
@@ -98,5 +98,22 @@
 				});
 			}
 	});
+	}
+
+	function phoneMakeText(){
+		if ($('body').hasClass('single-product')){
+
+		var $phoneMake = $('#picker_pa_phone-makes').find('.select-option');
+
+			if(($phoneMake).attr("data-attribute")){
+
+				var $dataAttribute = $(this).attr("data-value");
+				$(this).each(function(){
+					$(this).append($dataAttribute);
+				});
+
+				}
+
+		}
 	}
 }) (jQuery);

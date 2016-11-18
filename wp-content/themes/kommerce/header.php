@@ -10,8 +10,7 @@
     <header>
       <?php get_template_part('includes/modules/module', 'navBar'); ?>
 
-      <!-- <div class="header-image" style="background-image:url(<?php echo header_image(); ?>)" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>"></div> -->
       <?php get_template_part('includes/modules/module', 'slider'); ?>
 
      </header>
-     <main role="main">
+     <main role="main" id="" >

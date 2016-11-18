@@ -306,3 +306,7 @@ function product_prices( ) {
         return "R" . $sale_price . " - " . "R" . $regular_price;
     }
 }
+add_action( 'wp_enqueue_scripts', 'wcqi_enqueue_polyfill' );
+function wcqi_enqueue_polyfill() {
+    wp_enqueue_script( 'wcqi-number-polyfill' );
+}

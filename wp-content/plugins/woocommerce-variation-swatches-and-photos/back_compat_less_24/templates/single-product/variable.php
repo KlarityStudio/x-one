@@ -8,11 +8,11 @@ $variation_params = woocommerce_swatches_get_variation_form_args();
 
 do_action( 'woocommerce_before_add_to_cart_form' );
 ?>
-<form 
-      class="variations_form cart swatches" 
-      method="post" 
-      enctype='multipart/form-data' 
-      data-product_id="<?php echo $post->ID; ?>" 
+<form
+      class="variations_form cart swatches"
+      method="post"
+      enctype='multipart/form-data'
+      data-product_id="<?php echo $post->ID; ?>"
       data-product_variations="<?php echo esc_attr( json_encode( $variation_params['available_variations'] ) ) ?>"
       data-product_attributes="<?php echo esc_attr( json_encode( $variation_params['attributes_renamed'] ) ); ?>"
       data-product_variations_flat="<?php echo esc_attr( json_encode( $variation_params['available_variations_flat'] ) ); ?>"
@@ -24,7 +24,7 @@ do_action( 'woocommerce_before_add_to_cart_form' );
 		<div class="variation_form_section">
 			<?php
 			$woocommerce_variation_control_output = new WC_Swatch_Picker( $product->id, $attributes, $variation_params['selected_attributes'] );
-			$woocommerce_variation_control_output->picker();
+			$woocommerce_variation_control_output->select();
 			?>
 
 			<div class="clear"></div><a id="variations_clear" href="#reset" style="display:none;"><?php _e( 'Reset selection', 'woocommerce' ); ?></a>
@@ -33,7 +33,7 @@ do_action( 'woocommerce_before_add_to_cart_form' );
 
 		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
-		<div class="single_variation_wrap" style="display:none;">
+		<div class="single_variation_wrap" >
 			<?php
 				/**
 				 * woocommerce_before_single_variation Hook
