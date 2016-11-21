@@ -310,3 +310,72 @@ add_action( 'wp_enqueue_scripts', 'wcqi_enqueue_polyfill' );
 function wcqi_enqueue_polyfill() {
     wp_enqueue_script( 'wcqi-number-polyfill' );
 }
+//Page Slug Body class
+function add_slug( $classes ){
+    global $post;
+    if ( isset( $post ) ){
+        $classes[] = $post->post_type . '-' . $post->post_name;
+    }
+   return $classes;
+}
+add_filter('body_class' , 'add_slug' );
+
+
+
+    function cloudways_product_subcategories( $args = array() ) {
+        $parentid = get_queried_object_id();
+
+        $args = array(
+            'parent' => $parentid
+        );
+
+            $terms = get_terms( 'product_cat', $args );
+
+            if ( $terms ) {
+
+                echo '<ul class="product-cats">';
+
+                    foreach ( $terms as $term ) {
+
+                        echo '<li class="category">';
+
+                            woocommerce_subcategory_thumbnail( $term );
+
+                            echo '<h2>';
+                                echo '<a href="' .  esc_url( get_term_link( $term ) ) . '" class="' . $term->slug . '">';
+                                    echo $term->name;
+                                echo '</a>';
+                            echo '</h2>';
+
+                        echo '</li>';
+
+
+                }
+
+                echo '</ul>';
+
+            }
+
+    }
+
+
+function custom_override_checkout_fields( $fields ) {
+      unset($fields['billing']['billing_company']);
+      unset($fields['billing']['billing_address_2']);
+      unset($fields['shipping']['shipping_company']);
+
+
+     return $fields;
+}
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+
+add_filter( 'woocommerce_checkout_fields' , 'hjs_wc_checkout_fields' );
+
+// This example changes the default placeholder text for the state drop downs to "Select A State"
+function hjs_wc_checkout_fields( $fields ) {
+
+    $fields['billing']['billing_postcode']['label'] = 'Postalcode';
+    $fields['shipping']['shipping_address_2']['placeholder'] = 'Apartment, suite, unit (optional)';
+
+    return $fields;
+}

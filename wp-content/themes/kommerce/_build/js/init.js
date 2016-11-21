@@ -6,6 +6,10 @@
         cartMenu();
 		categoryInfoSlider();
 		phoneMakeText();
+		dynamicStock();
+		materialMenu();
+		faq();
+		sideBar();
   });
 
 	function productFilter(){
@@ -14,6 +18,13 @@
 			var $phoneMakes = $('.swatch-wrapper'),
 					$phones = $('#pa_phones'),
 					$material = $('#picker_pa_material');
+
+			if (($phoneMakes).hasClass('selected')) {
+					$phones.css({
+					'opacity':'1',
+					'pointer-events': 'visible'
+				});
+			}
 
 			$phoneMakes.on('click', function(){
 					$phones.css({
@@ -103,17 +114,70 @@
 	function phoneMakeText(){
 		if ($('body').hasClass('single-product')){
 
-		var $phoneMake = $('#picker_pa_phone-makes').find('.select-option');
+			var $phoneMake = $('#picker_pa_phone-makes').find('.select-option');
 
-			if(($phoneMake).attr("data-attribute")){
-
+			$phoneMake.each(function(){
 				var $dataAttribute = $(this).attr("data-value");
-				$(this).each(function(){
-					$(this).append($dataAttribute);
-				});
 
-				}
-
+				$(this).children('a').append("<p>"+$dataAttribute+"</p>");
+			});
 		}
+	}
+
+	function dynamicStock(){
+		var $stockAlert = $('.woocommerce-variation-add-to-cart'),
+			$staticPrice = $('.entry-summary').children('div').find('.price');
+
+			if ( ( $stockAlert ).hasClass("woocommerce-variation-add-to-cart-enabled") ){
+				$staticPrice.hide();
+			}else if (( $stockAlert ).hasClass("woocommerce-variation-add-to-cart-disabled")){
+				$staticPrice.show();
+			}
+	}
+
+	function materialMenu(){
+		var $materialInputBox = $('#picker_pa_material').parent('.value');
+
+		var $materialColor = $('#picker_pa_material').find(".select-option");
+
+		$materialColor.each(function(){
+			var $dataAttribute = $(this).attr("data-value");
+
+			$(this).append("<p>"+$dataAttribute+"</p>");
+		});
+
+		$($materialInputBox).on('click',function(){
+			$('#picker_pa_material').toggleClass('open');
+			$(this).parent('tr').toggleClass('open');
+		});
+	}
+
+	function faq(){
+		var $sidebarList = $('.faq-sidebar').find('ul'),
+			$faqArticle = $('.article-container').children('article');
+
+		$sidebarList.children('li').first().addClass('reading');
+		$faqArticle.first().addClass('reading');
+
+
+		$sidebarList.children('li').on('click', function(){
+			var $this = $(this),
+				$siblings = $this.parent().children(),
+				$position = $siblings.index($this);
+
+			$this.siblings('li').removeClass('reading');
+			$this.addClass('reading');
+
+
+			$faqArticle.removeClass('reading').eq($position).addClass('reading');
+			$(this).addClass('reading');
+
+
+		});
+	}
+	function sideBar(){
+		$('#woocommerce_layered_nav-2').children('h2').text("Phone Makes");
+		$('#woocommerce_product_categories-2').children('h2').text("Categories");
+		$('#woocommerce_layered_nav-3').children('h2').text("Colours");
 	}
 }) (jQuery);

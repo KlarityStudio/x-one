@@ -20,12 +20,22 @@ get_header();
 
 		while ( have_posts() ) : the_post();
 			if( is_front_page() ){
-          get_template_part( 'includes/pages/page', 'home' );
-					}
-			elseif(is_page('shop-by-brands')) {
-				get_template_part( 'includes/pages/page', 'shopBrand' );
+          		get_template_part( 'includes/pages/page', 'home' );
 			}
-			else {
+			elseif (is_singular() ) {
+				if(is_page('shop-by-brands')) {
+					get_template_part( 'includes/pages/page', 'shopBrand' );
+				}
+				if(is_page('faqs')) {
+					get_template_part( 'includes/pages/page', 'faq' );
+				}
+				if (is_page('cart')){
+					get_template_part( 'includes/pages/page' );
+				}
+				if (is_page('checkout')){
+					get_template_part( 'includes/pages/page' );
+				}
+			}else {
 				get_template_part( 'includes/pages/page' );
 			}
 		endwhile;

@@ -21,14 +21,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header( 'shop' ); ?>
-<?php
-  /**
-   * woocommerce_sidebar hook.
-   *
-   * @hooked woocommerce_get_sidebar - 10
-   */
-
-?>
 
 	<?php
 		/**
@@ -39,17 +31,50 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_before_main_content' );
 	?>
-		<article id="category-wrapper" class="content-wrapper">
-
 
 		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 
-			<h1 class="page-title">Categories</h1>
+			<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
 
 		<?php endif; ?>
 
-			<?php get_template_part( '/includes/pages/page', 'shop' ); ?>
-		</article>
+		<?php if ( have_posts() ) : ?>
+			<div class="search-wrapper">
+				<form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+					<input type="text" name="s" id="s" placeholder="Search Products" onfocus="if (this.value == 'Search') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search';}" />
+					<input type="submit" name="submit" id="searchsubmit" value="<?php esc_attr_e( 'Search' ); ?>" />
+				</form>
+			</div>
+
+			<div id="archive-content-wrapper">
+
+				<?php do_action( 'woocommerce_sidebar' ); ?>
+				<?php woocommerce_product_loop_start(); ?>
+
+				<?php woocommerce_product_subcategories(); ?>
+
+				<?php while ( have_posts() ) : the_post(); ?>
+
+					<?php wc_get_template_part( 'content', 'product' ); ?>
+
+				<?php endwhile; // end of the loop. ?>
+
+			<?php woocommerce_product_loop_end(); ?>
+			</div>
+			<?php
+				/**
+				 * woocommerce_after_shop_loop hook.
+				 *
+				 * @hooked woocommerce_pagination - 10
+				 */
+				do_action( 'woocommerce_after_shop_loop' );
+			?>
+
+		<?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
+
+			<?php wc_get_template( 'loop/no-products-found.php' ); ?>
+
+		<?php endif; ?>
 
 	<?php
 		/**
@@ -58,6 +83,14 @@ get_header( 'shop' ); ?>
 		 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
 		 */
 		do_action( 'woocommerce_after_main_content' );
+	?>
+
+	<?php
+		/**
+		 * woocommerce_sidebar hook.
+		 *
+		 * @hooked woocommerce_get_sidebar - 10
+		 */
 
 	?>
 

@@ -1,0 +1,81 @@
+.page-faqs{
+    section{
+        width: 100vw;
+        max-width: 1440px;
+        margin: auto;
+        height: 500px;
+        margin-bottom: 100px;
+        h1{
+            margin: 80px 0 40px 40px;
+        }
+        >div{
+            @include display(flex);
+            @include justify-content(space-around);
+            aside{
+                width: 40%;
+                max-width: 412.7px;
+
+                ul{
+                    border: 1px solid rgba(000, 000, 000, 0.18);
+                    li{
+                        font:{
+                            size: 14px;
+
+                        }
+                        cursor: pointer;
+                        padding: 0 20px;
+                        line-height: 50px;
+                        color: $textGrey;
+                        height: 50px;
+                        border-bottom: 1px solid rgba(000, 000, 000, 0.18);
+                        position: relative;
+                        span{
+                            width: 36px;
+                            position: absolute;
+                            right: 20px;
+                            .svg{
+                                @include transform(rotate(180deg))
+                            }
+                        }
+                        &:last-of-type{
+                            border: none;
+                        }
+                        &.reading{
+                            color: #ffffff;
+                            background-color: $baseGrey;
+                            span{
+                                .svg{
+                                    polygon{
+                                        fill: #ffffff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .article-container{
+                width: 60%;
+                max-width: 892px;
+                position: relative;
+                article{
+                    @include position(absolute, 0 0 0 0);
+                    display: none;
+                    h2{
+                        font-size: 22px;
+                        color: $baseGrey;
+                    }
+                    p{
+                        font-size: 18px;
+                        color: $textGrey;
+                        line-height: 24px;
+                    }
+                    &.reading{
+                        display:table;
+                        margin-bottom: 100px;
+                    }
+                }
+            }
+        }
+    }
+}

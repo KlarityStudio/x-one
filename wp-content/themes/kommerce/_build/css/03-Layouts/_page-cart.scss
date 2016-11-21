@@ -1,0 +1,171 @@
+.page-cart{
+    section{
+        h1{
+            text-align: center;
+            margin-top: 70px;
+        }
+        .woocommerce{
+            max-width: 1230px;
+            margin: auto;
+
+            form{
+                table{
+                    border: none;
+                    tbody{
+                        .cart_item{
+                            padding: 35px 0;
+                            height: 185px;
+                            border-bottom: 1px solid #000;
+                            &:last-of-type{
+                                border-bottom: 0;
+                            }
+                            td{
+                                border: none;
+
+                            }
+                            .product-remove{
+                                @include order(1);
+                            }
+                            .product-thumbnail{
+                                img{
+                                    width: 140px;
+                                }
+                            }
+                            .product-price{
+                                span{
+                                    color: $baseGreen;
+                                }
+
+                            }
+                            .product-name{
+                                a{
+                                    color: $baseGrey;
+                                    font:{
+                                        size: 18px;
+                                        family: "Open Sans";
+                                    }
+                                }
+                                dl{
+                                    dt{
+                                        color: $textGrey;
+                                        font:{
+                                            size: 14px;
+                                            family: "Open Sans";
+                                            weight: 600;
+                                        }
+                                    }
+                                    dd{
+                                        color: $textGrey;
+                                        font:{
+                                            size: 14px;
+                                            family: "Open Sans";
+                                        }
+                                    }
+                                }
+                            }
+                            .quantity{
+                                position: relative;
+                                background-color: #fff;
+                                border-top: 1px solid #F2F2F2;
+                                border-bottom: 1px solid #F2F2F2;
+                                @include display(flex);
+                                padding: 0;
+                                input{
+                                    margin: auto auto 0 auto;
+                                    height: 40px;
+                                    background-color: #fff;
+                                    border: none;
+                                    width: 74px;
+                                }
+                                .minus, .plus{
+                                    width: 43px;
+                                    height: 40px;
+                                    background-color: $baseGrey;
+                                    position: relative;
+                                    color: #fff;
+                                    text-align: center;
+                                    line-height:40px;
+                                    margin: 0;
+                                    border-radius: 0;
+                                    outline: transparent;
+                                }
+                            }
+                            .product-subtotal{
+                                padding-left: 20px;
+                                span{
+                                    color: $baseGreen;
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                        tr{
+                            &:last-of-type{
+                                td{
+                                    border: 1px solid $baseGrey;
+                                    padding: 15px 12px;
+                                    .coupon{
+                                        .input-text{
+                                            width: 252px;
+                                        }
+                                        .button{
+                                            background-color: transparent;
+                                            border: 1px solid $baseGreen;
+                                            color: $baseGreen;
+                                            margin-left: 20px;
+                                            @include transition(all, 0.3s, ease-in-out);
+                                            outline: none;
+                                            &:hover{
+                                                background-color: $baseGreen;
+                                                color: #fff;
+                                                @include transition(all, 0.3s, ease-in-out);
+                                            }
+                                        }
+                                    }
+                                    > .button{
+                                        background-color: $baseBlue;
+                                        color: #fff;
+                                        text-transform: uppercase;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .cart_totals{
+                float: none;
+                width: 100%;
+                h2{
+                    display: none;
+                }
+                .shop_table{
+                    border: 1px solid $baseGrey;
+                    padding: 13px 12px;
+                    border-radius: 0;
+                    tbody{
+                        @include display(flex);
+                        border: 0;
+                        @include justify-content(space-between);
+                        @include align-items(center);
+                        th, td{
+                            border: none;
+                            padding: 10px 12px 6px 12px;
+                        }
+                    }
+                }
+                .wc-proceed-to-checkout{
+                    width: 50%;
+                    max-width: 230px;
+                    float: right;
+
+                    a{
+                        background-color: $baseBlue;
+                        color: #fff;
+                        text-transform: uppercase;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

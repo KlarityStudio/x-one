@@ -3,7 +3,7 @@
         max-width: 1440px;
         margin: 60px auto;
         .single-product-wrapper{
-            border: 1px solid #23282D;
+            border: 1px solid #656565;
             @include display(flex);
 
         }
@@ -22,7 +22,7 @@
                     padding: 10px;
                     width: 100px !important;
                     height: 100px;
-                    border: 1.5px solid $baseGrey;
+                    border: 1.5px solid #656565;
                 }
             }
             .woocommerce-main-image{
@@ -47,12 +47,15 @@
                 padding: 0 0 0 70px;
                 color: $textGrey;
             }
-            border-left: 1px solid #23282D;
+            border-left: 1px solid #656565;
 
             .wc-tabs-wrapper{
                 .woocommerce-Tabs-panel{
-                    border-top: 1px solid #23282D;
-                    padding: 70px 75px;
+                    border-top: 1px solid #656565;
+                    padding: 70px 75px 40px 75px;
+                    h2{
+                        display: none;
+                    }
                     p{
                         font-size: 14px;
                         line-height: 22px;
@@ -61,11 +64,11 @@
             }
             .cart{
                 height: 100px;
-                border: 1px solid $baseGrey;
+                border: 1px solid #656565;
                 border-left: 0;
                 border-right:0;
                 position: relative;
-
+                margin-bottom: 0;
                 .variations{
                     margin: 0;
                     width: 746px;
@@ -76,8 +79,16 @@
                             height: 50px;
                             width: 100%;
                             overflow: hidden;
-                            border-right: 1px solid $baseGrey;
-                            border-bottom: 1px solid $baseGrey;
+                            border-right: 1px solid #656565;
+                            border-bottom: 1px solid #656565;
+
+                            &.open{
+                                overflow: visible;
+                                height: 190px;
+                                .value{
+                                    height: 190px;
+                                }
+                            }
                             &:first-of-type{
                                 height: 98px;
                                 max-width: calc(100% / 3);
@@ -122,10 +133,35 @@
                                         margin: 0;
                                         @include display(flex);
                                         padding: 0;
+                                        opacity: 0.5;
+                                        padding: 0 20px;
                                         &:first-of-type{
-                                            border-bottom: 1px solid $baseGrey;
+                                            border-bottom: 1px solid #656565;
                                         }
-    
+                                        &.selected{
+                                            opacity: 1;
+                                        }
+                                        a{
+                                            @include display(flex);
+                                            @include align-items(center);
+                                            @include justify-content(space-between);
+                                            width: 152px !important;
+                                            height: 100% !important;
+                                            margin: auto;
+                                            text-align: center;
+                                            img{
+                                                height: 32px;
+                                            }
+                                            p{
+                                                line-height: 50px;
+                                                width: 100%;
+                                                margin-bottom: 0;
+                                                font-size: 23px;
+                                                text-transform: capitalize;
+                                                padding-left: 10px;
+                                                color: #4a4a4a;
+                                            }
+                                        }
                                     }
                                 }
                                 .attribute_pa_phone-makes_picker_label{
@@ -141,9 +177,7 @@
                                 display: none;
                             }
                             .attribute_pa_material_picker_label{
-                                line-height: 50px;
-                                @include order(2);
-                                margin-right: 30px;
+                                display:none;
                             }
                             .reset_variations{
                                 @include order(3);
@@ -152,21 +186,41 @@
                                 @include display(flex);
                                 @include flex-direction(column);
                                 @include order(1);
-
+                                z-index: 100;
                                 border: none;
+                                width: 100%;
+                                opacity: 1;
 
                                 .swatch-wrapper{
                                     border: 0;
+                                    @include justify-content(space-around);
+                                    @include align-items(center);
                                     display: none;
                                     &.selected{
-                                        display: block;
+                                        @include display(flex);
                                         margin-bottom: 0;
                                     }
                                     a{
                                         border-radius: 50%;
-                                        border: 1px solid $textGrey;
+                                        border: 1px solid #656565;
                                         width: 25px !important;
                                         height: 25px !important;
+                                    }
+                                    p{
+                                        line-height: 40px;
+                                        margin: 0;
+                                        cursor: pointer;
+                                    }
+                                }
+                                &.open{
+                                    z-index: 100;
+                                    background-color: #fff;
+                                    .swatch-wrapper{
+                                        @include display(flex);
+                                        a{
+                                            @include display(flex);
+                                            @include align-items(center);
+                                        }
                                     }
                                 }
                             }
@@ -191,7 +245,7 @@
                     .quantity{
                         position: relative;
                         background-color: #fff;
-                        border-top: 1px solid;
+                        border-top: 1px solid #656565;
                         @include display(flex);
                         padding: 0;
                         input{

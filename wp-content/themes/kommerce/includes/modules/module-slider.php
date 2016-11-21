@@ -47,7 +47,7 @@
 	</li>
 	<li class="item">
 		<div class="feature-image">
-			<img src="wp-content/themes/kommerce/_build/images/slider.png" alt="Feature Image" />
+			<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/images/slider.png" alt="Feature Image" />
 		</div>
 		<?php if( is_front_page() ): ?>
 		<div class="product-spec-wrapper">

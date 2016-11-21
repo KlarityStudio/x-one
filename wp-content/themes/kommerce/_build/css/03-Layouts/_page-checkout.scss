@@ -1,0 +1,152 @@
+.page-checkout {
+    h1{
+        text-align: center;
+    }
+    .woocommerce{
+        max-width: 1230px;
+        margin: auto;
+
+        h3{
+            font-size: 16px;
+        }
+
+        #customer_details{
+            margin-bottom: 20px;
+            @include display(flex);
+            @include flex-direction(column-reverse);
+
+            .col-1, .col-2{
+                width: 100%;
+                .woocommerce-billing-fields, .shipping_address{
+                    @include display(flex);
+                    @include flex-wrap(wrap);
+                    @include align-items(flex-end);
+
+                    .form-row{
+                        width: 24%;
+                        position: relative;
+                        label{
+                            font-size: 12px;
+                            position: absolute;
+                            top: -7px;
+                            background-color: #fff;
+                            z-index: 20;
+                            left: 10px;
+                            padding: 0 4px;
+                            color: $textGrey;
+                            font-weight: 100;
+                        }
+                        input{
+                            box-shadow: none;
+                            border: 1px solid $baseGrey;
+                        }
+                        &#billing_state_field{
+                            width: 16%;
+                        }
+
+                        &#billing_postcode_field{
+                            width: 8%;
+                            label{
+                                display: none;
+                            }
+                        }
+                        div{
+                            height:44px;
+                            a{
+                                height: inherit;
+                                line-height: 44px;
+                                border: 1px solid $baseGrey;
+                            }
+                        }
+                    }
+                }
+            }
+            .col-2{
+                width: 100%;
+                margin: 50px 0;
+                #order_comments_field{
+                    margin-top: 50px;
+                }
+                textarea{
+                    border: 1px solid $baseGrey;
+                }
+            }
+        }
+        #order_review{
+            table{
+                border: none;
+                thead{
+                    tr{
+                        border-bottom: 1px solid $baseGrey;
+                    }
+                    th{
+
+                    }
+                }
+                tbody{
+                    .cart_item{
+                        padding: 35px 0;
+                        height: 185px;
+                        border-bottom: 1px solid #000;
+                        &:last-of-type{
+                            border-bottom: 0;
+                        }
+                        td{
+                            border: none;
+
+                        }
+                        .product-thumbnail{
+                            img{
+                                width: 140px;
+                            }
+                        }
+                        .product-price{
+                            span{
+                                color: $baseGreen;
+                            }
+
+                        }
+                        .product-name{
+                            a{
+                                color: $baseGrey;
+                                font:{
+                                    size: 18px;
+                                    family: "Open Sans";
+                                }
+                            }
+                        }
+                    }
+                    tr{
+                        &:last-of-type{
+                            td{
+                                padding: 15px 12px;
+                            }
+                        }
+                    }
+                }
+                tfoot{
+                    @include display(flex);
+                    tr{
+                        th{
+                            border: none;
+                        }
+                        td{
+                            border: none;
+                        }
+                    }
+                    .shipping{
+                        height: 100%;
+                        @include display(block);
+                        td{
+                            display: block;
+                        }
+                        #shipping_method{
+                            @include display(flex);
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
