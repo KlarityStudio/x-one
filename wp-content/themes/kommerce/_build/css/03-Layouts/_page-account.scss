@@ -1,0 +1,225 @@
+/*
+** My account login and register forms
+**
+*/
+
+.page-my-account{
+    h1{
+        text-align: center;
+        margin-top: 70px;
+    }
+    .woocommerce{
+        max-width: 1020px;
+        margin: auto;
+
+        h2{
+            font:{
+                family: "Raleway";
+                size: 23px;
+                weight: 500;
+            }
+            position: relative;
+            &:before{
+                content: "";
+                width: 50px;
+                height: 1px;
+                background-color: #373737;
+                position: absolute;
+                bottom: -5px;
+            }
+        }
+        form{
+            height: 280px;
+        }
+        .woocommerce-FormRow{
+            margin-bottom: 30px;
+            position: relative;
+            label{
+                position: absolute;
+                top: -8px;
+                left: 10px;
+                background-color: #fff;
+                padding: 0 5px;
+                letter-spacing: 0.5px;
+                color: $textGrey;
+                font-size: 12px;
+            }
+        }
+        .form-row{
+            >label{
+                float: right;
+            }
+        }
+        input[type="submit"]{
+            background-color: $baseGrey;
+            color: #fff;
+            border-radius: 25px;
+            padding: 9px 25px;
+            text-transform: uppercase;
+            opacity: 1;
+            @include transition(all, 0.3, ease-in-out);
+
+            &:hover{
+                opacity: 0.9;
+                @include transition(all, 0.3, ease-in-out);
+            }
+        }
+        .lost_password{
+            text-align: right;
+        }
+    }
+}
+
+/*
+** End of Account login/Register forms
+** Start of Logged in account page
+*/
+
+/* Sidebar Nav */
+.woocommerce-MyAccount-navigation{
+    width: 40%;
+    max-width: 412.7px;
+
+    ul{
+        border: 1px solid rgba(000, 000, 000, 0.18);
+        li{
+            font:{
+                size: 14px;
+            }
+            cursor: pointer;
+            padding: 0;
+            line-height: 50px;
+            height: 50px;
+            border-bottom: 1px solid rgba(000, 000, 000, 0.18);
+            position: relative;
+            a{
+                color: $baseGrey;
+                position: absolute;
+                padding: 0 20px;
+                width: 100%;
+            }
+            span{
+                width: 36px;
+                margin-top: 3px;
+                float: right;
+                .svg{
+                    @include transform(rotate(180deg))
+                }
+            }
+            &:last-of-type{
+                border: none;
+            }
+            &.is-active{
+                background-color: $baseGrey;
+                a{
+                    color: #ffffff;
+                }
+                span{
+                    .svg{
+                        polygon{
+                            fill: #ffffff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+/* End Sidebar Nav */
+
+/* Start of Orders */
+.woocommerce-MyAccount-content{
+    .woocommerce-MyAccount-orders{
+        border: none !important;
+        tr{
+            th, td{
+                border: none !important;
+            }
+            th{
+                font:{
+                    size: 23px;
+                    family: Poppins;
+                    weight: 400;
+                }
+                position: relative;
+                &:before{
+                    content: "";
+                    width: 50px;
+                    height: 1px;
+                    background-color: #373737;
+                    position: absolute;
+                    bottom: 7px;
+                }
+
+                &:last-of-type{
+                    &:before{
+                        display: none;
+                    }
+                }
+            }
+
+            .order-actions{
+                a{
+                    background-color: $baseGrey;
+                    color: #fff;
+                    padding-bottom: 5px;
+                }
+            }
+
+        }
+    }
+}
+/* End of Orders */
+/* Start of Addresses */
+.woocommerce-Address{
+    h3{
+        position: relative;
+        &:before{
+            content: "";
+            width: 50px;
+            height: 1px;
+            background-color: #373737;
+            position: absolute;
+            bottom: -5px;
+        }
+
+    }
+}
+/* End of Addresses */
+/* Start of Account Details */
+.page-my-account{
+    .woocommerce-MyAccount-content{
+        .woocommerce-EditAccountForm{
+            height: 100%;
+
+            hr{
+                border-bottom: 1px solid $baseGrey;
+                max-width: 600px;
+                margin: 50px auto;
+            }
+            fieldset{
+                legend{
+                    font:{
+                        size: 20.8px;
+                        weight: 600;
+                    }
+                    margin-bottom: 20px;
+                    position: relative;
+                    &:before{
+                        content: "";
+                        width: 50px;
+                        height: 1px;
+                        background-color: #373737;
+                        position: absolute;
+                        bottom: -5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+input[type="submit"]{
+    outline: none;
+}

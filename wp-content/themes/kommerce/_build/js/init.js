@@ -10,6 +10,7 @@
 		materialMenu();
 		faq();
 		sideBar();
+		modalAjax();
   });
 
 	function productFilter(){
@@ -179,5 +180,32 @@
 		$('#woocommerce_layered_nav-2').children('h2').text("Phone Makes");
 		$('#woocommerce_product_categories-2').children('h2').text("Categories");
 		$('#woocommerce_layered_nav-3').children('h2').text("Colours");
+		$('.woocommerce-FormRow').children('label[for="username"]').text("Username or Email");
+	}
+	function modalAjax(){
+
+		var $readButton = $('.post-footer').children('#read-more');
+
+		$($readButton).on("click", function(event) {
+
+			event.preventDefault();
+
+			var id = $(this).data('post'),
+				$ajaxUrl = $(this).attr('data-url');
+
+			$.ajax({
+				type: 'POST',
+				url: $ajaxUrl,
+				context: this,
+				data: {'action': 'post_modal', id: id },
+				success: function(response) {
+					$('.modal-wrapper').html(response);
+					$('.modal-wrapper').addClass('open');
+					$('.modal-wrapper').fadeIn('slow');
+					$('body').addClass('modal-open');
+					return false;
+				}
+			});
+		});
 	}
 }) (jQuery);

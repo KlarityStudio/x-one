@@ -9,8 +9,12 @@
     add_theme_support( 'woocommerce' );
   }
 
-  require_once('includes/admin/custom-post-types.php');
-  require_once('includes/admin/woocommerce-single-product.php');
+    require_once('includes/admin/custom-post-types.php');
+    require_once('includes/admin/woocommerce-single-product.php');
+    require_once('includes/admin/admin-functions.php');
+    require_once('includes/admin/woocommerce-functions.php');
+    require_once('includes/admin/ajax-functions.php');
+    require_once('includes/admin/theme-support.php');
 
   if ( ! function_exists( 'kommerce_setup' ) ) :
   /**
@@ -59,72 +63,6 @@
         'megaMenu' => esc_html__( 'Mega Menu', 'kommerce'),
       ) );
 
-    	/*
-    	 * Switch default core markup for search form, comment form, and comments
-    	 * to output valid HTML5.
-    	 */
-    	add_theme_support( 'html5', array(
-    		'search-form',
-    		'comment-form',
-    		'comment-list',
-    		'gallery',
-    		'caption',
-    	) );
-
-      add_theme_support( 'custom-logo', array(
-      	'height'      => 50,
-      	'width'       => 100,
-      	'flex-height' => false,
-      	'flex-width'  => false,
-      	'header-text' => array( 'kommerce', 'A responsive ecommerce site' ),
-      ) );
-
-    /* Added Header theme support for the customizer*/
-    add_theme_support( 'custom-background' );
-
-    function custom_background_size( $wp_customize ) {
-
-    	// Add the "panel" (Section).
-    	// If this section already exists, comment the next 3 lines out.
-    	$wp_customize->add_section( 'theme_settings', array(
-    		'title' => __( 'Theme Settings' ),
-    	) );
-
-    	// If they haven't set the background image, don't show these controls.
-    	if ( ! get_theme_mod( 'background_image' ) ) {
-    		return;
-    	}
-
-    	// Add your setting.
-    	$wp_customize->add_setting( 'default-size', array(
-    		'default' => 'inherit',
-    	) );
-
-    	// Add your control box.
-    	$wp_customize->add_control( 'default-size', array(
-    		'label'      => __( 'Background Image Size' ),
-    		'section'    => 'theme_settings',
-    		'settings'   => 'default-size',
-    		'priority'   => 200,
-    		'type' => 'radio',
-    		'choices' => array(
-    			'cover' => __( 'Cover' ),
-    			'contain' => __( 'Contain' ),
-    			'inherit' => __( 'Inherit' ),
-    		)
-    	) );
-    }
-
-    add_action( 'customize_register', 'custom_background_size' );
-
-    function custom_background_size_css() {
-    	$background_size = get_theme_mod( 'default-size', 'inherit' );
-    	echo '<style> body.custom-background { background-size: '.$background_size.'; } </style>';
-    }
-
-    add_action( 'wp_head', 'custom_background_size_css', 999 );
-
-
     /* Customizer theme header fallback for older wordpress versions */
       global $wp_version;
 
@@ -141,26 +79,27 @@
     	) ) );
     }
   endif;
+
   add_action( 'after_setup_theme', 'kommerce_setup' );
 
   /**
    * Enqueue scripts and styles.
    */
-  function kommerce_scripts() {
-    wp_enqueue_style('poppins-font','https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700', false);
-  	wp_enqueue_style( 'kommerce-style', get_stylesheet_uri() );
-  	wp_register_script('kommerce_initJS', get_template_directory_uri() . '/_build/js/min/init-min.js', array('jquery'),'1.0.0', true);
-  	wp_enqueue_script('kommerce_initJS');
-    wp_register_script('kommerce_jquery', get_stylesheet_directory_uri() . '/_build/js/min/jquery-3.1.1.min.js', array(),'', false);
-    wp_enqueue_script('kommerce_jquery');
-  }
-  add_action( 'wp_enqueue_scripts', 'kommerce_scripts' );
+    function kommerce_scripts() {
+        wp_enqueue_style('poppins-font','https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700', false);
+        wp_enqueue_style( 'kommerce-style', get_stylesheet_uri() );
+        wp_register_script('kommerce_initJS', get_template_directory_uri() . '/_build/js/min/init-min.js', array('jquery'),'1.0.0', true);
+        wp_enqueue_script('kommerce_initJS');
+        wp_register_script('kommerce_jquery', get_stylesheet_directory_uri() . '/_build/js/min/jquery-3.1.1.min.js', array(),'', false);
+        wp_enqueue_script('kommerce_jquery');
+    }
+    add_action( 'wp_enqueue_scripts', 'kommerce_scripts' );
 
 
-  function carousel_scripts() {
-    wp_enqueue_script( 'owl.carousel', get_template_directory_uri() . '/_build/js/owl.carousel.js', array('jquery'), '20120206', true );
-    wp_enqueue_script( 'effects', get_template_directory_uri() . '/_build/js/effects.js', array('jquery'), '20120206', true );
-  }
+    function carousel_scripts() {
+        wp_enqueue_script( 'owl.carousel', get_template_directory_uri() . '/_build/js/owl.carousel.js', array('jquery'), '20120206', true );
+        wp_enqueue_script( 'effects', get_template_directory_uri() . '/_build/js/effects.js', array('jquery'), '20120206', true );
+    }
   add_action( 'wp_enqueue_scripts', 'carousel_scripts' );
 
   add_image_size( 'carousel-pic', 480, 320, true );
@@ -179,11 +118,7 @@
           )
         );
         $dropdown = str_replace( '<select', '<select ' . $this->get_link(), $dropdown );
-        printf(
-          '<label class="customize-control-select"><span class="customize-control-title">%s</span> %s</label>',
-          $this->label,
-          $dropdown
-        );
+        printf( '<label class="customize-control-select"><span class="customize-control-title">%s</span> %s</label>', $this->label, $dropdown );
       }
     }
   }
@@ -256,126 +191,4 @@
     ) );
   }
 
-  /**
- * Ensure cart contents update when products are added to the cart via AJAX
- */
-function my_header_add_to_cart_fragment( $fragments ) {
-
-    ob_start();
-    $count = WC()->cart->cart_contents_count;
-    ?><a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php
-    if ( $count > 0 ) {
-        ?>
-        <span class="cart-contents-count"><?php echo esc_html( $count ); ?></span>
-        <?php
-    }
-        ?></a><?php
-
-    $fragments['a.cart-contents'] = ob_get_clean();
-
-    return $fragments;
-}
-add_filter( 'woocommerce_add_to_cart_fragments', 'my_header_add_to_cart_fragment' );
-
-function product_prices( ) {
-
-    global $product;
-    //get the sale price of the product whether it be simple, grouped or variable
-    $sale_price = get_post_meta( get_the_ID(), '_price', true);
-
-    //get the regular price of the product, but of a simple product
-    $regular_price = get_post_meta( get_the_ID(), '_regular_price', true);
-
-    //oh, the product is variable to $sale_price is empty? Lets get a variation price
-    if (!empty($sale_price)) {
-
-        if ($regular_price == ""){
-        #Step 1: Get product varations
-        $available_variations = $product->get_available_variations();
-
-        #Step 2: Get product variation id
-        $variation_id=$available_variations[0]['variation_id']; // Getting the variable id of just the 1st product. You can loop $available_variations to get info about each variation.
-
-        #Step 3: Create the variable product object
-        $variable_product1= new WC_Product_Variation( $variation_id );
-
-        #Step 4: You have the data. Have fun :)
-        $regular_price = $variable_product1 ->regular_price;
-        }
-
-        return "R" . $sale_price . " - " . "R" . $regular_price;
-    }
-}
-add_action( 'wp_enqueue_scripts', 'wcqi_enqueue_polyfill' );
-function wcqi_enqueue_polyfill() {
-    wp_enqueue_script( 'wcqi-number-polyfill' );
-}
-//Page Slug Body class
-function add_slug( $classes ){
-    global $post;
-    if ( isset( $post ) ){
-        $classes[] = $post->post_type . '-' . $post->post_name;
-    }
-   return $classes;
-}
-add_filter('body_class' , 'add_slug' );
-
-
-
-    function cloudways_product_subcategories( $args = array() ) {
-        $parentid = get_queried_object_id();
-
-        $args = array(
-            'parent' => $parentid
-        );
-
-            $terms = get_terms( 'product_cat', $args );
-
-            if ( $terms ) {
-
-                echo '<ul class="product-cats">';
-
-                    foreach ( $terms as $term ) {
-
-                        echo '<li class="category">';
-
-                            woocommerce_subcategory_thumbnail( $term );
-
-                            echo '<h2>';
-                                echo '<a href="' .  esc_url( get_term_link( $term ) ) . '" class="' . $term->slug . '">';
-                                    echo $term->name;
-                                echo '</a>';
-                            echo '</h2>';
-
-                        echo '</li>';
-
-
-                }
-
-                echo '</ul>';
-
-            }
-
-    }
-
-
-function custom_override_checkout_fields( $fields ) {
-      unset($fields['billing']['billing_company']);
-      unset($fields['billing']['billing_address_2']);
-      unset($fields['shipping']['shipping_company']);
-
-
-     return $fields;
-}
-add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
-
-add_filter( 'woocommerce_checkout_fields' , 'hjs_wc_checkout_fields' );
-
-// This example changes the default placeholder text for the state drop downs to "Select A State"
-function hjs_wc_checkout_fields( $fields ) {
-
-    $fields['billing']['billing_postcode']['label'] = 'Postalcode';
-    $fields['shipping']['shipping_address_2']['placeholder'] = 'Apartment, suite, unit (optional)';
-
-    return $fields;
-}
+add_filter( 'jetpack_development_mode', '__return_true' );

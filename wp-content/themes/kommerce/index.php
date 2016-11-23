@@ -35,6 +35,12 @@ get_header();
 				if (is_page('checkout')){
 					get_template_part( 'includes/pages/page' );
 				}
+				if (is_page('my-account')){
+					get_template_part( 'includes/pages/page' );
+				}
+				if (is_page('press-release')){
+					get_template_part( 'includes/pages/page', 'press' );
+				}
 			}else {
 				get_template_part( 'includes/pages/page' );
 			}

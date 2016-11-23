@@ -1,0 +1,39 @@
+.article-social  .post-like{
+    margin-top:1em;
+    @include display(flex);
+    @include align-items(center);
+}
+
+.article-social .like{
+    background:{
+        image:url(_build/icons/icon-heart.svg);
+        size: cover;
+        position: center;
+    }
+    width: 23px;
+    height: 21px;
+    display: block;
+    float:left;
+    margin-right: 14px;
+    -moz-transition: all 0.2s ease-out 0.1s;
+    -webkit-transition: all 0.2s ease-out 0.1s;
+    -o-transition: all 0.2s ease-out 0.1s;
+}
+
+.article-header{
+    .article-social  {
+        position: absolute;
+        left: 50%;
+        bottom: 20px;
+        .post-like{
+            margin-top:1em;
+            @include display(flex);
+            @include align-items(center);
+        }
+        .like{
+            background:{
+                image:url(_build/icons/icon-heart-white.svg);
+            }
+        }
+    }
+}

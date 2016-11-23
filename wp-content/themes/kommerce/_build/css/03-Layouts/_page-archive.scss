@@ -108,6 +108,8 @@
             }
         }
         .products{
+            margin-left: initial;
+            margin-right: initial;
             @include outer-container(1045px);
             @include display(flex);
             @include flex-wrap(wrap);
