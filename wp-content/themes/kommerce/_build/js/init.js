@@ -12,6 +12,8 @@
 		sideBar();
 		modalAjax();
 		socialAnimation();
+		revealPosts();
+		tagFilter();
   });
 
 	function productFilter(){
@@ -212,28 +214,81 @@
 		});
 	}
 
+	function tagFilter(){
+		$('.tax-filter').on('click', function(event) {
+
+			// Prevent default action - opening tag page
+			if (event.preventDefault) {
+				event.preventDefault();
+			} else {
+				event.returnValue = false;
+			}
+			// Get tag slug from title attirbute
+			var selecetd_taxonomy = $(this).attr('title'),
+				$ajaxUrl = $('.tag-filter').attr('data-url');
+
+			// After user click on tag, fade out list of posts
+			$('.reveal').fadeOut();
+
+
+			$.ajax({
+				type: 'POST',
+				url: $ajaxUrl,
+				context: this,
+				data: {'action': 'filter_posts', taxonomy: selecetd_taxonomy},
+				success: function(response) {
+					$('.section-wrapper').html(response);
+					$('.section-wrapper').fadeIn('slow');
+
+					return false;
+				}
+			});
+
+		});
+	}
+
 	function socialAnimation(){
 		var $socialContainer = $('.social-wrapper'),
 			$socialIcons = $('.social-container');
 
-			$socialContainer
-				.mouseover(function() {
-					$(this).children($socialIcons).find('a').each(function(i){
-						var $li = $(this);
-						setTimeout(function() {
-						  $li.addClass('show');
-					  }, i*200);
+		$socialContainer
+			.mouseover(function() {
+				$(this).children($socialIcons).find('a').each(function(i){
+					var $li = $(this);
+					setTimeout(function() {
+					  $li.addClass('show');
+				  }, i*200);
 
-					});
-				})
-				.mouseout(function() {
-					$(this).children($socialIcons).find('a').each(function(i){
-						var $li = $(this);
-						setTimeout(function() {
-						  $li.removeClass('show');
-					  }, i*200);
-
-					});
 				});
+			})
+			.mouseout(function() {
+				$(this).children($socialIcons).find('a').each(function(i){
+					var $li = $(this);
+					setTimeout(function() {
+					  $li.removeClass('show');
+				  }, i*200);
+
+				});
+			});
+	}
+
+	function revealPosts(){
+		if ($('body').hasClass('page-press-release')) {
+
+			var $posts = $('article:not(.reveal)'),
+				$i = 0 ;
+
+			setInterval( function(){
+
+				if( $i >= $posts.length ) {
+					return false;
+				}
+
+				var $el = $posts[$i];
+				$($el).addClass('reveal');
+				$i++;
+
+			}, 500 );
+		}
 	}
 }) (jQuery);

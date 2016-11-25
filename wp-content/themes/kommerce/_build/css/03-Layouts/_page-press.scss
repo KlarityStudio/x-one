@@ -35,6 +35,15 @@
             @include flex-direction(row);
             min-height: 400px;
             max-height: 400px;
+            opacity: 0;
+            @include transform(translateY(50px));
+            @include transition(all, 0.3s ease-in-out);
+            &.reveal{
+                opacity: 1;
+                @include transform(translateY(0px));
+                @include transition(all, 0.3s ease-in-out);
+
+            }
             .featured-image{
                 width: 66%;
                 max-width: 810px;
@@ -207,7 +216,7 @@
             }
             .article-social{
                 @include display(flex);
-
+                @include align-items(center);
             }
         }
         .post-content{

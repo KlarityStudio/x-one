@@ -63,6 +63,32 @@
 			</script>
 			<script type="text/javascript">
 
+				var $socialContainer = $('.social-wrapper'),
+					$socialIcons = $('.social-container');
+
+				$socialContainer
+					.mouseover(function() {
+						$(this).children($socialIcons).find('a').each(function(i){
+							var $li = $(this);
+							setTimeout(function() {
+							  $li.addClass('show');
+						  }, i*200);
+
+						});
+					})
+					.mouseout(function() {
+						$(this).children($socialIcons).find('a').each(function(i){
+							var $li = $(this);
+							setTimeout(function() {
+							  $li.removeClass('show');
+						  }, i*200);
+
+						});
+					});
+
+			</script>
+			<script type="text/javascript">
+
 				$(".post-like").children('a').on('click',function(e){
 					e.preventDefault();
 
@@ -131,23 +157,6 @@
 					</div>
 		            <?php the_content(); ?>
 		        </div>
-				<div class="comments-section">
-					<ol class="commentlist">
-					<?php
-						//Gather comments for a specific page/post
-						$comments = get_comments(array(
-							'post_id' => $id,
-							'status' => 'approve' //Change this to the type of comments to be displayed
-						));
-
-						//Display the list of comments
-						wp_list_comments(array(
-							'per_page' => 10, //Allow comment pagination
-							'reverse_top_level' => false //Show the oldest comments at the top of the list
-						), $comments);
-					?>
-				</ol>
-				</div>
 		    </div>
 		</div>
 	  <?php endwhile; ?>
@@ -162,26 +171,22 @@
 
 
 /*-----------     The ajax function for filtering posts by tags     -----------*/
-
-	function ajax_filter_posts_scripts() {
-	  // Enqueue script
-	  wp_register_script('kommerce_afp_script', get_template_directory_uri() . '/_build/js/min/ajax-filter-min.js', array('jquery'),'1.0.0', true);
-	  wp_enqueue_script('kommerce_afp_script');
-
-	  wp_localize_script( 'kommerce_afp_script', 'modal_vars', array(
-	        'modal_nonce' => wp_create_nonce( 'modal_nonce' ), // Create nonce which we later will use to verify AJAX request
-	        'afp_ajax_url' => admin_url( 'admin-ajax.php' ),
-	      )
-	  );
-	}
-	add_action('wp_enqueue_scripts', 'ajax_filter_posts_scripts', 100);
+	//
+	// function ajax_filter_posts_scripts() {
+	//   // Enqueue script
+	//   wp_register_script('kommerce_afp_script', get_template_directory_uri() . '/_build/js/min/ajax-filter-min.js', array('jquery'),'1.0.0', true);
+	//   wp_enqueue_script('kommerce_afp_script');
+	//
+	//   wp_localize_script( 'kommerce_afp_script', 'modal_vars', array(
+	//         'modal_nonce' => wp_create_nonce( 'modal_nonce' ), // Create nonce which we later will use to verify AJAX request
+	//         'afp_ajax_url' => admin_url( 'admin-ajax.php' ),
+	//       )
+	//   );
+	// }
+	// add_action('wp_enqueue_scripts', 'ajax_filter_posts_scripts', 100);
 
 	// Script for getting posts
 	function ajax_filter_get_posts( $taxonomy ) {
-
-		// Verify nonce
-		if( !isset( $_POST['afp_nonce'] ) || !wp_verify_nonce( $_POST['afp_nonce'], 'afp_nonce' ) )
-		die('Permission denied');
 
 		$taxonomy = $_POST['taxonomy'];
 
@@ -197,14 +202,98 @@
 		unset( $args['tag'] );
 		}
 
-		$query = new WP_Query( $args );
+		$query = new WP_Query( $args ); ?>
+			<div class="loading-gif">
+				<center>
+					<img class="loading-image" src="/wp-content/themes/kommerce/_build/icons/ajax-loader.gif" alt="loading..">
+				</center>
+			</div>
+			<script type="text/javascript">
+				if ($('body').hasClass('page-press-release')) {
 
-		if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+					var $posts = $('article:not(.reveal)'),
+						$i = 0 ;
 
-		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-		<?php the_excerpt(); ?>
+					setInterval( function(){
 
-		<?php endwhile; ?>
+						if( $i >= $posts.length ) {
+							return false;
+						}
+
+						var $el = $posts[$i];
+						$($el).addClass('reveal');
+						$i++;
+
+					}, 500 );
+				}
+			</script>
+			<script type="text/javascript">
+				var $socialContainer = $('.social-wrapper'),
+					$socialIcons = $('.social-container');
+
+				$socialContainer
+					.mouseover(function() {
+						$(this).children($socialIcons).find('a').each(function(i){
+							var $li = $(this);
+							setTimeout(function() {
+							  $li.addClass('show');
+						  }, i*200);
+
+						});
+					})
+					.mouseout(function() {
+						$(this).children($socialIcons).find('a').each(function(i){
+							var $li = $(this);
+							setTimeout(function() {
+							  $li.removeClass('show');
+						  }, i*200);
+
+						});
+					});
+			</script>
+			<div class="tag-filter" data-url="<?php echo admin_url('admin-ajax.php'); ?>">
+				<?php get_template_part('includes/modules/module', 'tagsList'); ?>
+			</div>
+			<?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+				<article data-value="<?php echo $data; ?>" data-post="<?php echo $post->ID; ?>">
+					<div class="featured-image">
+						<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
+						<div style="background-image:url(<?php echo $thumb[0]; ?>)">
+
+						</div>
+					</div>
+					<div class="article-content">
+						<div class="article-meta">
+							<p><span><?php the_author() ?></span> / <?php echo get_the_date(); ?></p>
+						</div>
+						<?php the_title('<h1>', '</h1>'); ?>
+						<div class="post-tags">
+							<?php the_tags('<ul><li>', '</li><li>', '</li></ul>'); ?>
+						</div>
+						<p>
+							<?php the_excerpt(); ?>
+						</p>
+						<div class="post-footer">
+							<div class="read-more-button">
+								<a id="read-more" href="#" data-post="<?php echo $post->ID; ?>" data-url="<?php echo admin_url('admin-ajax.php'); ?>">Read More</a>
+							</div>
+							<span class="divider"></span>
+							<div class="social-wrapper">
+								<div class="social-container">
+									<?php get_template_part('includes/modules/module', 'socialShare'); ?>
+								</div>
+								<div class="social-link">
+									<a href="#"><?php get_template_part('_build/icons/icon', 'share'); ?> Share</a>
+								</div>
+							</div>
+							<!-- <div class="article-social">
+								<?php get_template_part('includes/modules/module', 'postFooter'); ?>
+								<?php echo getPostLikeLink($post->ID); ?>
+							</div> -->
+						</div>
+					</div>
+				</article>
+			<?php endwhile; ?>
 		<?php else: ?>
 		<h2>No posts found</h2>
 		<?php endif;

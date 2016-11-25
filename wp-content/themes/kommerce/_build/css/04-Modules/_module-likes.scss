@@ -23,7 +23,7 @@
 .article-header{
     .article-social  {
         position: absolute;
-        left: 50%;
+        left: calc(50% - 227.97px / 2);
         bottom: 20px;
         .post-like{
             margin-top:1em;

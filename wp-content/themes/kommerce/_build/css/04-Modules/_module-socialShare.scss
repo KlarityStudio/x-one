@@ -70,3 +70,31 @@
         }
     }
 }
+
+// Single Blog Post modal
+
+.article-social{
+    .social-wrapper{
+        .social-link{
+            a{
+                color: #fff;
+            }
+            .svg{
+                path{
+                    fill: #fff;
+                }
+            }
+        }
+        .social{
+
+            a{
+                background-color: #fff;
+            }
+        }
+        .svg{
+            path{
+                fill: #424755;
+            }
+        }
+    }
+}

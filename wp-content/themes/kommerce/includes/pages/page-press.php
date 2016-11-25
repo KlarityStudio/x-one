@@ -22,7 +22,7 @@
     <section class="section-press-release">
         <?php the_title('<h1>', '</h1>'); ?>
         <div class="section-wrapper">
-            <div class="tag-filter">
+            <div class="tag-filter" data-url="<?php echo admin_url('admin-ajax.php'); ?>">
                 <?php get_template_part('includes/modules/module', 'tagsList'); ?>
             </div>
             <?php
