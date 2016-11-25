@@ -11,6 +11,7 @@
 		faq();
 		sideBar();
 		modalAjax();
+		socialAnimation();
   });
 
 	function productFilter(){
@@ -184,12 +185,13 @@
 	}
 	function modalAjax(){
 
-		var $readButton = $('.post-footer').children('#read-more');
+		var $readButton = $('.post-footer').find('#read-more'),
+			$ajaxLoad = $('.loading-gif');
 
 		$($readButton).on("click", function(event) {
 
 			event.preventDefault();
-
+			$ajaxLoad.show();
 			var id = $(this).data('post'),
 				$ajaxUrl = $(this).attr('data-url');
 
@@ -199,6 +201,7 @@
 				context: this,
 				data: {'action': 'post_modal', id: id },
 				success: function(response) {
+					$ajaxLoad.hide();
 					$('.modal-wrapper').html(response);
 					$('.modal-wrapper').addClass('open');
 					$('.modal-wrapper').fadeIn('slow');
@@ -207,5 +210,24 @@
 				}
 			});
 		});
+	}
+
+	function socialAnimation(){
+		var $socialContainer = $('.social-wrapper'),
+			$socialIcons = $('.social-container');
+
+			$socialContainer
+				.mouseover(function() {
+					$(this).children($socialIcons).find('a').each(function(){
+						$(this).addClass('show');
+						$(this).delay();
+
+					});
+				})
+				.mouseout(function() {
+					$(this).children($socialIcons).find('a').removeClass('show');
+
+				 });
+
 	}
 }) (jQuery);

@@ -14,7 +14,11 @@
             );
 
     $pressRelease= new WP_Query($args); ?>
-
+    <div class="loading-gif">
+        <center>
+            <img class="loading-image" src="/wp-content/themes/kommerce/_build/icons/ajax-loader.gif" alt="loading..">
+        </center>
+    </div>
     <section class="section-press-release">
         <?php the_title('<h1>', '</h1>'); ?>
         <div class="section-wrapper">
@@ -37,18 +41,29 @@
                             <p><span><?php the_author() ?></span> / <?php echo get_the_date(); ?></p>
                         </div>
                         <?php the_title('<h1>', '</h1>'); ?>
-                        <p>
-                            <?php the_excerpt(); ?>
-                        </p>
                         <div class="post-tags">
                             <?php the_tags('<ul><li>', '</li><li>', '</li></ul>'); ?>
                         </div>
+                        <p>
+                            <?php the_excerpt(); ?>
+                        </p>
                         <div class="post-footer">
-                            <a id="read-more" href="#" data-post="<?php echo $post->ID; ?>" data-url="<?php echo admin_url('admin-ajax.php'); ?>">Read More</a>
-                            <div class="article-social">
+                            <div class="read-more-button">
+                                <a id="read-more" href="#" data-post="<?php echo $post->ID; ?>" data-url="<?php echo admin_url('admin-ajax.php'); ?>">Read More</a>
+                            </div>
+                            <span class="divider"></span>
+                            <div class="social-wrapper">
+                                <div class="social-container">
+                                    <?php get_template_part('includes/modules/module', 'socialShare'); ?>
+                                </div>
+                                <div class="social-link">
+                                    <a href="#"><?php get_template_part('_build/icons/icon', 'share'); ?> Share</a>
+                                </div>
+                            </div>
+                            <!-- <div class="article-social">
                                 <?php get_template_part('includes/modules/module', 'postFooter'); ?>
                                 <?php echo getPostLikeLink($post->ID); ?>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </article>

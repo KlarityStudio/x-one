@@ -82,8 +82,8 @@
 
 	function post_meta_callback( $post ){
 
-		wp_nonce_field( basename( __FILE__ ), 'news_nonce');
-		$news_stored_meta = get_post_meta( $post->ID ); ?>
+		wp_nonce_field( basename( __FILE__ ), 'kommerce_post_nonce');
+		$desc_stored_meta = get_post_meta( $post->ID ); ?>
 		<div class="meta_row">
 			<div class="meta_row author_name">
 				<div class="meta_th">
@@ -92,8 +92,8 @@
 		        <div class="meta_editor excerpt">
 				<?php
 
-		    		$content = get_post_meta( $post->ID,'excerpt', true);
-		    		$editor = 'excerpt';
+		    		$content = get_post_meta( $post->ID,'desc', true);
+		    		$editor = 'desc';
 		    		$settings = array(
 		    			'textarea_rows' => 10,
 		    			'media_buttons' => false,
@@ -120,8 +120,8 @@
 		if ( $is_autosave || $is_revision || !$is_valid_nonce ){
 			return;
 		}
-	    if ( isset( $_POST[ 'excerpt' ] ) ) {
-			update_post_meta( $post_id, 'excerpt', sanitize_text_field($_POST[ 'excerpt' ] ) );
+	    if ( isset( $_POST[ 'desc' ] ) ) {
+			update_post_meta( $post_id, 'desc', sanitize_text_field($_POST[ 'desc' ] ) );
 		}
 	}
 

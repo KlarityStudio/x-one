@@ -42,14 +42,17 @@
 				$($paginationPost).on("click", function() {
 
 					var id = $(this).data('post'),
-						$ajaxUrl = $(this).attr('data-url');
+						$ajaxUrl = $(this).attr('data-url'),
+						$ajaxLoad = $('.loading-gif');
 
+					$ajaxLoad.show();
 					$.ajax({
 						type: 'POST',
 						url: $ajaxUrl,
 						context: this,
 						data: {'action': 'post_modal', id: id },
 						success: function(response) {
+							$ajaxLoad.hide();
 							$('.modal-wrapper').html(response);
 							$('.modal-wrapper').addClass('open');
 							$('body').addClass('modal-open');
@@ -98,7 +101,7 @@
 					<div class="article-header">
 			            <div class="title-box">
 			                <h1><?php the_title(); ?></h1>
-			                <?php $supportDesc =  get_post_meta( $id,'excerpt', true);
+			                <?php $supportDesc =  get_post_meta( $id,'desc', true);
 			                    if(!empty( $supportDesc ) ){
 			                    ?>
 			                    <h2><?php echo $supportDesc ?></h2>
@@ -107,7 +110,17 @@
 			            </div>
 						<div class="article-social">
 							<?php echo getPostLikeLink($id); ?>
+							<span class="divider"></span>
+							<div class="social-wrapper">
+								<div class="social-container">
+									<?php get_template_part('includes/modules/module', 'socialShare'); ?>
+								</div>
+								<div class="social-link">
+									<a href="#"><?php get_template_part('_build/icons/icon', 'share'); ?> Share</a>
+								</div>
+							</div>
 						</div>
+
 					</div>
 		        </div>
 
@@ -118,6 +131,23 @@
 					</div>
 		            <?php the_content(); ?>
 		        </div>
+				<div class="comments-section">
+					<ol class="commentlist">
+					<?php
+						//Gather comments for a specific page/post
+						$comments = get_comments(array(
+							'post_id' => $id,
+							'status' => 'approve' //Change this to the type of comments to be displayed
+						));
+
+						//Display the list of comments
+						wp_list_comments(array(
+							'per_page' => 10, //Allow comment pagination
+							'reverse_top_level' => false //Show the oldest comments at the top of the list
+						), $comments);
+					?>
+				</ol>
+				</div>
 		    </div>
 		</div>
 	  <?php endwhile; ?>
@@ -275,6 +305,9 @@
 	    $themename = "kommerce";
 
 	    $vote_count = get_post_meta($post_id, "votes_count", true);
+		if ($vote_count <= 0) {
+			$vote_count = '0';
+		}else
 
 	    $output = '<p class="post-like">';
 	    if(hasAlreadyVoted($post_id))
