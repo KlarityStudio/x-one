@@ -218,16 +218,22 @@
 
 			$socialContainer
 				.mouseover(function() {
-					$(this).children($socialIcons).find('a').each(function(){
-						$(this).addClass('show');
-						$(this).delay();
+					$(this).children($socialIcons).find('a').each(function(i){
+						var $li = $(this);
+						setTimeout(function() {
+						  $li.addClass('show');
+					  }, i*200);
 
 					});
 				})
 				.mouseout(function() {
-					$(this).children($socialIcons).find('a').removeClass('show');
+					$(this).children($socialIcons).find('a').each(function(i){
+						var $li = $(this);
+						setTimeout(function() {
+						  $li.removeClass('show');
+					  }, i*200);
 
-				 });
-
+					});
+				});
 	}
 }) (jQuery);
