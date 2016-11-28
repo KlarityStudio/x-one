@@ -192,3 +192,26 @@
   }
 
 add_filter( 'jetpack_development_mode', '__return_true' );
+
+function categoryDescriptions( $slug ){
+
+    $args = array( 'taxonomy' => 'product_cat',
+                    'slug'      => $slug
+                );
+    $terms = get_terms('product_cat', $args);
+
+    $count = count($terms);
+    echo $terms->description; ?>
+    <div class="cat-description">
+
+    <?php
+    if ($count > 0) {
+        foreach ($terms as $term) { ?>
+
+            <p><?php echo $term->description; ?></p>
+        <?php }
+
+    } ?>
+        </div>
+    <?php
+}

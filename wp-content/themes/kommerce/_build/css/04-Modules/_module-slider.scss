@@ -1,18 +1,25 @@
 #slider{
     height: 100%;
     overflow: hidden;
-    width: 100vw;
-
+    .owl-item{
+        //max-width: 1800px;
+    }
+    .owl-nav{
+        display: none;
+    }
     .item{
         height: inherit;
         width: 100vw;
+        max-width: 1800px;
         margin: 0;
         @include display(flex);
         @include flex-direction(column);
         .feature-image{
             img{
                 width: 100%;
+                max-width: 1800px;
                 margin-top: 0;
+                max-height: 450px;
             }
         }
         .product-spec-wrapper{

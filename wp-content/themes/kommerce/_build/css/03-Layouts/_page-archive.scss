@@ -117,6 +117,7 @@
                 width: 288.5px !important;
                 float: none !important;
                 @include span-columns(3);
+                max-height: 450px;
             }
         }
     }

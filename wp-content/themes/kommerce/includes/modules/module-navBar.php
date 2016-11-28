@@ -10,7 +10,9 @@
 
             $count = WC()->cart->cart_contents_count;
             get_template_part('_build/icons/icon', 'cart');
-            ?><a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php
+            ?>
+            <!-- <?php get_template_part('_build/icons/icon', 'shoppingCircle'); ?> -->
+            <a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php
 
             if ( $count > 0 ) {
               ?>

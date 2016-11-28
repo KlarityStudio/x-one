@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_head(); ?>
+    <script async src="//cdn.trackduck.com/toolbar/prod/td.js" data-trackduck-id="583841d85a3d986a25aed941"></script>
   </head>
   <body <?php body_class(); ?>>
     <header>

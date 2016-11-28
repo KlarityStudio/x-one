@@ -1,5 +1,6 @@
 <article class="category-section category-screen-protectors">
     <h1>Screen Protectors</h1>
+    <?php echo categoryDescriptions( 'screen-protectors'); ?>
     <section class="product-list">
             <?php echo do_shortcode('[product_category category="screen-protectors"]'); ?>
     </section>
@@ -14,6 +15,7 @@
     <div class="category-header-image">
     </div>
     <h1>Mobile Cases</h1>
+    <?php echo categoryDescriptions( 'cases'); ?>
     <section class="product-list">
         <?php echo do_shortcode('[product_category category="cases"]'); ?>
     </section>
@@ -23,6 +25,7 @@
     <div class="category-header-image">
     </div>
     <h1>Mobile Cables</h1>
+    <?php echo categoryDescriptions( 'cables'); ?>
     <section class="product-list">
         <?php echo do_shortcode('[product_category category="cables"]'); ?>
     </section>

@@ -1,13 +1,15 @@
 .category-section{
     text-align: center;
     margin: 70px auto;
-
+    max-width: 1800px;
     section{
         max-width: 1400px;
         margin: auto;
     }
     .category-header-image{
         width: 100vw;
+        max-width: 1800px;
+        margin: auto;
         height: 450px;
         background:{
             image: url('/wp-content/themes/kommerce/_build/images/cables-image.png ');
@@ -84,7 +86,7 @@
                 &:hover{
                     box-shadow: 0 20px 100px 0 rgba(000, 000, 000, 0.25);
                     @include transition( all, 0.3s, ease-in-out);
-                    
+
                     h3:after{
                         opacity: 1;
                         @include transition( all, 0.3s, ease-in-out);
@@ -103,6 +105,16 @@
             }
         }
     }
+    @media screen and (max-width: 930px){
+        .product-list{
+            .products{
+                .product{
+                    margin: 0;
+                    width: 25%;
+                }
+            }
+        }
+    }
 }
 .video-wrapper{
     @include outer-container(1400px);
@@ -112,5 +124,18 @@
             @include span-columns(2 of 4);
         }
     }
+    @media screen and (max-width:1400px){
+        &.video-screen-protectors{
+            iframe{
+                padding: 20px;
+            }
+        }
+    }
+    @media screen and (max-width:1400px){
+        &.video-screen-protectors{
+            iframe{
+                @include span-columns(1 of 1);
+            }
+        }
+    }
 }
-
