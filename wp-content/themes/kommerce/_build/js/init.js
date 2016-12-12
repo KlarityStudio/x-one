@@ -74,6 +74,7 @@
 	function stickyNav(){
 
 		$(window).scroll(function() {
+			window.console.alert('scroll');
 			if ($(this).scrollTop() > 1){
 			    $('nav').addClass("sticky");
 			  }
@@ -343,11 +344,11 @@
 
 	function accountDisplay(){
 		var $bodyClass = $('body').hasClass('logged-in'),
-			$accountNav = $('#mega-menu-primary').children('li').last();
+			$accountNav = $('#mega-menu-primary').children('li');
 		if ( $bodyClass ){
-			$accountNav.find('a').text('My Account');
+			$accountNav.find('a[href*="my-account"]').text('My Account');
 		}else{
-			$accountNav.find('a').text('Login');
+			$accountNav.find('a[href*="my-account"]').text('Login');
 		}
 	}
 }) (jQuery);
