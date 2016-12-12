@@ -54,4 +54,33 @@ footer{
         }
     }
   }
+  @media screen and (max-width:1031px){
+      #menu-footer{
+          li{
+              a{
+                  font-size: 13px;
+              }
+          }
+      }
+  }
+  @media screen and (max-width:874px){
+      display: block;
+      height: 100%;
+      .copyright{
+          @include span-columns(4 of 4);
+      }
+      nav{
+          @include span-columns(4 of 4);
+      }
+  }
+  @media screen and (max-width:450px){
+      height: 100%;
+      #menu-footer{
+          li{
+              a{
+                  font-size: 9px;
+              }
+          }
+      }
+  }
 }

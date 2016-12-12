@@ -1,9 +1,16 @@
 .page-checkout {
     section{
-        margin: 60px 0 100px 0;
+        margin: 60px auto 100px auto;
     }
     h1{
         text-align: center;
+    }
+    .create-account{
+        @include display(flex);
+        @include align-items(center);
+        label{
+            background-color: transparent;
+        }
     }
     .woocommerce{
         max-width: 1230px;
@@ -154,6 +161,87 @@
                     }
                 }
             }
+        }
+    }
+    @media screen and (max-width: 1140px){
+        .woocommerce{
+            width: 90vw;
+            #order_review{
+                table{
+                    display: block;
+                    tfoot{
+                        width: 90vw;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 768px){
+        .woocommerce{
+            width: 90vw;
+            #customer_details{
+                .col-1{
+                    .woocommerce-billing-fields{
+                        display: inline-block;
+                        width: 100%;
+                        .form-row, #billing_state_field, #billing_postcode_field{
+                            float: left !important;
+                            width: 100% !important;
+                        }
+                    }
+
+                }
+                .col-2{
+                    h3{
+                        &#ship-to-different-address{
+                            float: none;
+                        }
+                    }
+                    .shipping_address{
+                        display: inline-block;
+                        width: 100%;
+                        .form-row, #billing_state_field, #billing_postcode_field{
+                            float: left !important;
+                            width: 100% !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 463px){
+        .woocommerce{
+
+            #order_review{
+                table{
+                    tfoot{
+                        width: 100%;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 359px){
+        .woocommerce{
+            #order_review{
+                table{
+                    thead{
+                        display: none;
+                    }
+                    tbody{
+                        .cart_item{
+                            display: block;
+                            height: 100%;
+                            width: 80vw;
+                            td{
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+
         }
     }
 }

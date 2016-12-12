@@ -30,6 +30,40 @@
                 $data = 1;
                 while( $pressRelease->have_posts() ) : $pressRelease->the_post(); ?>
                 <article data-value="<?php echo $data; ?>" data-post="<?php echo $post->ID; ?>">
+                    <script type="application/ld+json">
+    					{
+    					  "@context": "http://schema.org",
+    					  "@type": "NewsArticle",
+    					  "mainEntityOfPage": {
+    					    "@type": "WebPage",
+    					    "@id": "<?php echo the_permalink(); ?>"
+    					  },
+    					  "headline": "<?php the_title(); ?>",
+    					  "image": {
+    					    "@type": "ImageObject",
+    					    "url": "<?php the_post_thumbnail_url(); ?>",
+    					    "height": 800,
+    					    "width": 800
+    					  },
+    					  "datePublished": "<?php echo the_date(); ?>",
+    					  "dateModified": "<?php echo the_modified_date(); ?>",
+    					  "author": {
+    					    "@type": "Person",
+    					    "name": "<?php the_author(); ?>"
+    					  },
+    					   "publisher": {
+    					    "@type": "Organization",
+    					    "name": "X-One",
+    					    "logo": {
+    					      "@type": "ImageObject",
+    						  "url": "<?php echo get_site_url() . '/wp-content/uploads/2016/10/cropped-logo.png'?>",
+    					      "width": 600,
+    					      "height": 60
+    					    }
+    					  },
+    					  "description": "<?php echo the_excerpt(); ?>"
+    					}
+    					</script>
                     <div class="featured-image">
                         <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
                         <div style="background-image:url(<?php echo $thumb[0]; ?>)">
@@ -60,10 +94,6 @@
                                     <a href="#"><?php get_template_part('_build/icons/icon', 'share'); ?> Share</a>
                                 </div>
                             </div>
-                            <!-- <div class="article-social">
-                                <?php get_template_part('includes/modules/module', 'postFooter'); ?>
-                                <?php echo getPostLikeLink($post->ID); ?>
-                            </div> -->
                         </div>
                     </div>
                 </article>

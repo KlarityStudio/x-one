@@ -39,16 +39,16 @@ get_header( 'shop' ); ?>
 		<?php endif; ?>
 
 		<?php if ( have_posts() ) : ?>
-			<div class="search-wrapper">
+			<!-- <div class="search-wrapper">
 				<form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 					<input type="text" name="s" id="s" placeholder="Search Products" onfocus="if (this.value == 'Search') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search';}" />
 					<input type="submit" name="submit" id="searchsubmit" value="<?php esc_attr_e( 'Search' ); ?>" />
 				</form>
-			</div>
+			</div> -->
 
 			<div id="archive-content-wrapper">
 
-				<?php do_action( 'woocommerce_sidebar' ); ?>
+				<!-- <?php do_action( 'woocommerce_sidebar' ); ?> -->
 				<?php woocommerce_product_loop_start(); ?>
 
 				<?php woocommerce_product_subcategories(); ?>

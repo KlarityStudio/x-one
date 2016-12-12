@@ -1,4 +1,4 @@
-.archive{
+.archive, .search{
     h1{
         text-align: center;
         margin-top: 70px;
@@ -94,7 +94,7 @@
 
                     &:hover{
                         color: $baseBlue;
-                        font-weight: 600;
+                        //font-weight: 600;
                         @include transition(all, 0.3s, ease-in-out);
                     }
                 }
@@ -115,74 +115,91 @@
             @include flex-wrap(wrap);
             .product{
                 width: 288.5px !important;
+                margin: 0 !important;
                 float: none !important;
                 @include span-columns(3);
                 max-height: 450px;
+                text-align: center;
+                &.product-category{
+                    max-height: 340px;
+                    mark{
+                        background-color: transparent;
+                    }
+                }
             }
         }
     }
 }
 
-    .products{
-        .product{
-            padding: 20px !important;
+.products{
+    .product{
+        padding: 20px !important;
+        overflow: hidden;
+        @include transition( all, 0.3s, ease-in-out);
+        h3{
+            text-align: left;
+            color: $baseGrey;
+            font-size: 14px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .price, .woocommerce-Price-amount{
+            margin-top: 30px;
+            font-size: 18px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .ajax_add_to_cart, .add_to_cart_button{
+            background-color: $baseBlue;
+            border-radius: 25px;
+            color: #fff;
+            position: initial;
+            margin-top: 20px;
+            opacity: 0;
+            font-size: 14px;
+            font-weight: medium;
+            text-transform: uppercase;
+            margin: auto;
+            margin-top: 0 !important;
+            @include transform( translateY(50px) );
+            @include transition(all, 0.3s, ease-in-out);
+        }
+        &:hover{
+            box-shadow: 0 20px 100px 0 rgba(000, 000, 000, 0.25);
             @include transition( all, 0.3s, ease-in-out);
-            h3{
-                text-align: left;
-                color: $baseGrey;
-                font-size: 14px;
-                margin-bottom: 20px;
-                position: relative;
-                &:after{
-                    content:"View";
-                    font-size: 14px;
-                    font-weight: 400;
-                    color: $baseBlue;
-                    position: absolute;
-                    top: 50px;
-                    left: 0px;
-                    opacity: 0;
-                    @include transition( all, 0.3s, ease-in-out);
 
-                }
-            }
-            .price, .woocommerce-Price-amount{
-                margin-top: 30px;
-                font-size: 18px;
-                text-align: left;
-                font-weight: 600;
+            h3:after{
+                opacity: 1;
+                @include transition( all, 0.3s, ease-in-out);
             }
             .ajax_add_to_cart, .add_to_cart_button{
-                background-color: $baseBlue;
-                border-radius: 25px;
-                color: #fff;
-                position: relative;
-                right: -59px;
-                opacity: 0;
-                font-size: 14px;
-                font-weight: medium;
-                text-transform: uppercase;
-                @include transform( translateY(50px) );
-                @include transition(all, 0.3s, ease-in-out);
-            }
-            &:hover{
-                box-shadow: 0 20px 100px 0 rgba(000, 000, 000, 0.25);
-                @include transition( all, 0.3s, ease-in-out);
-
-                h3:after{
-                    opacity: 1;
-                    @include transition( all, 0.3s, ease-in-out);
-                }
-                .ajax_add_to_cart, .add_to_cart_button{
-                    opacity: 1;
-                    @include transform( translateY( 0 ) );
-                    @include transition( all, 0.3s, ease-in-out );
-                }
-            }
-
-            img{
-                width: 80%;
-                margin: 0 auto 16px auto;
+                opacity: 1;
+                @include transform( translateY( 0 ) );
+                @include transition( all, 0.3s, ease-in-out );
             }
         }
+
+        img{
+            width: 80%;
+            margin: 0 auto 16px auto;
+        }
     }
+}
+
+.archive{
+    @media screen and (max-width: 570px){
+         #archive-content-wrapper{
+             .sidebar{
+                 display: none;
+             }
+             .products{
+                 .product{
+                     margin: auto;
+                     &:last-of-type{
+                         margin: auto;
+                     }
+                 }
+             }
+         }
+    }
+}

@@ -1,0 +1,25 @@
+.search{
+    .products{
+        .product{
+            img{
+                width: auto;
+            }
+            .woocommerce-LoopProduct-link{
+                display: block;
+
+                h3{
+                    text-align:center;
+                }
+                .price{
+                    margin-bottom: 10px;
+                    display:inline-block;
+                    margin-top: 0;
+                    color: $baseGreen;
+                }
+            }
+            .add_to_cart_button{
+                padding: 5px 10px;
+            }
+        }
+    }
+}

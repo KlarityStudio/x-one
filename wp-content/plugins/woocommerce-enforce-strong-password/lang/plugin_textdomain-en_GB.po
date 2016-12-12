@@ -1,0 +1,287 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Woocommerce Enforce Strong Password V1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-22 13:20+1000\n"
+"PO-Revision-Date: 2014-12-01 13:05+1000\n"
+"Last-Translator: Bernard Peh <bpeh@sitecritic.net>\n"
+"Language-Team:  <bpeh@sitecritic.net>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: /home/bpeh/projects/QuickCommerce/wp-content/plugins/"
+"woocommerce-enforce-strong-password/trunk/\n"
+"X-Generator: Poedit 1.6.10\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: uninstall.php:9
+msgid "You must be logged in to run this script."
+msgstr ""
+
+#: uninstall.php:12
+msgid "You do not have permission to run this script."
+msgstr ""
+
+#: Woocommerce-Enforce-Strong-Password.php:15
+msgid ""
+"This plugin is dependent on woocommerce. Please activate woocommerce first. "
+"Ignore this message if you are uninstalling this plugin"
+msgstr ""
+
+#: classes/Class-Woocommerce-Enforce-Strong-Password-Settings.php:37
+msgid "Password Options"
+msgstr ""
+
+#: classes/Class-Woocommerce-Enforce-Strong-Password-Settings.php:39
+msgid "Use the options below to control user's password format."
+msgstr ""
+
+#: classes/Class-Woocommerce-Enforce-Strong-Password-Settings.php:45
+msgid "The min. number of characters allowable for user's password."
+msgstr ""
+
+#: classes/Class-Woocommerce-Enforce-Strong-Password-Settings.php:53
+msgid "The max. number of characters allowable for user's password."
+msgstr ""
+
+#: classes/Class-Woocommerce-Enforce-Strong-Password-Settings.php:62
+msgid "Eg, 12345"
+msgstr ""
+
+#: classes/Class-Woocommerce-Enforce-Strong-Password-Settings.php:70
+msgid "Eg, qwerty"
+msgstr ""
+
+#: classes/Class-Woocommerce-Enforce-Strong-Password-Settings.php:78
+msgid "Eg, QWERTY"
+msgstr ""
+
+#: classes/Class-Woocommerce-Enforce-Strong-Password-Settings.php:86
+msgid "Eg, @#$%^&"
+msgstr ""
+
+#: classes/Class-Woocommerce-Enforce-Strong-Password-Settings.php:94
+msgid ""
+"This can help to keep your database clean but you lose settings when you "
+"uninstall this plugin."
+msgstr ""
+
+#: classes/Class-Woocommerce-Enforce-Strong-Password-Settings.php:42
+msgid "Minimum length"
+msgstr ""
+
+#: classes/Class-Woocommerce-Enforce-Strong-Password-Settings.php:50
+msgid "Maximum length"
+msgstr ""
+
+#: classes/Class-Woocommerce-Enforce-Strong-Password-Settings.php:58
+msgid "Characters Check"
+msgstr ""
+
+#: classes/Class-Woocommerce-Enforce-Strong-Password-Settings.php:59
+msgid "Password must consist of at least 1 number."
+msgstr ""
+
+#: classes/Class-Woocommerce-Enforce-Strong-Password-Settings.php:67
+msgid "Password must consist of at least 1 Lowercase Alphabet."
+msgstr ""
+
+#: classes/Class-Woocommerce-Enforce-Strong-Password-Settings.php:75
+msgid "Password must consist of at least 1 Uppercase Alphabet."
+msgstr ""
+
+#: classes/Class-Woocommerce-Enforce-Strong-Password-Settings.php:83
+msgid "Password must consist of at least 1 Special Character."
+msgstr ""
+
+#: classes/Class-Woocommerce-Enforce-Strong-Password-Settings.php:91
+msgid "Erase settings upon uninstalling this plugin"
+msgstr ""
+
+#: classes/Class-Woocommerce-Enforce-Strong-Password-Settings.php:167
+msgid "Sorry, your password must contain at least one NUMBER."
+msgstr ""
+
+#: classes/Class-Woocommerce-Enforce-Strong-Password-Settings.php:170
+msgid "Sorry, your password must contain at least one LOWERCASE letter."
+msgstr ""
+
+#: classes/Class-Woocommerce-Enforce-Strong-Password-Settings.php:173
+msgid "Sorry, your password must contain at least one UPPERCASE letter."
+msgstr ""
+
+#: classes/Class-Woocommerce-Enforce-Strong-Password-Settings.php:176
+msgid ""
+"Sorry, your password must contain at least one special character. For "
+"example, !@#$..."
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:51
+#, php-format
+msgid "Add New %s"
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:51
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:52
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:53
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:55
+msgid "Post"
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:52
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:53
+#, php-format
+msgid "New %s"
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:54
+#, php-format
+msgid "All %s"
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:54
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:56
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:57
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:58
+msgid "Posts"
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:55
+#, php-format
+msgid "View %s"
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:56
+msgid "Search %a"
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:57
+#, php-format
+msgid "No %s Found"
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:58
+#, php-format
+msgid "No %s Found In Trash"
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:60
+msgid "My Custom Posts"
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:87
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:97
+msgid "Terms"
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:88
+msgid "Term"
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:89
+msgid "Search Terms"
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:90
+msgid "All Terms"
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:91
+msgid "Parent Term"
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:92
+msgid "Parent Term:"
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:93
+msgid "Edit Term"
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:94
+msgid "Update Term"
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:95
+msgid "Add New Term"
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:96
+msgid "New Term Name"
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:112
+msgid "Custom Field"
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:156
+#, php-format
+msgid "Post updated. %sView post%s."
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:157
+msgid "Custom field updated."
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:158
+msgid "Custom field deleted."
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:159
+msgid "Post updated."
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:161
+#, php-format
+msgid "Post restored to revision from %s."
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:162
+#, php-format
+msgid "Post published. %sView post%s."
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:163
+msgid "Post saved."
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:164
+#, php-format
+msgid "Post submitted. %sPreview post%s."
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:165
+#, php-format
+msgid "Post scheduled for: %1$s. %2$sPreview post%3$s."
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:165
+msgid "M j, Y @ G:i"
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:166
+#, php-format
+msgid "Post draft updated. %sPreview post%s."
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:173
+msgid "Post Details"
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:253
+msgid "Enter the post title here"
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:262
+msgid "Custom field:"
+msgstr ""
+
+#: classes/post-types/Class-Woocommerce-Enforce-Strong-Password-Post-Type.php:263
+msgid "Description of this custom field."
+msgstr ""

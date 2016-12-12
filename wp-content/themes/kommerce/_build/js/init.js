@@ -8,20 +8,39 @@
 		phoneMakeText();
 		dynamicStock();
 		materialMenu();
+		colourMenu();
 		faq();
 		sideBar();
 		modalAjax();
 		socialAnimation();
 		revealPosts();
 		tagFilter();
+		navToggle();
+		breadcrumbFix();
+		accountDisplay();
+
   });
+
+	function navToggle(){
+	  $('#nav-toggle').on('click', function(){
+		  $('#nav-toggle').toggleClass('active');
+
+		  $('.menu-container').toggleClass('active');
+		//   if ($('.menu-container').hasClass('active')) {
+		// 	  $('.menu-container').show(200);
+		//   }else {
+		// 	  $('.menu-container').hide(200);
+		//   }
+	  });
+	}
 
 	function productFilter(){
 
 		if ( $('body').hasClass('single-product') ) {
 			var $phoneMakes = $('.swatch-wrapper'),
 					$phones = $('#pa_phones'),
-					$material = $('#picker_pa_material');
+					$material = $('#picker_pa_material'),
+					$colour = $('#picker_pa_colour');
 
 			if (($phoneMakes).hasClass('selected')) {
 					$phones.css({
@@ -40,6 +59,10 @@
 			$phones.on('click', function(){
 				$(this).addClass('selected');
 				$material.css({
+					'opacity':'1',
+					'pointer-events': 'visible'
+				});
+				$colour.$material.css({
 					'opacity':'1',
 					'pointer-events': 'visible'
 				});
@@ -156,6 +179,23 @@
 		});
 	}
 
+	function colourMenu(){
+		var $materialInputBox = $('#picker_pa_colour').parent('.value');
+
+		var $materialColor = $('#picker_pa_colour').find(".select-option");
+
+		$materialColor.each(function(){
+			var $dataAttribute = $(this).attr("data-value");
+
+			$(this).append("<p>"+$dataAttribute+"</p>");
+		});
+
+		$($materialInputBox).on('click',function(){
+			$('#picker_pa_colour').toggleClass('open');
+			$(this).parent('tr').toggleClass('open');
+		});
+	}
+
 	function faq(){
 		var $sidebarList = $('.faq-sidebar').find('ul'),
 			$faqArticle = $('.article-container').children('article');
@@ -205,6 +245,7 @@
 				success: function(response) {
 					$ajaxLoad.hide();
 					$('.modal-wrapper').html(response);
+					window.console.log('open');
 					$('.modal-wrapper').addClass('open');
 					$('.modal-wrapper').fadeIn('slow');
 					$('body').addClass('modal-open');
@@ -229,7 +270,6 @@
 
 			// After user click on tag, fade out list of posts
 			$('.reveal').fadeOut();
-
 
 			$.ajax({
 				type: 'POST',
@@ -289,6 +329,25 @@
 				$i++;
 
 			}, 500 );
+		}
+	}
+	function breadcrumbFix(){
+		if ( $('body').hasClass('woocommerce-account')){
+			var $breadCrumb = $('.woocommerce-breadcrumb');
+
+			if ( $breadCrumb.children().length >= 2 ){
+				$breadCrumb.children('a').last().text('My Account');
+			}
+		}
+	}
+
+	function accountDisplay(){
+		var $bodyClass = $('body').hasClass('logged-in'),
+			$accountNav = $('#mega-menu-primary').children('li').last();
+		if ( $bodyClass ){
+			$accountNav.find('a').text('My Account');
+		}else{
+			$accountNav.find('a').text('Login');
 		}
 	}
 }) (jQuery);

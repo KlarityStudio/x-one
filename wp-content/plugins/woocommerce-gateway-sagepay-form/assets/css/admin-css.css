@@ -1,0 +1,24 @@
+.widefat .column-sage_security span.sagepay-ok {
+	background: #73a724;
+}
+
+.widefat .column-sage_security span.sagepay-fail {
+	background: #a00;
+}
+
+.widefat .column-sage_security span.sagepay-check {
+	background: #ffba00;
+}
+
+.widefat .column-sage_security span {
+	color: #FFFFFF;
+
+	width: 30px; 
+	height: 30px; 
+	-moz-border-radius: 15px; 
+	-webkit-border-radius: 15px; 
+	border-radius: 15px;
+
+	margin: 0 2px 0 0;
+	padding: 0 4px;
+}

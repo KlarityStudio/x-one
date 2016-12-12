@@ -8,3 +8,52 @@ header{
     }
   }
 }
+
+// Header Images
+.page, .search{
+    .header-image{
+        background:{
+            image: url('/wp-content/themes/kommerce/_build/images/snakeskin-cover.png');
+            position: center;
+            size: cover;
+        }
+    }
+}
+//.usb-cables, .term-usb-cables{
+//    .header-image{
+//        background:{
+//            image: url('/wp-content/themes/kommerce/_build/images/apple-cable.png');
+//            position: center;
+//            size: cover;
+//        }
+//    }
+//}
+
+//.phone-covers, .term-phone-covers, .term-leather, .term-phone-protectors, .term-pu-leather {
+//    .header-image{
+//        background:{
+//            image: url('/wp-content/themes/kommerce/_build/images/snakeskin-cover.png');
+//            position: center;
+//            size: cover;
+//        }
+//    }
+//}
+//
+//.screen-protectors, .term-screen-protectors {
+//    .header-image{
+//        background:{
+//            image: url('/wp-content/themes/kommerce/_build/images/armor-x-one.png');
+//            position: center;
+//            size: cover;
+//        }
+//    }
+//}
+
+.error404{
+    .header-image{
+        display: none;
+    }
+    footer{
+        margin-top: 50px;
+    }
+}

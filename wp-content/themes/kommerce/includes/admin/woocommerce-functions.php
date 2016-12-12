@@ -105,7 +105,7 @@
     add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
 
 
-    
+
     function hjs_wc_checkout_fields( $fields ) {
 
         $fields['billing']['billing_postcode']['label'] = 'Postalcode';
@@ -114,3 +114,66 @@
         return $fields;
     }
     add_filter( 'woocommerce_checkout_fields' , 'hjs_wc_checkout_fields' );
+
+    function productSlider($cat){
+        global $post;
+
+            $count = -1;
+            $args = array(
+                'post_type' 				=> 'product',
+                'order_by'					=> 'menu_order',
+                'order'					    => 'DEC',
+                'update_post_term_cache' 	=> false,
+                'posts_per_page' 			=> $count,
+                'pagination'				=> false,
+                'tax_query'                 => array(
+                    array(
+                        'taxonomy'          => 'product_cat',
+                        'field'             => 'slug',
+                        'terms'              => $cat,
+                    ),
+                ),
+            );
+
+        $prod= new WP_Query($args);
+     ?>
+         <?php
+         if( $prod->have_posts() ) :
+
+         ?>
+            <ul id="owl-product-carousel-<?php echo $cat ?>" class="products owl-product-carousel">
+
+             <?php while( $prod->have_posts() ) : $prod->the_post(); ?>
+                 <li class="product item" >
+                     <a class="product-wrapper" href="<?php the_permalink(); ?>">
+                         <?php
+                     	do_action( 'woocommerce_before_shop_loop_item_title' );
+                        do_action( 'woocommerce_shop_loop_item_title' );
+
+                     	/**
+                     	 * woocommerce_after_shop_loop_item_title hook.
+                     	 *
+                     	 * @hooked woocommerce_template_loop_rating - 5
+                     	 * @hooked woocommerce_template_loop_price - 10
+                     	 */
+                     	do_action( 'woocommerce_after_shop_loop_item_title' );
+
+                     	/**
+                     	 * woocommerce_after_shop_loop_item hook.
+                     	 *
+                     	 * @hooked woocommerce_template_loop_product_link_close - 5
+                     	 * @hooked woocommerce_template_loop_add_to_cart - 10
+                     	 */
+                     	do_action( 'woocommerce_after_shop_loop_item' );
+
+                          ?>
+                     </a>
+                 </li>
+
+            <?php endwhile; ?>
+            </ul>
+         <?php endif;
+
+         wp_reset_query();
+
+    }

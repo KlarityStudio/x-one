@@ -99,8 +99,8 @@
 					//Ajax call
 					$.ajax({
 						type: "post",
-						url: <?php echo admin_url('admin-ajax.php'); ?>,
-						data: "action=post-like&post_like=&post_id="+post_id,
+						url: "http://xone.staging/wp-admin/admin-ajax.php",
+						data: "action=post-like&post_like=&post_id="+$post_id,
 						success: function(count){
 							// If vote successful
 							if(count != "already")
@@ -115,6 +115,40 @@
 			</script>
 			<div class="icon icon-close"><?php get_template_part( '_build/icons/icon', 'close'); ?></div>
 		    <div class="modal-content">
+				<script type="application/ld+json">
+					{
+					  "@context": "http://schema.org",
+					  "@type": "NewsArticle",
+					  "mainEntityOfPage": {
+					    "@type": "WebPage",
+					    "@id": "<?php echo the_permalink(); ?>"
+					  },
+					  "headline": "<?php the_title(); ?>",
+					  "image": {
+					    "@type": "ImageObject",
+					    "url": "<?php the_post_thumbnail_url(); ?>",
+					    "height": 800,
+					    "width": 800
+					  },
+					  "datePublished": "<?php echo the_date(); ?>",
+					  "dateModified": "<?php echo the_modified_date(); ?>",
+					  "author": {
+					    "@type": "Person",
+					    "name": "<?php echo the_author(); ?>"
+					  },
+					   "publisher": {
+					    "@type": "Organization",
+					    "name": "X-One",
+					    "logo": {
+					      "@type": "ImageObject",
+						  "url": "<?php echo get_site_url() . '/wp-content/uploads/2016/10/cropped-logo.png'?>",
+					      "width": 600,
+					      "height": 60
+					    }
+					  },
+					  "description": "<?php echo the_excerpt(); ?>"
+					}
+					</script>
 				<div class="pagination-icon-lockup" id="pagination">
 					<?php if($previous_post) : ?>
 						<div class="icon icon-left" data-url="<?php echo admin_url('admin-ajax.php'); ?>" data-post="<?php echo $previous_post->ID ?>"><?php get_template_part( '_build/icons/icon', 'right'); ?></div>
@@ -325,7 +359,7 @@
 	    $nonce = $_POST['nonce'];
 
 	    if ( ! wp_verify_nonce( $nonce, 'ajax-nonce' ) )
-	        die ( 'Busted!');
+	        die ( 'You have already liked this post');
 
 	    if(isset($_POST['post_like'])){
 	        // Retrieve user IP address

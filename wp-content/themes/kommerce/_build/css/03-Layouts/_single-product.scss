@@ -7,28 +7,36 @@
             @include display(flex);
 
         }
-
         .images{
-            @include display(flex);
-            @include flex-direction(row-reverse);
-            padding: 40px;
-
+            padding: 40px 40px 0 40px;
+            >a{
+                margin: 0 auto;
+            }
             .thumbnails{
                 @include display(flex);
-                @include flex-direction(column);
+                @include flex-direction(row);
+                @include justify-content(space-around);
                 width: inherit;
-
+                margin: auto;
                 a{
                     padding: 10px;
                     width: 100px !important;
                     height: 100px;
-                    border: 1.5px solid #656565;
+                    //border: 1.5px solid #656565;
+                    margin-bottom: 0;
+                    margin-right: 0;
                 }
+            }
+            img{
+                max-height: 526px ;
+                width: auto !important;
+                margin: auto;
             }
             .woocommerce-main-image{
 
                 img{
-                    max-width: 400px;
+                    max-height: 526px !important;
+                    width: auto !important;
                 }
             }
         }
@@ -93,6 +101,7 @@
                                 height: 98px;
                                 max-width: calc(100% / 3);
                                 border-bottom: none;
+                                //display: none;
                                 .value{
                                     @include align-items(baseline);
                                     padding: 0;
@@ -100,6 +109,61 @@
                             }
                             &:last-of-type{
                                 border-right: 0px;
+                            }
+                            &:nth-of-type(2){
+                                .value{
+                                    select{
+                                        border: none;
+                                        background-color: transparent;
+                                        height: 50px;
+                                    }
+                                }
+                            }
+                            &:nth-of-type(3){
+                                .swatch-control{
+                                    @include display(flex);
+                                    @include flex-direction(column);
+                                    @include order(1);
+                                    z-index: 100;
+                                    border: none;
+                                    width: 100%;
+                                    opacity: 1;
+
+                                    .swatch-wrapper{
+                                        border: 0;
+                                        @include justify-content(space-around);
+                                        @include align-items(center);
+                                        display: none;
+                                        &.selected{
+                                            @include display(flex);
+                                            margin-bottom: 0;
+                                        }
+                                        a{
+                                            border-radius: 50%;
+                                            border: 1px solid #656565;
+                                            width: 25px !important;
+                                            height: 25px !important;
+                                        }
+                                        p{
+                                            line-height: 40px;
+                                            margin: 0;
+                                            cursor: pointer;
+                                        }
+                                    }
+                                    &.open{
+                                        z-index: 100;
+                                        background-color: #fff;
+                                        .swatch-wrapper{
+                                            @include display(flex);
+                                            @include justify-content( flex-start );
+                                            a{
+                                                @include display(flex);
+                                                @include align-items(center);
+                                                margin: 0 20px;
+                                            }
+                                        }
+                                    }
+                                }
                             }
                             .value{
                                 @include display(flex);
@@ -167,11 +231,7 @@
                                 .attribute_pa_phone-makes_picker_label{
                                     display: none;
                                 }
-                                #pa_phones{
-                                    border: none;
-                                    background-color: transparent;
-                                    height: 50px;
-                                }
+
                             }
                             .label{
                                 display: none;
@@ -181,48 +241,6 @@
                             }
                             .reset_variations{
                                 @include order(3);
-                            }
-                            #picker_pa_material{
-                                @include display(flex);
-                                @include flex-direction(column);
-                                @include order(1);
-                                z-index: 100;
-                                border: none;
-                                width: 100%;
-                                opacity: 1;
-
-                                .swatch-wrapper{
-                                    border: 0;
-                                    @include justify-content(space-around);
-                                    @include align-items(center);
-                                    display: none;
-                                    &.selected{
-                                        @include display(flex);
-                                        margin-bottom: 0;
-                                    }
-                                    a{
-                                        border-radius: 50%;
-                                        border: 1px solid #656565;
-                                        width: 25px !important;
-                                        height: 25px !important;
-                                    }
-                                    p{
-                                        line-height: 40px;
-                                        margin: 0;
-                                        cursor: pointer;
-                                    }
-                                }
-                                &.open{
-                                    z-index: 100;
-                                    background-color: #fff;
-                                    .swatch-wrapper{
-                                        @include display(flex);
-                                        a{
-                                            @include display(flex);
-                                            @include align-items(center);
-                                        }
-                                    }
-                                }
                             }
                         }
                     }
@@ -324,6 +342,171 @@
                 }
             }
 
+        }
+    }
+    @media screen and (max-width: 1440px){
+        .type-product{
+            .entry-summary{
+                .cart{
+                    .variations{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 987px){
+        .type-product{
+            .entry-summary{
+                .cart{
+                    .variations{
+                        tbody{
+                            tr{
+                                .value{
+                                    #picker_pa_phone-makes{
+                                        .select-option{
+                                            a {
+                                                img{
+                                                    display: none;
+                                                }
+                                                p{
+                                                    font-size: 19px
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 987px){
+        .type-product{
+            .images{
+                @include flex-direction(column);
+
+                .thumbnails{
+                    @include flex-direction(row);
+                    margin: 0 auto;
+                    width: 100%;
+                    @include flex-wrap(wrap);
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 878px){
+        .type-product{
+            .single-product-wrapper{
+                @include display(block);
+            }
+            .entry-summary{
+                width: 100%;
+            }
+        }
+    }
+    @media screen and (max-width: 763px){
+        .type-product{
+            .images{
+                .woocommerce-main-image{
+                    margin: auto;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 600px){
+        .type-product{
+            .entry-summary{
+                .cart{
+                    .variations{
+                        tbody{
+                            tr{
+                                #picker_pa_material{
+                                    .swatch-wrapper{
+                                        a{
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 443px){
+        .type-product{
+            .entry-summary{
+                .woocommerce-tabs{
+                    .wc-tabs{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 493px){
+        .type-product{
+            .entry-summary{
+                border-left: 0;
+                .cart{
+                    position: initial;
+                    height: 100%;
+                    .variations{
+                        tbody{
+                            display: block;
+                            tr{
+                                display: block;
+                                border-bottom: none;
+                                &:first-of-type{
+                                    display: block;
+                                    max-width: 100%;
+                                    border-bottom: 1px solid #656565;
+                                }
+                                .value{
+                                    #picker_pa_phone-makes{
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .single_variation_wrap{
+                    position: initial;
+                    left: 0;
+                    width: 100%;
+                    .woocommerce-variation-add-to-cart{
+                        display: block;
+                        height: 100px;
+                        button{
+                            width: 100%;
+                            height: 50%;
+                            background-color: $baseBlue;
+                        }
+                        .woocommerce-variation-availability{
+                            position: initial;
+                            text-align:center;
+                        }
+                        .woocommerce-variation-price{
+                            text-align: center;
+                            span{
+                                padding-left: 0;
+                            }
+                        }
+                        .quantity{
+                            width: 100%;
+
+                            .minus, .plus{
+                                width: 33%;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

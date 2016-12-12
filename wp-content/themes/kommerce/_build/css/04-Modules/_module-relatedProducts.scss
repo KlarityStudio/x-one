@@ -1,24 +1,34 @@
 .single-product #content{
 
     .related-products{
+        h1{
+            font-size: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 50px
+        }
         .products{
-            margin-top: 130px;
-            @include outer-container(1230px);
+            margin-top: 100px;
+            @include outer-container(1440px);
+            @include display(flex);
+            @include justify-content(space-between);
+            @include flex-wrap(wrap);
             li{
-                @include span-columns(3);
                 padding: 20px;
                 &.product{
                     h3{
-                        text-align: left;
+                        text-align: center;
                         color: $baseGrey;
                         font-size: 18px;
                         margin-bottom: 0px;
                         position: relative;
+                        text-align: center;
                     }
                     .price, .woocommerce-Price-amount{
-                        margin-top: 15px;
+                        margin-top: 25px;
                         font-size: 14px;
-                        text-align: left;
+                        text-align: center;
                         font-weight: 600;
                     }
                     &:hover{
@@ -48,73 +58,58 @@
                     }
 
                 }
-                &.description{
-                    height: 380px;
-                    h1{
-                        font-size: 24px;
-                        font-weight: 500;
-                        max-width: 150px;
-                        text-transform: uppercase;
-
-                    }
-                    div{
-                        @include display(flex);
-                        @include flex-direction(column);
-                        @include justify-content(center);
-                        height: 70%;
-                        >p{
-                            color: $textGrey;
-                            font:{
-                                size: 14px;
-
-                            }
-                            line-height: 30px;
-                            max-width: 206px;
-                        }
-                        &.parent-category-link{
-                            height: initial;
-                            a{
-                                font-size: 12px;
-                                color: $textGrey;
-                                text-transform: uppercase;
-                                @include display(flex);
-                                @include justify-content(space-between);
-                                align-items: center;
-                                @include transition( all, 0.3, ease-in-out );
-                                &:hover{
-                                    color: $baseBlue;
-                                    @include transition( all, 0.3, ease-in-out );
-                                }
-                            }
-                            span{
-                                background:{
-                                    image: url('_build/icons/icon-backArrow.svg');
-                                }
-                                height: 11px;
-                                width: 34px;
-                                display: -webkit-inline-box;
-                                font-weight: 500;
-                            }
-                        }
-                    }
-                }
             }
             a{
                 img{
                     width: 335px;
                     height: 240px;
                 }
-                h2{
-                    color: $baseGrey;
-                    text-align: left;
-                    font-size: 18px;
-                    margin-top: 15px;
-                    margin-bottom: 35px;
-                }
                 span{
                     color: $baseGreen;
                     font:{
                         size: 16px;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1131px){
+
+        .related-products{
+            .products{
+                @include outer-container(100vw);
+                li{
+                    @include span-columns(2 of 4);
+                    margin-right: 3.5%;
+
+                    &.description{
+                        div{
+
+                            p{
+                                max-width: none;
+                            }
+                            &.parent-category-link{
+                                max-width: 206px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 480px){
+
+        .related-products{
+            .products{
+                @include outer-container(100vw);
+                li{
+                    @include span-columns(1 of 1);
+                    margin-right: 0;
+
+                }
+                a{
+                    img{
+                        height: auto;
                     }
                 }
             }

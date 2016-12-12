@@ -41,10 +41,28 @@ get_header();
 				if (is_page('press-release')){
 					get_template_part( 'includes/pages/page', 'press' );
 				}
-			}else {
-				get_template_part( 'includes/pages/page' );
+				if (is_page('privacy-policy')){
+					get_template_part( 'includes/pages/page' );
+				}
+				if (is_page('terms-conditions')){
+					get_template_part( 'includes/pages/page' );
+				}
+				if (is_page('refunds')){
+					get_template_part( 'includes/pages/page' );
+				}
+				if (is_page('shipping')){
+					get_template_part( 'includes/pages/page' );
+				}
+				else{
+					if (is_page('contact')) {
+						get_template_part('includes/pages/page', 'generic');
+					}
+				}
+
 			}
 		endwhile;
+
 	endif;
+
 
 get_footer();

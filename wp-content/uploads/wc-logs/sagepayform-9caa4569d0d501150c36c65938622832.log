@@ -1,0 +1,141 @@
+11-29-2016 @ 11:51:49 - 
+11-29-2016 @ 11:51:49 - =============================================
+11-29-2016 @ 11:51:49 - 
+11-29-2016 @ 11:51:49 - SagePay Log
+11-29-2016 @ 11:51:49 - 29 Nov 2016, 11:51:49
+11-29-2016 @ 11:51:49 - 
+11-29-2016 @ 11:51:49 - =============================================
+11-29-2016 @ 11:51:49 - Sent to SagePay : 
+11-29-2016 @ 11:51:49 - Array
+(
+    [VendorTxCode] => wc_583d6bd39f717-183-5149
+    [Amount] => 509.58
+    [Currency] => ZAR
+    [Description] => Order 183
+    [SuccessURL] => http://xone.staging/wc-api/WC_Gateway_Sagepay_Form/
+    [FailureURL] => http://xone.staging/cart/?cancel_order=true&order=wc_order_583d6bd39f717&order_id=183&redirect
+    [CustomerName] => Miles Williams
+    [CustomerEMail] => support@klarity.co.za
+    [VendorEMail] => support@klarity.co.za
+    [SendEMail] => 1
+    [BillingFirstnames] => Miles
+    [BillingSurname] => Williams
+    [BillingAddress1] => 2 Hospital Street
+    [BillingAddress2] => 
+    [BillingCity] => Cape Town
+    [BillingState] => 
+    [BillingPostCode] => 8001
+    [BillingCountry] => ZA
+    [BillingPhone] => 0832955766
+    [DeliveryFirstnames] => Miles
+    [DeliverySurname] => Williams
+    [DeliveryAddress1] => 2 Hospital Street
+    [DeliveryAddress2] => 
+    [DeliveryCity] => Cape Town
+    [DeliveryState] => 
+    [DeliveryPostCode] => 8001
+    [DeliveryCountry] => ZA
+    [DeliveryPhone] => 0832955766
+    [Basket] => 2:[1234]Extreme Shock Eliminator ( Phone Makes iPhone, Phones iPhone 6s ):2:200:28:228:456:Shipping:1:47.00:6.58:53.58:53.58
+    [AllowGiftAid] => 1
+    [ApplyAVSCV2] => 0
+    [Apply3DSecure] => 0
+    [surchargeXML] => 
+    [ReferrerID] => F4D0E135-F056-449E-99E0-EC59917923E1
+)
+
+11-29-2016 @ 11:51:49 - =============================================
+11-29-2016 @ 11:53:37 - 
+11-29-2016 @ 11:53:37 - =============================================
+11-29-2016 @ 11:53:37 - 
+11-29-2016 @ 11:53:37 - SagePay Log
+11-29-2016 @ 11:53:37 - 29 Nov 2016, 11:53:37
+11-29-2016 @ 11:53:37 - 
+11-29-2016 @ 11:53:37 - =============================================
+11-29-2016 @ 11:53:37 - Sent to SagePay : 
+11-29-2016 @ 11:53:37 - Array
+(
+    [VendorTxCode] => wc_583d6bd39f717-183-5337
+    [Amount] => 509.58
+    [Currency] => ZAR
+    [Description] => Order 183
+    [SuccessURL] => http://xone.staging/wc-api/WC_Gateway_Sagepay_Form/
+    [FailureURL] => http://xone.staging/cart/?cancel_order=true&order=wc_order_583d6bd39f717&order_id=183&redirect
+    [CustomerName] => Miles Williams
+    [CustomerEMail] => support@klarity.co.za
+    [VendorEMail] => support@klarity.co.za
+    [SendEMail] => 1
+    [BillingFirstnames] => Miles
+    [BillingSurname] => Williams
+    [BillingAddress1] => 2 Hospital Street
+    [BillingAddress2] => 
+    [BillingCity] => Cape Town
+    [BillingState] => 
+    [BillingPostCode] => 8001
+    [BillingCountry] => ZA
+    [BillingPhone] => 0832955766
+    [DeliveryFirstnames] => Miles
+    [DeliverySurname] => Williams
+    [DeliveryAddress1] => 2 Hospital Street
+    [DeliveryAddress2] => 
+    [DeliveryCity] => Cape Town
+    [DeliveryState] => 
+    [DeliveryPostCode] => 8001
+    [DeliveryCountry] => ZA
+    [DeliveryPhone] => 0832955766
+    [Basket] => 2:[1234]Extreme Shock Eliminator ( Phone Makes iPhone, Phones iPhone 6s ):2:200:28:228:456:Shipping:1:47.00:6.58:53.58:53.58
+    [AllowGiftAid] => 1
+    [ApplyAVSCV2] => 0
+    [Apply3DSecure] => 0
+    [surchargeXML] => 
+    [ReferrerID] => F4D0E135-F056-449E-99E0-EC59917923E1
+)
+
+11-29-2016 @ 11:53:37 - =============================================
+11-29-2016 @ 11:57:09 - 
+11-29-2016 @ 11:57:09 - =============================================
+11-29-2016 @ 11:57:09 - 
+11-29-2016 @ 11:57:09 - SagePay Log
+11-29-2016 @ 11:57:09 - 29 Nov 2016, 11:57:09
+11-29-2016 @ 11:57:09 - 
+11-29-2016 @ 11:57:09 - =============================================
+11-29-2016 @ 11:57:09 - Sent to SagePay : 
+11-29-2016 @ 11:57:09 - Array
+(
+    [VendorTxCode] => wc_583d6bd39f717-183-5709
+    [Amount] => 509.58
+    [Currency] => ZAR
+    [Description] => Order 183
+    [SuccessURL] => http://xone.staging/wc-api/WC_Gateway_Sagepay_Form/
+    [FailureURL] => http://xone.staging/cart/?cancel_order=true&order=wc_order_583d6bd39f717&order_id=183&redirect
+    [CustomerName] => Miles Williams
+    [CustomerEMail] => support@klarity.co.za
+    [VendorEMail] => support@klarity.co.za
+    [SendEMail] => 1
+    [BillingFirstnames] => Miles
+    [BillingSurname] => Williams
+    [BillingAddress1] => 2 Hospital Street
+    [BillingAddress2] => 
+    [BillingCity] => Cape Town
+    [BillingState] => 
+    [BillingPostCode] => 8001
+    [BillingCountry] => ZA
+    [BillingPhone] => 0832955766
+    [DeliveryFirstnames] => Miles
+    [DeliverySurname] => Williams
+    [DeliveryAddress1] => 2 Hospital Street
+    [DeliveryAddress2] => 
+    [DeliveryCity] => Cape Town
+    [DeliveryState] => 
+    [DeliveryPostCode] => 8001
+    [DeliveryCountry] => ZA
+    [DeliveryPhone] => 0832955766
+    [Basket] => 2:[1234]Extreme Shock Eliminator ( Phone Makes iPhone, Phones iPhone 6s ):2:200:28:228:456:Shipping:1:47.00:6.58:53.58:53.58
+    [AllowGiftAid] => 1
+    [ApplyAVSCV2] => 0
+    [Apply3DSecure] => 0
+    [surchargeXML] => 
+    [ReferrerID] => F4D0E135-F056-449E-99E0-EC59917923E1
+)
+
+11-29-2016 @ 11:57:09 - =============================================

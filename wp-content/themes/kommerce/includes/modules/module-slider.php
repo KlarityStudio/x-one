@@ -24,48 +24,68 @@
 <ul id="slider" class="owl-carousel">
 	<li class="item">
 		<div class="feature-image">
-			<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/images/Slider.png" alt="Feature Image" />
+			<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/images/armor-x-one.png" alt="Feature Image" />
 		</div>
-		<?php if( is_front_page() ): ?>
 		<div class="product-spec-wrapper">
 			<div class="product-spec-lockup">
 				<div class="product-spec">
-					<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/icons/Cleaning.png" alt="" />
+					<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/icons/Ultimate-Shock-Absorption.png" alt="Ultimate Shock Absorption" />
 				</div>
 				<div class="product-spec">
-					<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/icons/Cleaning.png" alt="" />
+					<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/icons/Puncture.png" alt="Puncture Protection" />
 				</div>
 				<div class="product-spec">
-					<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/icons/Cleaning.png" alt="" />
+					<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/icons/Scratch.png" alt="5H+ Scratch Resistance" />
 				</div>
 				<div class="product-spec">
-					<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/icons/Cleaning.png" alt="" />
+					<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/icons/Eye-Protection.png" alt="Eye Protection" />
+				</div>
+				<div class="product-spec">
+					<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/icons/Responsive.png" alt="Responsive Smooth Touch" />
+				</div>
+				<div class="product-spec">
+					<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/icons/Cleaning.png" alt="Easy Cleaning" />
 				</div>
 			</div>
 		</div>
-	<?php endif;  ?>
 	</li>
 	<li class="item">
 		<div class="feature-image">
-			<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/images/Slider.png" alt="Feature Image" />
+			<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/images/extreme-shock.png" alt="Feature Image" />
 		</div>
-		<?php if( is_front_page() ): ?>
 		<div class="product-spec-wrapper">
 			<div class="product-spec-lockup">
 				<div class="product-spec">
-					<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/icons/Puncture.png" alt="" />
+					<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/icons/Responsive.png" alt="Responsive Smooth Touch" />
 				</div>
 				<div class="product-spec">
-					<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/icons/Puncture.png" alt="" />
+					<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/icons/Ultimate-Shock-Absorption.png" alt="Ultimate Shock Absorption" />
 				</div>
 				<div class="product-spec">
-					<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/icons/Puncture.png" alt="" />
+					<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/icons/Scratch.png" alt="5H+ Scratch Resistance" />
 				</div>
 				<div class="product-spec">
-					<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/icons/Puncture.png" alt="" />
+					<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/icons/Fingerprint.png" alt="Anti Fingerprint" />
+				</div>
+				<div class="product-spec">
+					<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/icons/Puncture.png" alt="Puncture Protection" />
 				</div>
 			</div>
 		</div>
-	<?php endif;  ?>
+	</li>
+	<li class="item">
+		<div class="feature-image">
+			<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/images/ultra-clear.png" alt="Feature Image" />
+		</div>
+		<div class="product-spec-wrapper">
+			<div class="product-spec-lockup">
+				<div class="product-spec">
+					<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/icons/Scratch.png" alt="5H+ Scratch Resistance" />
+				</div>
+				<div class="product-spec">
+					<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/icons/Cleaning.png" alt="Easy Cleaning" />
+				</div>
+			</div>
+		</div>
 	</li>
 </ul>
