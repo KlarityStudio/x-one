@@ -1,5 +1,5 @@
 <article class="category-section category-screen-protectors">
-    <h1>Screen Protectors</h1>
+    <h1 class="git-test">Screen Protectors</h1>
     <?php echo categoryDescriptions( 'screen-protectors'); ?>
     <section class="product-list">
             <!-- <?php echo do_shortcode('[product_category category="screen-protectors"]'); ?> -->
