@@ -162,7 +162,7 @@
 			$support_stored_meta = get_post_meta( $post->ID ); ?>
 			<div class="meta_row support_title">
 				<div class="meta_th">
-					<label for="support_title" class="meta_label">Enter The Event's start date.</label>
+					<label for="support_title" class="meta_label">Enter The Product Support Title.</label>
 				</div>
 				<div class="meta_td">
 					<input type="text" name="support_title" id="support_title"value="<?php  if ( ! empty( $support_stored_meta['support_title'] ) ) echo esc_attr( $support_stored_meta['support_title'][0] ); ?>"/>
