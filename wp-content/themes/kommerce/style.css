@@ -2707,7 +2707,7 @@ input[type="submit"] {
   -spec-justify-content: space-around;
   justify-content: space-around;
   -ms-flex-pack: distribute;
-  margin: 0 auto 50px auto; }
+  margin: 125px auto 50px auto; }
   .single-product .single-product-wrapper .images {
     width: 49%;
     max-width: 495px; }
@@ -2731,7 +2731,7 @@ input[type="submit"] {
       justify-content: space-between;
       -ms-flex-pack: justify;
       max-width: 402px;
-      margin: 68px auto 0 auto; }
+      margin: 0px auto 0 auto; }
       .single-product .single-product-wrapper .images .thumbnails a {
         width: 80px !important;
         border: 1px solid #eee;
