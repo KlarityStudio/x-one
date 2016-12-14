@@ -547,15 +547,17 @@
                 }
                 margin-bottom: 29px;
             }
-            .price{
-                font-size: 23px;
-                color: #000;
-                position: absolute;
-                top: 0;
-                right: 0;
-                text-transform: uppercase;
-                span{
-                    color: $baseBlue;
+            >div{
+                .price{
+                    font-size: 23px;
+                    color: #000;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    text-transform: uppercase;
+                    span{
+                        color: $baseBlue;
+                    }
                 }
             }
             div{
@@ -668,6 +670,154 @@
                                     border-radius: 50%;
                                 }
                             }
+                        }
+                    }
+                }
+            }
+            .single_variation_wrap{
+                position: relative;
+                left: 0;
+                width: 100%;
+                max-width: 385px;
+                .woocommerce-variation-add-to-cart{
+                    display: flex;
+                    height: 50px;
+
+                    &.woocommerce-variation-add-to-cart-disabled{
+                        max-width: 355px;
+                        button{
+                            padding-left: 1em;
+                            &:before{
+                                display: none;
+                            }
+                        }
+                    }
+                    button{
+                        width: 100%;
+                        height: 100%;
+                        background-color: $baseBlue;
+                        border-radius: 0px;
+                        opacity: 1 !important;
+                        padding-left: 0;
+                        outline: none;
+                        &:before{
+                            content: "-";
+                            position: absolute;
+                            left: 8px;
+                        }
+                    }
+                    .woocommerce-variation-availability{
+                        position: absolute;
+                        text-align: left;
+                        right: -290px;
+                        top: 0;
+
+                    }
+                    .single_variation{
+                        display: block !important;
+                    }
+                    .woocommerce-variation-price{
+                        text-align: center;
+                        background-color: $baseBlue;
+                        height: 50px;
+                        line-height: 50px;
+                        span{
+                            color: #fff;
+                            font:{
+                                weight: 700;
+                                size: 16px;
+                            }
+                            &.price{
+                                padding-left: 1em;
+                            }
+                        }
+                    }
+                    .quantity{
+                        width: 100%;
+
+                        .minus, .plus{
+                            width: 33%;
+                        }
+                    }
+                    .quantity{
+                        position: relative;
+                        background-color: #fff;
+                        border-top: 1px solid #656565;
+                        @include display(flex);
+                        padding: 0;
+                        margin-right: 0;
+                        input{
+                            margin: auto auto 0 auto;
+                            height: 50px;
+                            background-color: #fff;
+                            border: none;
+
+                        }
+                        .minus, .plus{
+                            width: 70px;
+                            height: 50px;
+                            background-color: $baseGrey;
+                            position: relative;
+                            color: #fff;
+                            text-align: center;
+                            line-height:50px;
+                            margin: 0;
+                            border-radius: 0;
+                            outline: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #container{
+
+        .product{
+            .wc-tabs-wrapper{
+                .woocommerce-Tabs-panel{
+                    padding: 70px 75px 40px 75px;
+                    h2{
+                        display: none;
+                    }
+                    p{
+                        font-size: 14px;
+                        line-height: 22px;
+                    }
+                }
+            }
+            .woocommerce-tabs{
+                .wc-tabs{
+                    width: 658px;
+                    margin: 40px auto 0 auto;
+                    @include display(flex);
+                    @include justify-content(space-between);
+                    padding: 0 100px;
+                    border-bottom: 1px solid #9C9C9C;
+                    &:before, :after{
+                        display: none !important ;
+                    }
+                    .additional_information_tab, .active, .reviews_tab, .description_tab{
+                        &:before, :after{
+                            display: none !important;
+                        }
+
+                        border: none;
+                        background-color: #fff;
+                    }
+                    li{
+                        a{
+                            text-transform: uppercase;
+                            color: $textGrey;
+                            font-weight: 400;
+                            font-size: 12px;
+                        }
+                    }
+                    .active{
+                        border-bottom: 2px solid $baseGreen;
+                        border-bottom-color: $baseGreen;
+                        a{
+                            color: $baseGrey;
+                            font-weight: 600;
                         }
                     }
                 }
