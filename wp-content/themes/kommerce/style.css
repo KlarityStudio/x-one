@@ -2711,6 +2711,31 @@ input[type="submit"] {
   .single-product .single-product-wrapper .images {
     width: 49%;
     max-width: 495px; }
+    .single-product .single-product-wrapper .images .thumbnails {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -moz-box-pack: justify;
+      -spec-box-pack: justify;
+      box-pack: justify;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      -ms-justify-content: space-between;
+      -o-justify-content: space-between;
+      -spec-justify-content: space-between;
+      justify-content: space-between;
+      -ms-flex-pack: justify;
+      max-width: 402px;
+      margin: 68px auto 0 auto; }
+      .single-product .single-product-wrapper .images .thumbnails a {
+        width: 80px !important;
+        border: 1px solid #eee;
+        padding: 5px; }
   .single-product .single-product-wrapper .entry-summary {
     width: 49%;
     max-width: 544px;

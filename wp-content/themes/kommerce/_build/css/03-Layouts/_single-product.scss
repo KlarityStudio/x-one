@@ -530,7 +530,20 @@
         margin:125px auto 50px auto;
         .images{
             width: 49%;
-            max-width: 495px
+            max-width: 495px;
+
+            .thumbnails{
+                @include display(flex);
+                @include justify-content(space-between);
+                max-width: 402px;
+                margin: 68px auto 0 auto;
+
+                a{
+                    width: 80px !important;
+                    border: 1px solid #eee;
+                    padding: 5px;
+                }
+            }
         }
         .entry-summary{
             width: 49%;
