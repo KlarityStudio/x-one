@@ -38,6 +38,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="single-product-wrapper">
+		<!-- <div class="icon-container">
+			<div class="icon icon-make">
+
+			</div>
+		</div> -->
 		<?php
 			/**
 			 * woocommerce_before_single_product_summary hook.
@@ -49,7 +54,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		?>
 
 		<section class="summary entry-summary">
-
+			<?php $supportDesc =  get_post_meta( $id,'support_title', true); ?>
+			<h2><?php echo $supportDesc ?></h2>
 			<?php
 				/**
 				 * woocommerce_single_product_summary hook.

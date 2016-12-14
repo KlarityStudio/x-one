@@ -4,6 +4,7 @@
     remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
     remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
     remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+    remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
 
     add_action( 'woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10 );
     add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5 );
@@ -20,12 +21,16 @@
 
     // woocommerce_single_product_summary hook.
     add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
-    add_action( 'woocommerce_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+    add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 5 );
+    add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 10 );
+    add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 10 );
+
     add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
-    add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 30 );
+
 
     add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 5 );
     add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50 );
+    add_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
 
     /**
      * After Single Products Summary Div.

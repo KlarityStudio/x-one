@@ -35,7 +35,17 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 			<tbody>
 				<?php foreach ( $attributes as $attribute_name => $options ) : ?>
 					<tr>
-						<td class="label"><label for="<?php echo sanitize_title( $attribute_name ); ?>"><?php echo wc_attribute_label( $attribute_name ); ?></label></td>
+						<td class="label"><label for="<?php echo sanitize_title( $attribute_name ); ?>">
+
+							<?php
+							if ( $attribute_name == "pa_phone-makes" ){
+								$text = "<span>1. </span>Choose a phone <span>make</span> & <span> model</span>";
+							}else if( $attribute_name == "pa_material" ){
+								$text = "<span>2. </span>Select a color/material";
+							}else{
+								$text = $attribute_name;
+							};
+							echo wc_attribute_label( $text ); ?></label></td>
 						<td class="value">
 							<?php
 								$selected = isset( $_REQUEST[ 'attribute_' . sanitize_title( $attribute_name ) ] ) ? wc_clean( urldecode( $_REQUEST[ 'attribute_' . sanitize_title( $attribute_name ) ] ) ) : $product->get_variation_default_attribute( $attribute_name );

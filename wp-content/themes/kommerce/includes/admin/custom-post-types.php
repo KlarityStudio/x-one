@@ -148,7 +148,8 @@
 				'postAdd',
 				"Product Title Support",
 				'meta_callback',
-				'product'
+				'product',
+				'high'
 			);
 
 		}

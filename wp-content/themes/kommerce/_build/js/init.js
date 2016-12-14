@@ -18,7 +18,8 @@
 		navToggle();
 		breadcrumbFix();
 		accountDisplay();
-
+		phoneIcon();
+		variablePrice();
   });
 
 	function navToggle(){
@@ -235,14 +236,14 @@
 
 			event.preventDefault();
 			$ajaxLoad.show();
-			var id = $(this).data('post'),
+			var $id = $(this).data('post'),
 				$ajaxUrl = $(this).attr('data-url');
 
 			$.ajax({
 				type: 'POST',
 				url: $ajaxUrl,
 				context: this,
-				data: {'action': 'post_modal', id: id },
+				data: {'action': 'post_modal', id: $id },
 				success: function(response) {
 					$ajaxLoad.hide();
 					$('.modal-wrapper').html(response);
@@ -266,7 +267,7 @@
 				event.returnValue = false;
 			}
 			// Get tag slug from title attirbute
-			var selecetd_taxonomy = $(this).attr('title'),
+			var $selecetd_taxonomy = $(this).attr('title'),
 				$ajaxUrl = $('.tag-filter').attr('data-url');
 
 			// After user click on tag, fade out list of posts
@@ -276,7 +277,7 @@
 				type: 'POST',
 				url: $ajaxUrl,
 				context: this,
-				data: {'action': 'filter_posts', taxonomy: selecetd_taxonomy},
+				data: {'action': 'filter_posts', taxonomy: $selecetd_taxonomy},
 				success: function(response) {
 					$('.section-wrapper').html(response);
 					$('.section-wrapper').fadeIn('slow');
@@ -341,7 +342,6 @@
 			}
 		}
 	}
-
 	function accountDisplay(){
 		var $bodyClass = $('body').hasClass('logged-in'),
 			$accountNav = $('#mega-menu-primary').children('li');
@@ -349,6 +349,24 @@
 			$accountNav.find('a[href*="my-account"]').text('My Account');
 		}else{
 			$accountNav.find('a[href*="my-account"]').text('Login');
+		}
+	}
+	function phoneIcon(){
+		var $selectField = $('#pa_phone-makes').children('enabled'),
+			$selectValue = $selectField.attr('value'),
+			$icon = $('.icon-container').children('.icon');
+
+		if ($('body').hasClass('single-product')) {
+			window.alert($selectValue);
+			$icon.addClass($selectValue);
+		}
+	}
+	function variablePrice(){
+		var priceText = $('.entry-summary').find('.price');
+
+		if (priceText.children().length === 2){
+			var price =  priceText.children().first().text();
+			priceText.html('From <span>' + price + '</span>');
 		}
 	}
 }) (jQuery);

@@ -1,4 +1,4 @@
-/** Friday 9th of December 2016 08:08:20 AM (core) **/
+/** Wednesday 14th of December 2016 10:17:12 AM (core) **/
 
 #mega-menu-wrap-primary, #mega-menu-wrap-primary #mega-menu-primary, #mega-menu-wrap-primary #mega-menu-primary ul.mega-sub-menu, #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item, #mega-menu-wrap-primary #mega-menu-primary a.mega-menu-link {
   -moz-transition: none;
@@ -61,12 +61,12 @@
   text-align: left;
   padding: 0px 0px 0px 0px;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 0px) {
   #mega-menu-wrap-primary #mega-menu-primary {
     background: #222;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 0px) {
   #mega-menu-wrap-primary #mega-menu-primary {
     padding: 0;
   }
@@ -198,7 +198,7 @@
 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-item-align-right {
   float: right;
 }
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 1px) {
   #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-item-align-right {
     margin: 0 0 0 0px;
   }
@@ -237,19 +237,19 @@
   font-family: inherit;
   font-size: 14px;
 }
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 1px) {
   #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-multi-line > a.mega-menu-link {
     line-height: inherit;
     display: table-cell;
     vertical-align: middle;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 0px) {
   #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-multi-line > a.mega-menu-link br {
     display: none;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 0px) {
   #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item {
     display: list-item;
     margin: 0;
@@ -279,7 +279,7 @@
   -ms-border-radius: 0px 0px 0px 0px;
   -o-border-radius: 0px 0px 0px 0px;
   border-radius: 0px 0px 0px 0px;
-  background: #f1f1f1;
+  background: #fff;
   padding: 0px 0px 0px 0px;
   position: absolute;
   width: 100%;
@@ -289,14 +289,14 @@
   border-bottom: 0px solid #fff;
   left: 0;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 0px) {
   #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu {
     float: left;
     position: static;
     width: 100%;
   }
 }
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 1px) {
   #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-columns-1-of-1 {
     width: 100%;
   }
@@ -487,7 +487,7 @@
   text-decoration: none;
   background: rgba(0, 0, 0, 0);
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 0px) {
   #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu {
     border: 0;
     padding: 10px;
@@ -513,9 +513,9 @@
   border-right: 0px solid #fff;
   border-bottom: 0px solid #fff;
   padding: 0px 0px 0px 0px;
-  background: #f1f1f1;
+  background: #fff;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 0px) {
   #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout ul.mega-sub-menu {
     float: left;
     position: static;
@@ -524,7 +524,7 @@
     border: 0;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 0px) {
   #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item {
     clear: both;
   }
@@ -546,7 +546,7 @@
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 0px) {
   #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item:first-child > a.mega-menu-link {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -556,7 +556,7 @@
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 0px) {
   #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item:last-child > a.mega-menu-link {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
@@ -573,7 +573,7 @@
   left: 100%;
   top: 0;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 0px) {
   #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item ul.mega-sub-menu {
     position: static;
     left: 0;
@@ -598,7 +598,7 @@
   transform: rotate(0);
   color: inherit;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 0px) {
   #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-flyout.mega-menu-item-has-children a.mega-menu-link:after, #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-flyout li.mega-menu-item-has-children a.mega-menu-link:after, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item-has-children a.mega-menu-link:after {
     float: right;
   }
@@ -617,7 +617,7 @@
   float: right;
   margin: 0;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 0px) {
   #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item li.mega-menu-item-has-children > a.mega-menu-link:after {
     content: '\f140';
   }
@@ -625,7 +625,7 @@
 #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-flyout.mega-align-bottom-right li.mega-menu-item a.mega-menu-link {
   text-align: right;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 0px) {
   #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-flyout.mega-align-bottom-right li.mega-menu-item a.mega-menu-link {
     text-align: left;
   }
@@ -634,7 +634,7 @@
   float: right;
   margin: 0 0 0 6px;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 0px) {
   #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-flyout.mega-align-bottom-right li.mega-menu-item a.mega-menu-link:before {
     float: left;
     margin: 0 6px 0 0;
@@ -645,7 +645,7 @@
   float: left;
   margin: 0;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 0px) {
   #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-flyout.mega-align-bottom-right li.mega-menu-item-has-children > a.mega-menu-link:after {
     content: '\f140';
     float: right;
@@ -662,12 +662,12 @@
   display: inline;
   margin-right: 8px;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 0px) {
   #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item.mega-hide-on-mobile, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item.mega-hide-on-mobile {
     display: none;
   }
 }
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 1px) {
   #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item.mega-hide-on-desktop, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item.mega-hide-on-desktop {
     display: none;
   }
@@ -692,7 +692,7 @@
   -ms-user-select: none;
   outline: none;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 0px) {
   #mega-menu-wrap-primary .mega-menu-toggle {
     display: block;
   }
@@ -715,7 +715,7 @@
   float: right;
   margin-right: 6px;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 0px) {
   #mega-menu-wrap-primary .mega-menu-toggle + #mega-menu-primary {
     display: none;
   }
@@ -848,7 +848,7 @@
 #mega-menu-wrap-primary #mega-menu-primary.mega-menu-vertical > li.mega-menu-megamenu.mega-menu-item, #mega-menu-wrap-primary #mega-menu-primary.mega-menu-vertical > li.mega-menu-flyout.mega-menu-item {
   position: relative;
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 0px) {
   #mega-menu-wrap-primary #mega-menu-primary.mega-menu-vertical li.mega-align-bottom-right.mega-menu-item-has-children li.mega-menu-item a.mega-menu-link, #mega-menu-wrap-primary #mega-menu-primary.mega-menu-vertical li.mega-align-bottom-right.mega-menu-flyout li.mega-menu-item-has-children li.mega-menu-item a.mega-menu-link {
     text-align: left;
   }
@@ -965,7 +965,7 @@
   vertical-align: middle;
   max-height: none;
 }
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 1px) {
   #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-tabbed > ul.mega-sub-menu > li.mega-menu-item {
     width: 100%;
     padding: 0;
@@ -974,7 +974,7 @@
   #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-tabbed > ul.mega-sub-menu > li.mega-menu-item > a.mega-menu-link {
     width: 20%;
     float: left;
-    background: #f1f1f1;
+    background: #fff;
     color: #666;
     font-family: inherit;
     font-size: 14px;
