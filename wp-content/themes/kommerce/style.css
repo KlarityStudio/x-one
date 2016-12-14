@@ -2707,7 +2707,7 @@ input[type="submit"] {
   -spec-justify-content: space-around;
   justify-content: space-around;
   -ms-flex-pack: distribute;
-  margin: 125px auto 50px auto; }
+  margin: 0 auto 50px auto; }
   .single-product .single-product-wrapper .images {
     width: 49%;
     max-width: 495px; }

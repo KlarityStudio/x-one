@@ -527,7 +527,7 @@
         @include display(flex);
         max-width: 1106px;
         @include justify-content(space-around);
-        margin:125px auto 50px auto;
+        margin: 0 auto 50px auto;
         .images{
             width: 49%;
             max-width: 495px;
