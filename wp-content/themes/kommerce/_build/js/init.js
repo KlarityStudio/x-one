@@ -357,7 +357,7 @@
 			$icon = $('.icon-container').children('.icon');
 
 		if ($('body').hasClass('single-product')) {
-			window.alert($selectValue);
+			// window.alert($selectValue);
 			$icon.addClass($selectValue);
 		}
 	}
