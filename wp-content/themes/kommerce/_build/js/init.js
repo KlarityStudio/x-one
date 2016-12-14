@@ -7,8 +7,8 @@
 		categoryInfoSlider();
 		phoneMakeText();
 		dynamicStock();
-		materialMenu();
-		colourMenu();
+		// materialMenu();
+		// colourMenu();
 		faq();
 		sideBar();
 		modalAjax();
@@ -164,39 +164,39 @@
 			}
 	}
 
-	function materialMenu(){
-		var $materialInputBox = $('#picker_pa_material').parent('.value');
-
-		var $materialColor = $('#picker_pa_material').find(".select-option");
-
-		$materialColor.each(function(){
-			var $dataAttribute = $(this).attr("data-value");
-
-			$(this).append("<p>"+$dataAttribute+"</p>");
-		});
-
-		$($materialInputBox).on('click',function(){
-			$('#picker_pa_material').toggleClass('open');
-			$(this).parent('tr').toggleClass('open');
-		});
-	}
-
-	function colourMenu(){
-		var $materialInputBox = $('#picker_pa_colour').parent('.value');
-
-		var $materialColor = $('#picker_pa_colour').find(".select-option");
-
-		$materialColor.each(function(){
-			var $dataAttribute = $(this).attr("data-value");
-
-			$(this).append("<p>"+$dataAttribute+"</p>");
-		});
-
-		$($materialInputBox).on('click',function(){
-			$('#picker_pa_colour').toggleClass('open');
-			$(this).parent('tr').toggleClass('open');
-		});
-	}
+	// function materialMenu(){
+	// 	var $materialInputBox = $('#picker_pa_material').parent('.value');
+	//
+	// 	var $materialColor = $('#picker_pa_material').find(".select-option");
+	//
+	// 	$materialColor.each(function(){
+	// 		var $dataAttribute = $(this).attr("data-value");
+	//
+	// 		$(this).append("<p>"+$dataAttribute+"</p>");
+	// 	});
+	//
+	// 	$($materialInputBox).on('click',function(){
+	// 		$('#picker_pa_material').toggleClass('open');
+	// 		$(this).parent('tr').toggleClass('open');
+	// 	});
+	// }
+	//
+	// function colourMenu(){
+	// 	var $materialInputBox = $('#picker_pa_colour').parent('.value');
+	//
+	// 	var $materialColor = $('#picker_pa_colour').find(".select-option");
+	//
+	// 	$materialColor.each(function(){
+	// 		var $dataAttribute = $(this).attr("data-value");
+	//
+	// 		$(this).append("<p>"+$dataAttribute+"</p>");
+	// 	});
+	//
+	// 	$($materialInputBox).on('click',function(){
+	// 		$('#picker_pa_colour').toggleClass('open');
+	// 		$(this).parent('tr').toggleClass('open');
+	// 	});
+	// }
 
 	function faq(){
 		var $sidebarList = $('.faq-sidebar').find('ul'),

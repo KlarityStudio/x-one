@@ -2735,13 +2735,78 @@ input[type="submit"] {
     .single-product .single-product-wrapper .entry-summary div p {
       font-size: 14px;
       margin-bottom: 33px; }
-    .single-product .single-product-wrapper .entry-summary form tr td {
-      display: block; }
-    .single-product .single-product-wrapper .entry-summary form tr label {
-      font-size: 18px;
-      font-weight: 600; }
-    .single-product .single-product-wrapper .entry-summary form tr span {
-      color: #61B11B; }
+    .single-product .single-product-wrapper .entry-summary form {
+      position: relative; }
+      .single-product .single-product-wrapper .entry-summary form tr {
+        margin-bottom: 20px; }
+        .single-product .single-product-wrapper .entry-summary form tr td {
+          display: block; }
+        .single-product .single-product-wrapper .entry-summary form tr label {
+          font-size: 18px;
+          font-weight: 600; }
+        .single-product .single-product-wrapper .entry-summary form tr span {
+          color: #61B11B; }
+        .single-product .single-product-wrapper .entry-summary form tr #picker_pa_phone-makes p {
+          display: none; }
+        .single-product .single-product-wrapper .entry-summary form tr #picker_pa_phone-makes div {
+          border: none;
+          height: 35px;
+          width: 35px; }
+          .single-product .single-product-wrapper .entry-summary form tr #picker_pa_phone-makes div img {
+            opacity: 0.3; }
+          .single-product .single-product-wrapper .entry-summary form tr #picker_pa_phone-makes div.selected {
+            padding: 2px; }
+            .single-product .single-product-wrapper .entry-summary form tr #picker_pa_phone-makes div.selected img {
+              opacity: 1; }
+          .single-product .single-product-wrapper .entry-summary form tr #picker_pa_phone-makes div:nth-of-type(2) {
+            margin-left: 60px; }
+            .single-product .single-product-wrapper .entry-summary form tr #picker_pa_phone-makes div:nth-of-type(2):before {
+              content: " or ";
+              line-height: 37px;
+              font-size: 18px;
+              font-weight: 700;
+              position: absolute;
+              left: 59px; }
+        .single-product .single-product-wrapper .entry-summary form tr.pa_phone-makes {
+          display: inline-block; }
+          .single-product .single-product-wrapper .entry-summary form tr.pa_phone-makes .label {
+            padding-right: 0 !important; }
+        .single-product .single-product-wrapper .entry-summary form tr.pa_phones, .single-product .single-product-wrapper .entry-summary form tr.pa_cable-length {
+          display: inline-block;
+          height: 0;
+          position: absolute;
+          left: 189px;
+          width: 100%;
+          top: 76px; }
+          .single-product .single-product-wrapper .entry-summary form tr.pa_phones .label, .single-product .single-product-wrapper .entry-summary form tr.pa_cable-length .label {
+            display: none;
+            padding: 0; }
+          .single-product .single-product-wrapper .entry-summary form tr.pa_phones .select-option, .single-product .single-product-wrapper .entry-summary form tr.pa_cable-length .select-option {
+            border-color: #91989E;
+            border-radius: 2px;
+            padding: 0 12px; }
+            .single-product .single-product-wrapper .entry-summary form tr.pa_phones .select-option a, .single-product .single-product-wrapper .entry-summary form tr.pa_cable-length .select-option a {
+              text-indent: 0 !important;
+              color: #91989E;
+              font-size: 12px;
+              width: 100% !important; }
+            .single-product .single-product-wrapper .entry-summary form tr.pa_phones .select-option.disabled, .single-product .single-product-wrapper .entry-summary form tr.pa_cable-length .select-option.disabled {
+              display: none; }
+            .single-product .single-product-wrapper .entry-summary form tr.pa_phones .select-option:hover, .single-product .single-product-wrapper .entry-summary form tr.pa_phones .select-option.selected, .single-product .single-product-wrapper .entry-summary form tr.pa_cable-length .select-option:hover, .single-product .single-product-wrapper .entry-summary form tr.pa_cable-length .select-option.selected {
+              border: 1px solid #006DD1;
+              background-color: #F1F8FF; }
+              .single-product .single-product-wrapper .entry-summary form tr.pa_phones .select-option:hover a, .single-product .single-product-wrapper .entry-summary form tr.pa_phones .select-option.selected a, .single-product .single-product-wrapper .entry-summary form tr.pa_cable-length .select-option:hover a, .single-product .single-product-wrapper .entry-summary form tr.pa_cable-length .select-option.selected a {
+                color: #000;
+                background-color: #F1F8FF !important; }
+        .single-product .single-product-wrapper .entry-summary form tr.pa_colour p, .single-product .single-product-wrapper .entry-summary form tr.pa_material p {
+          display: none; }
+        .single-product .single-product-wrapper .entry-summary form tr.pa_colour #picker_pa_colour div, .single-product .single-product-wrapper .entry-summary form tr.pa_colour #picker_pa_material div, .single-product .single-product-wrapper .entry-summary form tr.pa_material #picker_pa_colour div, .single-product .single-product-wrapper .entry-summary form tr.pa_material #picker_pa_material div {
+          border-radius: 50%;
+          border-color: #91989E; }
+          .single-product .single-product-wrapper .entry-summary form tr.pa_colour #picker_pa_colour div.selected, .single-product .single-product-wrapper .entry-summary form tr.pa_colour #picker_pa_material div.selected, .single-product .single-product-wrapper .entry-summary form tr.pa_material #picker_pa_colour div.selected, .single-product .single-product-wrapper .entry-summary form tr.pa_material #picker_pa_material div.selected {
+            border-color: #91989E; }
+          .single-product .single-product-wrapper .entry-summary form tr.pa_colour #picker_pa_colour div a, .single-product .single-product-wrapper .entry-summary form tr.pa_colour #picker_pa_material div a, .single-product .single-product-wrapper .entry-summary form tr.pa_material #picker_pa_colour div a, .single-product .single-product-wrapper .entry-summary form tr.pa_material #picker_pa_material div a {
+            border-radius: 50%; }
 
 @media screen and (min-width: 1018px) {
   header #mega-menu-wrap-primary {
@@ -3347,10 +3412,6 @@ input[type="submit"] {
     color: #ffffff; }
 
 /*----- CSS styling for single product filters -----*/
-.single-product #pa_phones, .single-product #picker_pa_material {
-  opacity: 0.8;
-  pointer-events: none; }
-
 .shop-lockup {
   margin-top: 130px;
   max-width: 1230px;

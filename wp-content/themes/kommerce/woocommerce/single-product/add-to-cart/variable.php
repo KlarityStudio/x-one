@@ -34,13 +34,15 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 		<table class="variations" cellspacing="0">
 			<tbody>
 				<?php foreach ( $attributes as $attribute_name => $options ) : ?>
-					<tr>
+					<tr class="<?php echo sanitize_title( $attribute_name );  ?>">
 						<td class="label"><label for="<?php echo sanitize_title( $attribute_name ); ?>">
 
 							<?php
 							if ( $attribute_name == "pa_phone-makes" ){
 								$text = "<span>1. </span>Choose a phone <span>make</span> & <span> model</span>";
 							}else if( $attribute_name == "pa_material" ){
+								$text = "<span>2. </span>Select a color/material";
+							}else if( $attribute_name == "pa_colour" ){
 								$text = "<span>2. </span>Select a color/material";
 							}else{
 								$text = $attribute_name;
