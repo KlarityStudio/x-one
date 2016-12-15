@@ -72,8 +72,9 @@
                 @include justify-content(space-around);
                 .product-spec{
                     img{
-                        width: 119px;
-                        padding: 85px 0;
+                      max-width: 120px;
+                      padding: 4vw 31px;
+                      min-width: 150px;
                     }
                 }
             }
