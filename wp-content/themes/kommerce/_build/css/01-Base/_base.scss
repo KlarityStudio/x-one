@@ -2,14 +2,13 @@ body{
     -webkit-font-smoothing: antialiased;
     background-color: #EBEBEB;
     @include filter(drop-shadow(0px 0px 7px rgba(0, 0, 0, 0.2)));
-    height: 100vh;
-    .wrapper{
+    .wrapper {
         background-color: #ffffff;
         max-width: 1800px;
         margin: auto;
-        overflow-x: hidden;
+        overflow: hidden;
         height: 100%;
-        main{
+        main {
 
         }
     }
