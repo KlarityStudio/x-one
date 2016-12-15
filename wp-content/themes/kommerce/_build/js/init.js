@@ -20,6 +20,7 @@
 		accountDisplay();
 		phoneIcon();
 		variablePrice();
+		variablePriceInfinity();
   });
 
 	function navToggle(){
@@ -367,5 +368,12 @@
 			var price =  priceText.children().first().text();
 			priceText.html('From <span>' + price + '</span>');
 		}
+	}
+
+	function variablePriceInfinity(){
+		$('.price-part').each(function() {
+			var price = $(this).find('.price-text span').eq(0).text();
+			$(this).find('.price-text').html('<span>' + price + '</span>');
+		});
 	}
 }) (jQuery);
