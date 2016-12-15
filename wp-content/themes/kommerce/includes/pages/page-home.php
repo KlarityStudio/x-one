@@ -3,6 +3,8 @@
     <h1 class="git-test">Screen Protectors</h1>
     <?php echo categoryDescriptions( 'screen-protectors'); ?>
     <section class="product-list">
+      <?php echo do_shortcode('[infinity id="693"]'); ?>
+
     </section>
 
     <section class="video-wrapper video-screen-protectors">
