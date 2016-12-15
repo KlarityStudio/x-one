@@ -1,0 +1,259 @@
+@import "normalize";
+@import "bourbon";
+
+$inputWidth: 268.7px;
+#mc_embed_signup{
+    clear:left;
+    font:14px Helvetica,Arial,sans-serif;
+}
+article{
+    height: 100vh;
+    width: 100vw;
+    background:{
+        image: url('../images/background.png');
+        size: cover;
+        position: center;
+        repeat: no-repeat;
+    }
+    position: fixed;
+    h1{
+        color: #fff;
+        font:{
+            family: Raleway-Thin;
+            size: 41.7px;
+            weight: 100;
+        }
+        text-transform: uppercase;
+        border-top: 2px solid rgba(255,255 ,255 , 0.1);
+        border-bottom: 2px solid rgba(255,255 ,255 , 0.1);
+        margin: auto;
+        max-width: 381px;
+        padding: 10px 0;
+    }
+    .global-logo{
+        background:{
+            image: url('../icons/global-logo.png');
+            repeat: no-repeat;
+            size: contain;
+            position: center;
+        }
+        height: 100px;
+        margin: 0 auto 61px auto ;
+        width: 99px;
+    }
+    .logo{
+        background:{
+            image: url('../icons/logo.svg');
+            repeat: no-repeat;
+            size: contain;
+            position: center;
+        }
+        margin: 45px auto 103px auto;
+       width: 431.4px;
+       height: 98.6px;
+    }
+    p{
+        color: #fff;
+        font:{
+            family: Poppins;
+            size: 23px;
+        }
+        margin-bottom: 0;
+    }
+    .information-lockup{
+        max-width: 626px;
+        text-align: center;
+        margin: auto;
+        padding-top: calc(100vh/2 - 732.5px/2 );
+    }
+    .signUp-form{
+        margin: 17px  auto 95px auto;
+        #mc_embed_signup_scroll{
+             @include display(flex);
+             input{
+                height: 30px;
+                background-color: #fff;
+                width: $inputWidth;
+                opacity: 0.75;
+                border: none;
+                padding: 0;
+                margin-right: 10px;
+                padding: 5px 10px;
+                &:focus, :active{
+
+                }
+                @include placeholder{
+                    font:{
+                        size: 15px;
+                        family: Poppins;
+                    }
+                    color: #242A34;
+                    text-transform: capitalize;
+                }
+                &#mce-FNAME{
+                    width:197.8px;
+                }
+                &.button{
+                    opacity: 1;
+                    width:100.4px;
+                    background-color: #61B11B;
+                    color: #fff;
+                    text-transform: uppercase;
+                    font-family: Poppins;
+                    font-size: 18px;
+                    line-height: 36px;
+                    height: 40px;
+                }
+             }
+        }
+    }
+    .mce_inline_error{
+        width: $inputWidth;
+    }
+    .device-lockup{
+        display: inline-block;
+        width: 190px;
+        .icon{
+            background:{
+                size: cover;
+                repeat: no-repeat;
+                position: center;
+            }
+            height: 70px;
+            width: 70px;
+            float:left;
+        }
+        .apple{
+            background:{
+                image: url('./icons/Apple.svg');
+            }
+        }
+        .android{
+            background:{
+                image: url('./icons/Android.svg');
+            }
+            float: right;
+        }
+    }
+
+    @media screen and (max-width:658px){
+        p{
+            max-width: 340px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .information-lockup{
+
+            padding-top: calc(100vh/2 - 883px/2 );
+        }
+        .signUp-form{
+            #mc_embed_signup_scroll{
+                @include display(block);
+                $inputWidth: 300px;
+                input{
+                    width: $inputWidth;
+                    margin-bottom: 15px;
+                    margin-right: 0;
+                    &#mce-FNAME{
+                        width: 300px;
+                    }
+                    &.button{
+                        width: 320px;
+                    }
+                }
+            }
+        }
+        .mce_inline_error{
+            width: $inputWidth;
+        }
+    }
+    @media screen and (max-width: 510px){
+        .logo{
+            width: 371.4px;
+        }
+        .information-lockup{
+            padding-top: calc(100vh/2 - 831px/2 );
+        }
+        h1{
+            font-size: 42px;
+        }
+        .signUp-form{
+                margin: 27px auto 45px auto;
+        }
+    }
+    @media screen and (max-width: 415px){
+        .logo{
+            width: 311.4px;
+            margin: 25px auto 0px auto;
+        }
+        .global-logo{
+            height: 90px;
+            margin: 0 auto 21px auto;
+            width: 79px;
+        }
+        .information-lockup{
+            padding-top: calc(100vh/2 - 664px/2 );
+        }
+        h1{
+            font-size: 35px;
+            max-width: 301px;
+        }
+        .signUp-form{
+            margin: 27px auto 45px auto;
+        }
+        .device-lockup{
+            width: 140px;
+            .icon{
+                @include size(50px);
+            }
+        }
+    }
+    @media screen and (max-width: 320px){
+        h1{
+            font-size: 25px;
+            max-width: 221px;
+        }
+        .information-lockup{
+            padding-top: calc(100vh/2 - 545.59px/2 );
+        }
+        .logo{
+            width: 251.4px;
+        }
+        .global-logo{
+            height: 70px;
+            width: 79px;
+        }
+        p{
+            font-size: 17px;
+            padding: 0 10px;
+        }
+        .signUp-form{
+            margin: 10px auto 5px auto;
+            #mc_embed_signup_scroll{
+                $inputWidth: 250px;
+                input{
+                    width: $inputWidth;
+                    &#mce-FNAME{
+                        width: 250px;
+                    }
+                    &.button{
+                        width: 270px;
+                    }
+                }
+            }
+            .mce_inline_error{
+                width: $inputWidth;
+            }
+        }
+        .device-lockup{
+            width: 110px;
+
+            .icon{
+                @include size(40px);
+            }
+        }
+    }
+    #mce-responses{
+        display: none !important;
+    }
+}
