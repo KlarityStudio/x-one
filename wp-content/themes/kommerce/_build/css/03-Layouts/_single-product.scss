@@ -560,6 +560,9 @@
                 }
                 margin-bottom: 29px;
             }
+            .product_meta{
+                display: none;
+            }
             >div{
                 .price{
                     font-size: 23px;
@@ -581,8 +584,17 @@
             }
             form{
                 position: relative;
+                table{
+                    background:{
+                        image:url(../kommerce/_build/icons/pathArrow.png);
+                        repeat:no-repeat;
+                    }
+                }
                 tr{
                     margin-bottom: 20px;
+                    .value{
+                        margin-left: 20px;
+                    }
                     td{
                         display: block;
                     }
@@ -672,15 +684,37 @@
                         p{
                             display: none;
                         }
+                        .value{
+                            @include display(flex);
+                            .reset_variations{
+                                background:{
+                                    image:url(../kommerce/_build/icons/clearIcon.png);
+                                    repeat: no-repeat;
+                                    position: center;
+                                    color: #fff;
+                                };
+                                border-radius: 50%;
+                                @include size(52px);
+                                border: 4px solid #fff;
+                                @include filter(drop-shadow(0 0 2px rgba(0, 0, 0, 0.3)));
+                                margin-top: 5px;
+                                text-indent: -99999px;
+                            }
+                        }
                         #picker_pa_colour, #picker_pa_material{
                             div{
                                 border-radius: 50%;
-                                border-color: #91989E;
+                                border: 4px solid #fff;
+                                margin-top: 5px;
+                                @include filter(drop-shadow(0 0 2px rgba(0, 0, 0, 0.3)));
                                 &.selected{
-                                    border-color: #91989E;
+                                    border-color: rgba(0, 109, 209, 0.6);
+                                    @include filter(drop-shadow(0 0 2px rgba(0, 109, 209, 0.2)));
                                 }
                                 a,img{
                                     border-radius: 50%;
+                                    width: 40px !important;
+                                    height: 40px !important;
                                 }
                             }
                         }
