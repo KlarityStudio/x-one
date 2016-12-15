@@ -2742,6 +2742,7 @@ input[type="submit"] {
     position: relative; }
     .single-product .single-product-wrapper .entry-summary h2 {
       font-size: 13px;
+      font-weight: 500;
       text-transform: uppercase; }
     .single-product .single-product-wrapper .entry-summary h1 {
       margin-bottom: 29px; }
@@ -2922,6 +2923,7 @@ input[type="submit"] {
           position: relative;
           background-color: #fff;
           border-top: 1px solid #656565;
+          border-bottom: 1px solid #656565;
           display: -webkit-box;
           display: -moz-box;
           display: box;

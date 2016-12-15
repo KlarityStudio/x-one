@@ -75,7 +75,6 @@
 	function stickyNav(){
 
 		$(window).scroll(function() {
-			window.console.alert('scroll');
 			if ($(this).scrollTop() > 1){
 			    $('nav').addClass("sticky");
 			  }
