@@ -169,7 +169,7 @@
 
 			            </div>
 						<div class="article-social">
-							<?php echo getPostLikeLink($id); ?>
+							<?php echo getThePostLikeLink($id); ?>
 							<span class="divider"></span>
 							<div class="social-wrapper">
 								<div class="social-container">
@@ -322,7 +322,7 @@
 							</div>
 							<!-- <div class="article-social">
 								<?php get_template_part('includes/modules/module', 'postFooter'); ?>
-								<?php echo getPostLikeLink($post->ID); ?>
+								<?php echo getThePostLikeLink($post->ID); ?>
 							</div> -->
 						</div>
 					</div>
@@ -424,7 +424,7 @@
 	    return false;
 	}
 
-	function getPostLikeLink($post_id){
+	function getThePostLikeLink($post_id){
 	    $themename = "kommerce";
 
 	    $vote_count = get_post_meta($post_id, "votes_count", true);
