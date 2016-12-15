@@ -1,0 +1,99 @@
+/* Thumb Cover */
+
+.infinity-cover {
+
+	display:block;
+	overflow:hidden;
+	position:relative;
+	
+	/* Cover Buttons */
+	.thumb-cover {
+		background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+		z-index: 2;
+	}
+
+	.cover-button {
+	    box-sizing:border-box
+	}
+
+	.thumb-icons {
+
+		z-index: 3;
+
+		span {
+
+			background-color: white;
+			border: medium none;
+			display: inline-block !important;
+			float: none !important;
+			font-size: 14px;
+			font-weight: normal;
+			height: 40px;
+			line-height: 40px;
+			margin: 0 2px;
+			text-align: center;
+			width: 40px;
+			-o-border-radius: 50%;
+			border-radius: 50%;
+			z-index: 3;
+
+			> a {
+
+				color: #222;
+				display: block;
+				font-weight: normal;
+
+				i {
+
+					display: inline-block;
+					font: normal normal normal 14px/1 FontAwesome;
+					font-size: inherit;
+					text-rendering: auto;
+					-webkit-font-smoothing: antialiased;
+
+				}
+
+			}
+
+		}
+
+
+
+	}
+
+	/* Content Cover */
+
+	.content-cover {
+		position: absolute;
+	    opacity:0;
+	    visibility:hidden;
+	    width:100%;
+	    height:100%;
+	    display:block;
+	    z-index: 2;
+	}
+	.content-cover-content {
+	    width: 100%;
+	    position:relative;
+
+	    &.vertical-top {
+	   	position: relative;
+  			top: 0%;
+  			transform: translateY(0%);
+	    }
+
+	    &.vertical-center {
+	   	position: relative;
+  			top: 50%;
+  			transform: translateY(-50%);
+	    }
+
+	    &.vertical-bottom {
+	   	position: relative;
+  			bottom: 0%;
+	    }
+	}
+
+
+}
+
