@@ -2799,7 +2799,7 @@ input[type="submit"] {
               font-size: 18px;
               font-weight: 700;
               position: absolute;
-              left: 59px; }
+              left: 73px; }
         .single-product .single-product-wrapper .entry-summary form tr.pa_phone-makes {
           display: inline-block; }
           .single-product .single-product-wrapper .entry-summary form tr.pa_phone-makes .label {
@@ -2814,6 +2814,19 @@ input[type="submit"] {
           .single-product .single-product-wrapper .entry-summary form tr.pa_phones .label, .single-product .single-product-wrapper .entry-summary form tr.pa_cable-length .label {
             display: none;
             padding: 0; }
+          .single-product .single-product-wrapper .entry-summary form tr.pa_phones .value, .single-product .single-product-wrapper .entry-summary form tr.pa_cable-length .value {
+            display: -webkit-box;
+            display: -moz-box;
+            display: box;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flexbox;
+            display: flex; }
+            .single-product .single-product-wrapper .entry-summary form tr.pa_phones .value .reset_variations, .single-product .single-product-wrapper .entry-summary form tr.pa_cable-length .value .reset_variations {
+              border: 1px solid;
+              border-radius: 2px;
+              padding: 0 12px;
+              height: 34px; }
           .single-product .single-product-wrapper .entry-summary form tr.pa_phones .select-option, .single-product .single-product-wrapper .entry-summary form tr.pa_cable-length .select-option {
             border-color: #91989E;
             border-radius: 2px;

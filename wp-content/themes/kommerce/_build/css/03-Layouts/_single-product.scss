@@ -636,7 +636,7 @@
                                         weight: 700;
                                     }
                                     position: absolute;
-                                    left: 59px;
+                                    left: 73px;
                                 }
                             }
                         }
@@ -657,6 +657,15 @@
                         .label{
                             display: none;
                             padding: 0;
+                        }
+                        .value{
+                            @include display(flex);
+                            .reset_variations{
+                                border: 1px solid;
+                                border-radius: 2px;
+                                padding: 0 12px;
+                                height: 34px;
+                            }
                         }
                         .select-option{
                             border-color:#91989E;
