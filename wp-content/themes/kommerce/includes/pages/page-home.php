@@ -11,7 +11,6 @@
         <iframe src="https://www.youtube.com/embed/8XBGLImhq9w" width="690" height="358" frameborder="0" allowfullscreen></iframe>
         <iframe src="https://www.youtube.com/embed/Js0W_zR5CPQ" width="690" height="358" frameborder="0" allowfullscreen></iframe>
     </section>
-   <!-- <div class="button-wrapper"><a href="<?php echo site_url('/product-category/screen-protectors'); ?>">View Screen Protectors</a></div> -->
 </article>
 <article class="category-section category-cases">
     <img class="category-header-image" src="/wp-content/themes/kommerce/_build/images/leather.png" alt="Mobile Cases">
@@ -19,7 +18,6 @@
     <?php echo categoryDescriptions( 'phone-covers'); ?>
     <section class="product-list">
     </section>
-    <!-- <div class="button-wrapper"><a href="<?php echo site_url('/product-category/phone-covers'); ?>">View Phone Covers</a></div> -->
 </article>
 <article class="category-section category-cables">
     <img class="category-header-image" src="/wp-content/themes/kommerce/_build/images/apple-cable.png" alt="Apple Cable">
@@ -30,5 +28,4 @@
     <section class="video-wrapper video-cables">
         <iframe src="https://www.youtube.com/embed/VBCi851OlVw" width="690" height="358" frameborder="0" allowfullscreen></iframe>
     </section>
-   <!-- <div class="button-wrapper"><a href="<?php echo site_url('/product-category/usb-cables'); ?>">View Usb Cables</a></div> -->
 </article>
