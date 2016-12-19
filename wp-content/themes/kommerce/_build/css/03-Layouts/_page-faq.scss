@@ -12,18 +12,20 @@
             @include display(flex);
             @include justify-content(space-around);
             aside{
-                width: 40%;
-                max-width: 412.7px;
+                width: 50%;
+                max-width: 512.7px;
 
                 ul{
                     border: 1px solid rgba(000, 000, 000, 0.18);
                     li{
+                        @include display(flex);
+                        @include align-items(center);
                         font:{
                             size: 14px;
 
                         }
                         cursor: pointer;
-                        padding: 0 20px;
+                        padding: 10px 60px 10px 20px;
                         line-height: 50px;
                         color: $textGrey;
                         height: 50px;
@@ -68,8 +70,8 @@
                 }
             }
             .article-container{
-                width: 60%;
-                max-width: 892px;
+                width: 100%;
+                max-width: 852px;
                 min-height: 400px;
                 position: relative;
                 article{
