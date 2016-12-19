@@ -351,16 +351,17 @@
 			$accountNav.find('a[href*="my-account"]').text('Login');
 		}
 	}
+
 	function phoneIcon(){
-		var $selectField = $('#pa_phone-makes').children('enabled'),
-			$selectValue = $selectField.attr('value'),
+		var $selectField = $('#picker_pa_phone-makes').children('.selected'),
+			$selectValue = $selectField.attr('data-value'),
 			$icon = $('.icon-container').children('.icon');
 
-		if ($('body').hasClass('single-product')) {
-			// window.alert($selectValue);
+			window.console.log($selectValue);
 			$icon.addClass($selectValue);
-		}
+		
 	}
+
 	function variablePrice(){
 		var priceText = $('.entry-summary').find('.price');
 
