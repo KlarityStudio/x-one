@@ -1,0 +1,38 @@
+// -----------------------------------------------------------------------------
+// When having several themes, this file contains everything related to the
+// default one.
+// -----------------------------------------------------------------------------
+
+$gray-dark:                 #373a3c !default;
+$gray:                      #55595c !default;
+$gray-light:                #818a91 !default;
+$gray-lighter:              #eceeef !default;
+$gray-lightest:             #f7f7f9 !default;
+
+.text-gray-dark { color: $gray-dark; }
+.text-gray { color: $gray; }
+.text-gray-light { color: $gray-light; }
+.text-gray-lighter { color: $gray-lighter; }
+.text-gray-lightest {color: $gray-lightest;  }
+
+.bg-gray-dark { background-color: $gray-dark; }
+.bg-gray { background-color: $gray; }
+.bg-gray-light { background-color: $gray-light; }
+.bg-gray-lighter { background-color: $gray-lighter; }
+.bg-gray-lightest {background-color: $gray-lightest;  }
+
+// 1.Config
+$kit-color1: #FE4A5D;
+$kit-color2: #3C7AD0;
+$kit-color3: #71CE51;
+$kit-color4: #FFC300;
+$kit-color5: #5059A6;
+$kit-color6: #252942;
+
+// 2.Base
+@include kit-color($kit-color1, 1);
+@include kit-color($kit-color2, 2);
+@include kit-color($kit-color3, 3);
+@include kit-color($kit-color4, 4);
+@include kit-color($kit-color5, 5);
+@include kit-color($kit-color6, 6);

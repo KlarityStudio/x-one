@@ -1,0 +1,13 @@
+@mixin kit-color($color, $index) {
+  .kit-color#{$index} { color: $color; }
+  .kit-color#{$index}-lighten4 { color:  lighten( $color, 42% ); }
+  .kit-color#{$index}-lighten3 { color:  lighten( $color, 30% ); }
+  .kit-color#{$index}-lighten2 { color:  lighten( $color, 20% ); }
+  .kit-color#{$index}-lighten1 { color:  lighten( $color, 10% ); }
+  //  - Backgrounds
+  .kit-bg#{$index} { background-color: $color; }
+  .kit-bg#{$index}-lighten4 { background-color:  lighten( $color, 42% ); }
+  .kit-bg#{$index}-lighten3 { background-color:  lighten( $color, 30% ); }
+  .kit-bg#{$index}-lighten2 { background-color:  lighten( $color, 20% ); }
+  .kit-bg#{$index}-lighten1 { background-color:  lighten( $color, 10% ); }
+}

@@ -1,0 +1,38 @@
+/**
+ * Basic typography style for copy text
+ */
+
+//@include display(flex);
+
+.small { font-size: .8rem; }
+.medium { font-size: .9rem; }
+.teaser { font-size: 1.1rem; }
+.leading { font-size: 1.2rem }
+.attention { font-size: 1.4rem }
+.display1 { font-size: 2rem }
+.display2 { font-size: 3rem }
+.display3 { font-size: 4rem }
+.display4 { font-size: 5rem }
+.display5 { font-size: 6rem }
+.display6 { font-size: 7rem }
+
+.uppercase { text-transform: uppercase;}
+.lowercase { text-transform: lowercase; }
+.center { text-align: center; }
+
+.fade1 { opacity: 0.1; }
+.fade2 { opacity: 0.2; }
+.fade3 { opacity: 0.3; }
+.fade4 { opacity: 0.4; }
+.fade5 { opacity: 0.5; }
+.fade6 { opacity: 0.6; }
+.fade7 { opacity: 0.7; }
+.fade8 { opacity: 0.8; }
+
+.decorated {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  background-image: url("http://uploads.webflow.com/5767fd691f7004325ac6e4ef/5767fd691f7004325ac6e596_thin-separator.svg");
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+}
