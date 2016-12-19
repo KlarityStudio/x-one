@@ -2778,27 +2778,29 @@ input[type="submit"] {
           font-weight: 600; }
         .single-product .single-product-wrapper .entry-summary form tr span {
           color: #61B11B; }
-        .single-product .single-product-wrapper .entry-summary form tr #picker_pa_phone-makes p {
-          display: none; }
-        .single-product .single-product-wrapper .entry-summary form tr #picker_pa_phone-makes div {
-          border: none;
-          height: 35px;
-          width: 35px; }
-          .single-product .single-product-wrapper .entry-summary form tr #picker_pa_phone-makes div img {
-            opacity: 0.3; }
-          .single-product .single-product-wrapper .entry-summary form tr #picker_pa_phone-makes div.selected {
-            padding: 2px; }
-            .single-product .single-product-wrapper .entry-summary form tr #picker_pa_phone-makes div.selected img {
-              opacity: 1; }
-          .single-product .single-product-wrapper .entry-summary form tr #picker_pa_phone-makes div:nth-of-type(2) {
-            margin-left: 60px; }
-            .single-product .single-product-wrapper .entry-summary form tr #picker_pa_phone-makes div:nth-of-type(2):before {
-              content: " or ";
-              line-height: 37px;
-              font-size: 18px;
-              font-weight: 700;
-              position: absolute;
-              left: 73px; }
+        .single-product .single-product-wrapper .entry-summary form tr #picker_pa_phone-makes {
+          position: relative; }
+          .single-product .single-product-wrapper .entry-summary form tr #picker_pa_phone-makes p {
+            display: none; }
+          .single-product .single-product-wrapper .entry-summary form tr #picker_pa_phone-makes div {
+            border: none;
+            height: 35px;
+            width: 35px; }
+            .single-product .single-product-wrapper .entry-summary form tr #picker_pa_phone-makes div img {
+              opacity: 0.3; }
+            .single-product .single-product-wrapper .entry-summary form tr #picker_pa_phone-makes div.selected {
+              padding: 2px; }
+              .single-product .single-product-wrapper .entry-summary form tr #picker_pa_phone-makes div.selected img {
+                opacity: 1; }
+            .single-product .single-product-wrapper .entry-summary form tr #picker_pa_phone-makes div:nth-of-type(2) {
+              margin-left: 60px; }
+              .single-product .single-product-wrapper .entry-summary form tr #picker_pa_phone-makes div:nth-of-type(2):before {
+                content: " or ";
+                line-height: 37px;
+                font-size: 18px;
+                font-weight: 700;
+                position: absolute;
+                left: 73px; }
         .single-product .single-product-wrapper .entry-summary form tr.pa_phone-makes {
           display: inline-block; }
           .single-product .single-product-wrapper .entry-summary form tr.pa_phone-makes .label {
@@ -3012,20 +3014,25 @@ input[type="submit"] {
       font-weight: 600; }
 @media screen and (max-width: 1314px) {
   .single-product .single-product-wrapper .entry-summary form tr.pa_phones .value {
-    max-width: 367px; } }
+    max-width: 367px; }
+  .single-product .single-product-wrapper .entry-summary .single_variation_wrap .woocommerce-variation-add-to-cart .woocommerce-variation-availability {
+    right: 0;
+    top: 60px; } }
 @media screen and (max-width: 1077px) {
-  .single-product .single-product-wrapper .entry-summary form tr.pa_phones .value {
-    max-width: 247px; } }
+  .single-product .single-product-wrapper .entry-summary form table {
+    background-image: none; }
+  .single-product .single-product-wrapper .entry-summary form tr.pa_phones {
+    position: initial;
+    height: 100%; }
+    .single-product .single-product-wrapper .entry-summary form tr.pa_phones .value {
+      max-width: 247px; } }
 @media screen and (max-width: 902px) {
   .single-product .single-product-wrapper .entry-summary > div .price {
     position: initial; }
   .single-product .single-product-wrapper .entry-summary form table {
     background-image: none; }
   .single-product .single-product-wrapper .entry-summary form tr.pa_phone-makes {
-    margin-bottom: 0; }
-  .single-product .single-product-wrapper .entry-summary form tr.pa_phones {
-    position: initial;
-    margin-bottom: 100px; } }
+    margin-bottom: 0; } }
 @media screen and (max-width: 769px) {
   .single-product .single-product-wrapper {
     -webkit-box-orient: vertical;
