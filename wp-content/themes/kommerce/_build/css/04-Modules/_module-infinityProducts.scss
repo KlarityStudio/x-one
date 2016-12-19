@@ -1,5 +1,6 @@
 .mega-menu {
-  .view-wrapper {
+  .product-view  {
+    line-height: 1;
     .add_to_cart_button {
       display: none;
     }
@@ -16,7 +17,9 @@
 //       }
 //   }
 // }
-.product-view {
+.product-view,
+.woocommerce .product-view,
+.single-product #content .product-view {
   text-align: center;
   .owl-item {
     padding: 20px 0;
