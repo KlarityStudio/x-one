@@ -26,13 +26,12 @@
                         }
                         cursor: pointer;
                         padding: 10px 60px 10px 20px;
-                        line-height: 50px;
                         color: $textGrey;
-                        height: 50px;
+                        height: 60px;
                         border-bottom: 1px solid rgba(000, 000, 000, 0.18);
                         position: relative;
                         @include transition(all, 0.3s, ease-in-out);
-                        span{
+                        .icon-arrow{
                             width: 36px;
                             position: absolute;
                             right: 20px;
@@ -46,7 +45,7 @@
                         &.reading{
                             color: #ffffff;
                             background-color: $baseGrey;
-                            span{
+                            .icon-arrow{
                                 .svg{
                                     polygon{
                                         fill: #ffffff;

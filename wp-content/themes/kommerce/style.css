@@ -1162,20 +1162,19 @@ footer {
           font-size: 14px;
           cursor: pointer;
           padding: 10px 60px 10px 20px;
-          line-height: 50px;
           color: #656565;
-          height: 50px;
+          height: 60px;
           border-bottom: 1px solid rgba(0, 0, 0, 0.18);
           position: relative;
           -webkit-transition: all, 0.3s, ease-in-out;
           -moz-transition: all, 0.3s, ease-in-out;
           -spec-transition: all, 0.3s, ease-in-out;
           transition: all, 0.3s, ease-in-out; }
-          .page-faqs section > div aside ul li span {
+          .page-faqs section > div aside ul li .icon-arrow {
             width: 36px;
             position: absolute;
             right: 20px; }
-            .page-faqs section > div aside ul li span .svg {
+            .page-faqs section > div aside ul li .icon-arrow .svg {
               -webkit-transform: rotate(180deg);
               -moz-transform: rotate(180deg);
               -ms-transform: rotate(180deg);
@@ -1187,7 +1186,7 @@ footer {
           .page-faqs section > div aside ul li.reading {
             color: #ffffff;
             background-color: #23282D; }
-            .page-faqs section > div aside ul li.reading span .svg polygon {
+            .page-faqs section > div aside ul li.reading .icon-arrow .svg polygon {
               fill: #ffffff; }
           .page-faqs section > div aside ul li:hover {
             background-color: #23282d;

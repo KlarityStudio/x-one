@@ -24,7 +24,7 @@
                  if( $faq->have_posts() ) :
                      $data = 1;
                      while( $faq->have_posts() ) : $faq->the_post(); ?>
-                     <li data-value="<?php echo $data; ?>"><?php the_title(); ?><span><?php get_template_part('_build/icons/icon', 'arrow'); ?></span></li>
+                     <li data-value="<?php echo $data; ?>"><div><?php the_title(); ?></div><div class="icon-arrow" ><?php get_template_part('_build/icons/icon', 'arrow'); ?></div></li>
                  <?php
                     $data++;
                     endwhile;
