@@ -1219,18 +1219,21 @@ footer {
         .page-faqs section > div .article-container article.reading {
           display: table;
           margin-bottom: 100px; }
+@media screen and (max-width: 1350px) {
+  .page-faqs section > div {
+    padding: 10px; }
+    .page-faqs section > div .article-container {
+      width: 60%; }
+      .page-faqs section > div .article-container article {
+        width: 100%;
+        padding: 0 0 0 20px; } }
 @media screen and (max-width: 982px) {
   .page-faqs section > div {
     padding: 10px; }
     .page-faqs section > div .article-container article {
       width: 100%;
       padding: 0 0 0 20px; } }
-@media screen and (max-width: 702px) {
-  .page-faqs section > div {
-    padding: 10px; }
-    .page-faqs section > div aside ul li span {
-      display: none; } }
-@media screen and (max-width: 615px) {
+@media screen and (max-width: 820px) {
   .page-faqs section {
     height: 100%; }
     .page-faqs section > div {
@@ -1241,7 +1244,10 @@ footer {
         width: 100%; }
         .page-faqs section > div .article-container article {
           display: block;
-          position: initial; } }
+          position: initial;
+          margin-bottom: 50px; }
+          .page-faqs section > div .article-container article.reading {
+            margin-bottom: 50px; } }
 
 .archive h1, .search h1 {
   text-align: center;
