@@ -147,7 +147,7 @@ header{
                 ul{
                     background-color: #fff;
                     position: absolute;
-                    padding: 20px;
+                    padding: 10px 20px;
                     right: 0;
                     opacity: 0;
                     z-index: 200;
@@ -158,8 +158,11 @@ header{
                             color: $baseGrey;
                             opacity: 0.8;
                             @include transition(all, 0.3s, ease-in-out);
+                            text-transform: uppercase;
+                            font-size: 13px;
                             &:hover{
                                 opacity: 1;
+                                color: $baseBlue;
                                 @include transition(all, 0.3s, ease-in-out);
                             }
                         }
@@ -168,7 +171,8 @@ header{
                     &.active{
                         box-shadow: 0 0 0 rgba(000, 000, 000, 0.2);
                         opacity: 1;
-                        right: 0;
+                        right: -20px;
+                        top: 46px;
                         height: initial;
                         width: 122px;
                         @include transition(all, 0.3s, ease-in-out);
@@ -224,6 +228,20 @@ header{
             width: 100%;
             #mega-menu-primary{
                 @include flex-direction(column);
+                li.mega-menu-item {
+                  margin: 5px 0 5px 0;
+                  > a.mega-menu-link {
+                    line-height: 20px;
+                    height: 20px;
+                  }
+                }
+                ul.mega-sub-menu {
+                  margin: 0!important;
+                  li.mega-menu-item {
+                    margin: 0!important;
+                    padding: 0!important;
+                  }
+                }
                 .mega-toggle-on{
                     ul{
                         margin-right: 20px;
@@ -232,6 +250,32 @@ header{
                             width: 100% !important;
                         }
                     }
+                }
+                .owl-carousel .owl-stage {
+                  width: auto!important;
+                  margin: 10px 0 20px;
+                }
+                .product-view {
+                  .owl-controls {
+                    display: none;
+                  }
+                  .owl-item {
+                    width: 100%!important;
+                    padding: 0;
+                    .vb-part {
+                      display: none;
+                    }
+                    .title-part,
+                    .title-part a {
+                      display: block;
+                      font-weight: normal;
+                      font-size: 12px;
+                      text-transform: uppercase;
+                      text-align: left;
+                      padding-left: 10px;
+                      color: #555;
+                    }
+                  }
                 }
             }
         }
@@ -280,6 +324,7 @@ header{
                             color: $baseGrey;
                             opacity: 0.8;
                             @include transition(all, 0.3s, ease-in-out);
+                            text-transform: uppercase;
                         }
                     }
 

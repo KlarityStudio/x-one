@@ -51,17 +51,7 @@ if ( $products->have_posts() ) : ?>
 <?php $cat_count = sizeof( get_the_terms( $post->ID, 'product_cat' ) ); ?>
 	<section class="related products related-products">
 		<h1>You Might also like</h1>
-		<ul class="products">
-
-			<?php while ( $products->have_posts() ) : $products->the_post(); ?>
-
-				<?php wc_get_template_part( 'content', 'product' ); ?>
-
-			<?php endwhile; // end of the loop. ?>
-
-		<?php woocommerce_product_loop_end(); ?>
-
-		</ul>
+		<?php echo do_shortcode('[infinity id="804"]'); ?>
 	</section>
 
 <?php endif;
