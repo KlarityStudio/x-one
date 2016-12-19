@@ -42,19 +42,19 @@ function vb_loop_query( $id, $query = '' ) {
 
 	$args = array();
 
-	$options = vb_options( $id );
+	//$options = vb_options( $id );
 
 	$infinity_options = views();
 	// post/content type
-	$post_type = $infinity_options->getOption('postopts-post-type-' . $id . '', 'post');
+	$post_type = $infinity_options->getSerializedOption('postopts-post-type-'.$id, 'post', 'infinity_options_view_'.$id);
 	$args['post_type'] = $post_type;
 
 	// pagination
-	$per_page = $infinity_options->getOption( 'postopts-post-count-' . $id . '', '20' );
+	$per_page = $infinity_options->getSerializedOption( 'postopts-post-count-' . $id, '20', 'infinity_options_view_'.$id );
 	$args['posts_per_page'] = $per_page;//$options['posts-per-page'];
 
 	//offset
-	$offset = $infinity_options->getOption( 'postopts-post-offset-' . $id . '', null );
+	$offset = $infinity_options->getOption( 'postopts-post-offset-' . $id, null );
 	$args['offset'] = $offset;
 
 	$args['paged'] = max( 1, get_query_var( 'paged' ) );
@@ -77,24 +77,24 @@ function vb_loop_query( $id, $query = '' ) {
 	}
 
 	//category for simple query
-	if ( empty( $options['taxonomy-group'] ) || $options['post-taxonomies-relation'] == 'none' ) {
-
-		//TODO: use this code when multiple select is working for categories
-		// $categories = $infinity_options->getOption( 'postopts-post-categories-' . $id . '', 'all' );
-		// if ( $categories && !in_array( 'all', $categories ) ) {
-		// 	$categories = implode( ',', $categories );
-		// 	$args['cat'] = $categories;
-		// }
-
-		// $categories = $infinity_options->getOption( 'postopts-post-categories-' . $id . '', 'all' );
-		// if ( $categories && $categories != 'all' ) {
-		// 	$args['cat'] = $categories;
-		// }
-
-	}
+	// if ( empty( $options['taxonomy-group'] ) || $options['post-taxonomies-relation'] == 'none' ) {
+	//
+	// 	//TODO: use this code when multiple select is working for categories
+	// 	// $categories = $infinity_options->getOption( 'postopts-post-categories-' . $id, 'all' );
+	// 	// if ( $categories && !in_array( 'all', $categories ) ) {
+	// 	// 	$categories = implode( ',', $categories );
+	// 	// 	$args['cat'] = $categories;
+	// 	// }
+	//
+	// 	// $categories = $infinity_options->getOption( 'postopts-post-categories-' . $id, 'all' );
+	// 	// if ( $categories && $categories != 'all' ) {
+	// 	// 	$args['cat'] = $categories;
+	// 	// }
+	//
+	// }
 
 	//woocommerce categories
-	$woocats = $infinity_options->getOption( 'postopts-woo-categories-' . $id );
+	$woocats = $infinity_options->getSerializedOption( 'postopts-woo-categories-' . $id, array(), 'infinity_options_view_'.$id );
 	if ( ! empty( $woocats ) && $post_type == 'product' ) {
 
 		$woo_tax_query = array();
@@ -115,8 +115,8 @@ function vb_loop_query( $id, $query = '' ) {
 		}
 	}
 
-	$taxonomy_group = $infinity_options->getOption('taxonomy-group_' .$id . '', 'categories');
-	$taxonomy_relation = $infinity_options->getOption('post-taxonomies-relation_' .$id . '');
+	$taxonomy_group = $infinity_options->getOption('taxonomy-group_' .$id, 'categories');
+	$taxonomy_relation = $infinity_options->getOption('post-taxonomies-relation_' .$id);
 
 	// taxonomy
 	if ( ! empty( $taxonomy_group )  && $post_type == 'post' ) {
@@ -204,17 +204,17 @@ function vb_loop_query( $id, $query = '' ) {
 	}
 
 	// ordering
-	$args['order'] = $infinity_options->getOption( 'postopts-order-' . $id . '' );
-	$order_by = $infinity_options->getOption( 'postopts-order-by-' . $id . '' );
+	$args['order'] = $infinity_options->getOption( 'postopts-order-' . $id );
+	$order_by = $infinity_options->getOption( 'postopts-order-by-' . $id );
 
 	if ( $order_by == 'meta_value_num' || $order_by == 'meta_value' ) {
 
-		$options['meta-key'] = trim ( $infinity_options->getOption( 'postopts-order-meta-key-' . $id . '' ) );
-
-		if ( ! empty( $options['meta-key'] ) ) {
-			$args['meta_key'] = $options['meta-key'];
-			$args['orderby']  = $order_by;
-		}
+		// $options['meta-key'] = trim ( $infinity_options->getOption( 'postopts-order-meta-key-' . $id ) );
+		//
+		// if ( ! empty( $options['meta-key'] ) ) {
+		// 	$args['meta_key'] = $options['meta-key'];
+		// 	$args['orderby']  = $order_by;
+		// }
 
 	} else if ( $order_by == 'likes' ) {
 
@@ -298,8 +298,6 @@ function vb_render_view( $id, $layout_name, $args = null, $context = '' ) {
 	$view_layouts = vb_get_view_layouts();
 	$view_name = strtolower(views()->view_name);
 
-	$options = vb_options( $id );
-
 	if ( empty( $view_layouts ) ) return false;
 
 	if (isset( $view_layouts[$layout_name] )) {
@@ -346,7 +344,7 @@ function vb_setup_query( $id, $args ) {
 
 	$options = vb_options( $id );
 
-	$query_mode = $options['query-mode'];
+	$query_mode = 1;//$options['query-mode'];
 
 	//0 = custom query
 	if ( $query_mode == 1 ) {
@@ -771,13 +769,13 @@ function vb_shortcode( $atts ) {
 		'id' => 0,
 	), $atts ) );
 
-	$options = vb_options( $id );
-
 	$infinity_options = views();
 
 	$view_name = strtolower(views()->view_name);
 
-	$layout = ( $infinity_options->getOption( 'view-layout-' . $id . '' ) == true ) ? $infinity_options->getOption( 'view-layout-' . $id . '' ) : 'blog';
+	$selected_layout = $infinity_options->getSerializedOption( 'view-layout-' . $id, 'blog', 'infinity_options_view_'.$id );
+
+	$layout = $selected_layout;
 
 	return vb_render_view( $id, $layout, null, 'shortcode' );
 
@@ -1034,7 +1032,7 @@ function get_filter_taxonomy_list() {
 */
 function vb_get_views( $args = array() ) {
 	$defaults = array(
-		'post_type' => 'view',
+		'post_type' => 'ib_views',
 		'nopaging'  => true
 	);
 

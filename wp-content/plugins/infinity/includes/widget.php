@@ -36,14 +36,17 @@ class Infinity_Widget extends WP_Widget  {
 		echo $before_widget;
 
 		$id = $instance['view_id'];
-		$options = vb_options( $id );
 
 		$infinity_options = views();
 		$view_name = strtolower(views()->view_name);
 
-		$layout = ( $infinity_options->getOption( 'view-layout-' . $id . '' ) == true ) ? $infinity_options->getOption( 'view-layout-' . $id . '' ) : 'blog';
+		$selected_layout = $infinity_options->getSerializedOption( 'view-layout-' . $id, 'blog', 'infinity_options_view_'.$id );
 
+		$layout = $selected_layout;
+		//
 		echo vb_render_view( $id, $layout, null, 'shortcode' );
+
+		//include_once(views()->layouts_dir.$layout.'.php');
 
 		echo $after_widget;
 

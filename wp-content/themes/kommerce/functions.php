@@ -97,7 +97,7 @@
 
 
     function carousel_scripts() {
-        wp_enqueue_script( 'owl.carousel', get_template_directory_uri() . '/_build/js/owl.carousel.js', array('jquery'), '20120206', true );
+        // wp_enqueue_script( 'owl.carousel', get_template_directory_uri() . '/_build/js/owl.carousel.js', array('jquery'), '20120206', true );
         wp_enqueue_script( 'effects', get_template_directory_uri() . '/_build/js/effects.js', array('jquery'), '20120206', true );
     }
   add_action( 'wp_enqueue_scripts', 'carousel_scripts' );

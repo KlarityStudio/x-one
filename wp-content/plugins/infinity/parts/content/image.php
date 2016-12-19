@@ -2,12 +2,12 @@
 
 	extract( shortcode_atts( array(
 			'thumb_align'                    => 'left',
-			'auto_size'                      => 'on',
+			'auto_size'                      => 'off',
 			'auto_size_container_width'		=> '940',
-			'crop_vertically'        			=> 'on',
+			'crop_vertically'        			=> 'off',
 			'columns'                        => 4,//make = number of columns
 			'thumbnail_width'               	=> '250',
-			'thumbnail_height'              	=> '200',
+			'thumbnail_height'              	=> null,
 			'crop_vertically_height_ratio' 	=> '60',
 			'show_cover'               	=> true,
 			'thumb_cover_effect'        	=> 'ImageFade',
@@ -37,12 +37,14 @@
 
 	$infinity_options = views();
 	$id = views()->id;
-	$btns = $infinity_options->getOption( 'image-cover-icon-type-icons-' . $id );
-	if ( empty($btns) ) {
-		$btns = array('btn1', 'btn2');
-	}
+	// $btns = $infinity_options->getOption( 'image-cover-icon-type-icons-' . $id );
+	// if ( empty($btns) ) {
+	// 	$btns = array('btn1', 'btn2');
+	// }
 	$display_as = $display_as != null ? ' display-' . $display_as : null;
-	$layout = ( $infinity_options->getOption( 'view-layout-' . $id ) == true ) ? $infinity_options->getOption( 'view-layout-' . $id ) : 'blog';
+	// $layout = ( $infinity_options->getOption( 'view-layout-' . $id ) == true ) ? $infinity_options->getOption( 'view-layout-' . $id ) : 'blog';
+
+	$layout = 'carousel';
 
 	if ( $layout == 'slider' ||  $layout == 'blog') {
 		$columns	= '1';
@@ -73,7 +75,7 @@
 	if ( $auto_size == 'on' ) {
 
 		/* all images height depends on ratios so set to '' */
-		$thumbnail_height = '';
+		$thumbnail_height = null;
 		$thumbnail_width = $approx_img_width + 10; /* Add a 10px buffer to insure that image will be large enough */
 
 		/* if crop vertically make all images the same height */
@@ -237,17 +239,6 @@
 			<img src="<?php echo esc_url($thumbnail_url); ?>" alt="<?php echo get_the_title(); ?>"  width="<?php echo $thumbnail_width; ?>" height="<?php echo $thumbnail_height; ?>" class="initial-image" />
 			<?php if($thumb_cover_type == 'flip') : ?>
 				<img src="<?php echo esc_url($flip_thumbnail_url); ?>" alt="<?php echo get_the_title(); ?>"  width="<?php echo $thumbnail_width; ?>" height="<?php echo $thumbnail_height; ?>" style="display: none;" class="flip-image" />
-				<script>
-				jQuery(document).ready(function($){
-					jQuery( '.image-part a:first-child' ).hover( function() {
-							jQuery( this ).find( '.initial-image' ).hide();
-							jQuery( this ).find( '.flip-image' ).show();
-					}, function() {
-							jQuery( this ).find( '.initial-image' ).show();
-							jQuery( this ).find( '.flip-image' ).hide();
-					});
-				});
-				</script>
 			<?php endif; ?>
 		</a>
 
