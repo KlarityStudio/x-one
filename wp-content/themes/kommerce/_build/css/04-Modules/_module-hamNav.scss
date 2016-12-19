@@ -24,22 +24,22 @@
 #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
   cursor: pointer;
   border-radius: 1px;
-  height: 5px;
-  width: 35px;
-  background-color: rgba(100,146,188,0.80);
+  height: 3px;
+  width: 30px;
+  background-color: $baseBlue;
   position: absolute;
   display: block;
   content: '';
 }
 #nav-toggle span:before {
-  top: -10px;
+  top: -8px;
 }
 #nav-toggle span:after {
-  bottom: -10px;
+  bottom: -8px;
 }
 
 #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
-  transition: all 500ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 #nav-toggle.active span {
@@ -47,7 +47,7 @@
 }
 #nav-toggle.active span:before, #nav-toggle.active span:after {
   top: 0;
-    background-color: $baseBlue;
+  background-color: $baseBlue;
 }
 #nav-toggle.active span:before {
   transform: rotate(45deg);
