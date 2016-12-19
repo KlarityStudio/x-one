@@ -889,6 +889,8 @@
                 form{
                     tr{
                         &.pa_phones{
+                            position: initial;
+                            height: 100%;
                             .value{
                                 max-width: 367px;
                             }
@@ -912,15 +914,6 @@
                 form{
                     table{
                         background-image: none;
-                    }
-                    tr{
-                        &.pa_phones{
-                            position: initial;
-                            height: 100%;
-                            .value{
-                                max-width: 247px;
-                            }
-                        }
                     }
                 }
             }

@@ -3013,19 +3013,17 @@ input[type="submit"] {
       color: #23282D;
       font-weight: 600; }
 @media screen and (max-width: 1314px) {
-  .single-product .single-product-wrapper .entry-summary form tr.pa_phones .value {
-    max-width: 367px; }
+  .single-product .single-product-wrapper .entry-summary form tr.pa_phones {
+    position: initial;
+    height: 100%; }
+    .single-product .single-product-wrapper .entry-summary form tr.pa_phones .value {
+      max-width: 367px; }
   .single-product .single-product-wrapper .entry-summary .single_variation_wrap .woocommerce-variation-add-to-cart .woocommerce-variation-availability {
     right: 0;
     top: 60px; } }
 @media screen and (max-width: 1077px) {
   .single-product .single-product-wrapper .entry-summary form table {
-    background-image: none; }
-  .single-product .single-product-wrapper .entry-summary form tr.pa_phones {
-    position: initial;
-    height: 100%; }
-    .single-product .single-product-wrapper .entry-summary form tr.pa_phones .value {
-      max-width: 247px; } }
+    background-image: none; } }
 @media screen and (max-width: 902px) {
   .single-product .single-product-wrapper .entry-summary > div .price {
     position: initial; }
