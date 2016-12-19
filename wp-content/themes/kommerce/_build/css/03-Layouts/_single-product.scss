@@ -660,6 +660,7 @@
                         }
                         .value{
                             @include display(flex);
+                            max-width: 437px;
                             .reset_variations{
                                 border: 1px solid;
                                 border-radius: 2px;
@@ -878,6 +879,175 @@
                             font-weight: 600;
                         }
                     }
+                }
+            }
+        }
+    }
+    @media screen and (max-width:1314px){
+        .single-product-wrapper{
+            .entry-summary{
+                form{
+                    tr{
+                        &.pa_phones{
+                            .value{
+                                max-width: 367px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width:1077px){
+        .single-product-wrapper{
+            .entry-summary{
+                form{
+                    tr{
+                        &.pa_phones{
+                            .value{
+                                max-width: 247px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+     @media screen and (max-width:902px){
+        .single-product-wrapper{
+            .entry-summary{
+                >div{
+                    .price{
+                        position: initial;
+                    }
+                }
+                form{
+                    table{
+                        background-image: none;
+                    }
+                    tr{
+                        &.pa_phone-makes{
+                            margin-bottom: 0;
+                        }
+                        &.pa_phones{
+                            position: initial;
+                            margin-bottom: 100px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and(max-width: 769px){
+        .single-product-wrapper{
+            @include flex-direction(column-reverse);
+            .images{
+                margin: auto;
+            }
+            .entry-summary{
+                padding: 0px 75px;
+                max-width: 769px;
+                width: 100%;
+                text-align: center;
+                form{
+                    table{
+                        text-align: center;
+                    }
+                    tr{
+                        &.pa_phone-makes{
+                            margin-bottom: 20px;
+                        }
+                        &.pa_phones{
+                            // position: absolute;
+                            .value{
+                                margin: auto;
+                                max-width: 438px;
+                            }
+                        }
+                        &.pa_material{
+                            .value{
+                                max-width: 340px;
+                                margin: auto;
+                            }
+                        }
+                    }
+                }
+                .single_variation_wrap{
+                    max-width: none;
+                    .woocommerce-variation-add-to-cart {
+                        max-width: 355px;
+                        margin: auto;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 522px){
+        #container{
+            .product{
+                .woocommerce-tabs{
+                    padding: 0 40px;
+                    .wc-tabs{
+                        width: inherit;
+                        padding: 0;
+                        @include justify-content(center);
+                    }
+                    .woocommerce-Tabs-panel{
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 438px){
+        .single-product-wrapper{
+
+            .entry-summary{
+
+                form{
+                    tr{
+                        &.pa_material{
+                            .value{
+                                display: inline-block;
+                                max-width: 230px;
+                                .reset_variations{
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 396px){
+        .single-product-wrapper{
+            .entry-summary{
+                padding: 0px 35px;
+            }
+        }
+    }
+    @media screen and (max-width: 334px){
+        .single-product-wrapper{
+            .images{
+              .thumbnails{
+                  a{
+                     margin-right: 3.8% !important;
+                     &:last-of-type{
+                         margin-right: 0 !important;
+                     }
+                  }
+              }
+            }
+            .entry-summary{
+                padding: 0px 20px;
+            }
+        }
+         #container{
+            .product{
+                .woocommerce-tabs{
+                    padding: 0 20px;
                 }
             }
         }
