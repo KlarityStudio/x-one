@@ -40,13 +40,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="single-product-wrapper">
 
 		<?php
-			if (is_singular('product')) { ?>
-				<div class="icon-container">
-					<div class="icon icon-make">
-
-					</div>
-				</div> 
-			<?php }
 			/**
 			 * woocommerce_before_single_product_summary hook.
 			 *

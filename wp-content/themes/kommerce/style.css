@@ -2730,9 +2730,24 @@ input[type="submit"] {
   justify-content: space-around;
   -ms-flex-pack: distribute;
   margin: 125px auto 50px auto; }
+  .single-product .single-product-wrapper .icon-container {
+    position: absolute;
+    left: 0; }
+    .single-product .single-product-wrapper .icon-container .icon {
+      height: 57px;
+      width: 57px; }
+      .single-product .single-product-wrapper .icon-container .icon.iphone {
+        background-image: url("../kommerce/_build/images/apple.png");
+        background-size: cover;
+        background-position: center; }
+      .single-product .single-product-wrapper .icon-container .icon.samsung {
+        background-image: url("../kommerce/_build/images/android.png");
+        background-size: cover;
+        background-position: center; }
   .single-product .single-product-wrapper .images {
     width: 49%;
-    max-width: 495px; }
+    max-width: 495px;
+    position: relative; }
     .single-product .single-product-wrapper .images .thumbnails {
       display: -webkit-box;
       display: -moz-box;
@@ -3118,6 +3133,9 @@ input[type="submit"] {
     .single-product #container .product .woocommerce-tabs .woocommerce-Tabs-panel {
       padding-left: 0;
       padding-right: 0; } }
+@media screen and (max-width: 489px) {
+  .single-product .single-product-wrapper .icon-container {
+    left: 30px; } }
 @media screen and (max-width: 438px) {
   .single-product .single-product-wrapper .entry-summary form tr.pa_material .value {
     display: inline-block;

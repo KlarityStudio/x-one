@@ -353,13 +353,19 @@
 	}
 
 	function phoneIcon(){
-		var $selectField = $('#picker_pa_phone-makes').children('.selected'),
-			$selectValue = $selectField.attr('data-value'),
+		var $selectField = $('#picker_pa_phone-makes').children('.swatch-wrapper'),
+			$selected = $('#picker_pa_phone-makes').children('.selected'),
+			$selectValue = $selected.attr('data-value'),
 			$icon = $('.icon-container').children('.icon');
+			
+		$icon.addClass($selectValue);
 
-			window.console.log($selectValue);
-			$icon.addClass($selectValue);
-		
+		$selectField.on('click', function(){
+			var $selectValue = $(this).attr('data-value');
+				$icon.removeClass('iphone');
+				$icon.removeClass('samsung');
+				$icon.addClass($selectValue);
+		});
 	}
 
 	function variablePrice(){

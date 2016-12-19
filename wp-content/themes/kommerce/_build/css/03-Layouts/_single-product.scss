@@ -528,10 +528,32 @@
         max-width: 1106px;
         @include justify-content(space-around);
         margin:125px auto 50px auto;
+        .icon-container{
+            position: absolute;
+            left: 0;
+            .icon{
+                @include size(57px);
+
+                &.iphone{
+                    background:{
+                        image: url('../kommerce/_build/images/apple.png');
+                        size: cover;
+                        position: center;
+                    }
+                }
+                &.samsung{
+                    background:{
+                        image: url('../kommerce/_build/images/android.png');
+                        size: cover;
+                        position: center;
+                    }
+                }
+            }
+        }
         .images{
             width: 49%;
             max-width: 495px;
-
+            position: relative;
             .thumbnails{
                 @include display(flex);
                 @include justify-content(space-between);
@@ -1010,6 +1032,13 @@
                         padding-right: 0;
                     }
                 }
+            }
+        }
+    }
+    @media screen and(max-width: 489px){
+        .single-product-wrapper{
+            .icon-container{
+                left: 30px;
             }
         }
     }
