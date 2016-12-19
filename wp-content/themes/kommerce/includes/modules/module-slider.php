@@ -24,7 +24,7 @@
 <ul id="slider" class="owl-carousel">
 	<li class="item">
 		<div class="feature-image">
-			<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/images/armor-x-one.png" alt="Feature Image" />
+			<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/images/armor-visor.png" alt="Armour Visor Screen Protector" />
 		</div>
 		<div class="product-spec-wrapper">
 			<div class="product-spec-lockup">
@@ -51,7 +51,7 @@
 	</li>
 	<li class="item">
 		<div class="feature-image">
-			<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/images/extreme-shock.png" alt="Feature Image" />
+			<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/images/extreme-shock.png" alt="Extreme Shock Screen Protector" />
 		</div>
 		<div class="product-spec-wrapper">
 			<div class="product-spec-lockup">
@@ -75,7 +75,7 @@
 	</li>
 	<li class="item">
 		<div class="feature-image">
-			<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/images/ultra-clear.png" alt="Feature Image" />
+			<img src="<?php echo site_url(); ?>/wp-content/themes/kommerce/_build/images/ultra-clear.png" alt="Ultra Clear Screen Protector" />
 		</div>
 		<div class="product-spec-wrapper">
 			<div class="product-spec-lockup">
