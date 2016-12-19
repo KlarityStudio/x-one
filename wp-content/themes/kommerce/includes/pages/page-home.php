@@ -17,6 +17,7 @@
     <h1>Mobile Cases</h1>
     <?php echo categoryDescriptions( 'phone-covers'); ?>
     <section class="product-list">
+      <?php echo do_shortcode('[infinity id="796"]'); ?>
     </section>
 </article>
 <article class="category-section category-cables">
@@ -24,6 +25,7 @@
     <h1>Cables &amp; Cases</h1>
     <?php echo categoryDescriptions( 'usb-cables'); ?>
     <section class="product-list">
+      <?php echo do_shortcode('[infinity id="797"]'); ?>
     </section>
     <section class="video-wrapper video-cables">
         <iframe src="https://www.youtube.com/embed/VBCi851OlVw" width="690" height="358" frameborder="0" allowfullscreen></iframe>
