@@ -3017,7 +3017,8 @@ input[type="submit"] {
     position: initial;
     height: 100%; }
     .single-product .single-product-wrapper .entry-summary form tr.pa_phones .value, .single-product .single-product-wrapper .entry-summary form tr.pa_cable-length .value {
-      max-width: 367px; }
+      max-width: 367px;
+      margin: auto; }
   .single-product .single-product-wrapper .entry-summary .single_variation_wrap .woocommerce-variation-add-to-cart .woocommerce-variation-availability {
     right: 0;
     top: 60px; } }
