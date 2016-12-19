@@ -3013,10 +3013,10 @@ input[type="submit"] {
       color: #23282D;
       font-weight: 600; }
 @media screen and (max-width: 1314px) {
-  .single-product .single-product-wrapper .entry-summary form tr.pa_phones {
+  .single-product .single-product-wrapper .entry-summary form tr.pa_phones, .single-product .single-product-wrapper .entry-summary form tr.pa_cable-length {
     position: initial;
     height: 100%; }
-    .single-product .single-product-wrapper .entry-summary form tr.pa_phones .value {
+    .single-product .single-product-wrapper .entry-summary form tr.pa_phones .value, .single-product .single-product-wrapper .entry-summary form tr.pa_cable-length .value {
       max-width: 367px; }
   .single-product .single-product-wrapper .entry-summary .single_variation_wrap .woocommerce-variation-add-to-cart .woocommerce-variation-availability {
     right: 0;
@@ -3047,7 +3047,7 @@ input[type="submit"] {
     flex-direction: column-reverse;
     -ms-flex-direction: column-reverse; }
     .single-product .single-product-wrapper .images {
-      margin: auto; }
+      margin: 40px auto; }
     .single-product .single-product-wrapper .entry-summary {
       padding: 0px 75px;
       max-width: 769px;
@@ -3063,11 +3063,17 @@ input[type="submit"] {
       .single-product .single-product-wrapper .entry-summary form tr.pa_material .value {
         max-width: 340px;
         margin: auto; }
+      .single-product .single-product-wrapper .entry-summary form tr #picker_pa_phone-makes {
+        margin: auto;
+        width: 140px; }
       .single-product .single-product-wrapper .entry-summary .single_variation_wrap {
         max-width: none; }
         .single-product .single-product-wrapper .entry-summary .single_variation_wrap .woocommerce-variation-add-to-cart {
           max-width: 355px;
-          margin: auto; } }
+          margin: auto; }
+          .single-product .single-product-wrapper .entry-summary .single_variation_wrap .woocommerce-variation-add-to-cart .woocommerce-variation-availability {
+            right: 150px;
+            top: 60px; } }
 @media screen and (max-width: 522px) {
   .single-product #container .product .woocommerce-tabs {
     padding: 0 40px; }

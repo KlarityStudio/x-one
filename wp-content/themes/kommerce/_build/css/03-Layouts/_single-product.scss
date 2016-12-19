@@ -888,7 +888,7 @@
             .entry-summary{
                 form{
                     tr{
-                        &.pa_phones{
+                        &.pa_phones, &.pa_cable-length{
                             position: initial;
                             height: 100%;
                             .value{
@@ -944,7 +944,7 @@
         .single-product-wrapper{
             @include flex-direction(column-reverse);
             .images{
-                margin: auto;
+                margin: 40px auto;
             }
             .entry-summary{
                 padding: 0px 75px;
@@ -972,6 +972,10 @@
                                 margin: auto;
                             }
                         }
+                        #picker_pa_phone-makes{
+                            margin: auto;
+                            width: 140px;
+                        }
                     }
                 }
                 .single_variation_wrap{
@@ -979,8 +983,14 @@
                     .woocommerce-variation-add-to-cart {
                         max-width: 355px;
                         margin: auto;
+                        .woocommerce-variation-availability{
+                             right: 150px;
+                             top: 60px;
+                         }
                     }
+                    
                 }
+                
             }
         }
     }
