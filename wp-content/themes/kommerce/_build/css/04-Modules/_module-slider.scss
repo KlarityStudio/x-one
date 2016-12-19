@@ -4,49 +4,6 @@
     .owl-item{
         //max-width: 1800px;
     }
-    .owl-nav{
-        @include display(flex);
-        @include justify-content(space-between);
-        position: absolute;
-        left: 20px;
-        right: 20px;
-        top: calc(30% - 12px);
-        div{
-            background:{
-                color: #fff;
-            }
-            padding: 10px 15px;
-            opacity: 0.9;
-            @include transition(all, 0.3s, ease-in-out);
-
-            &:hover{
-                opacity: 1;
-                @include transition(all, 0.3s, ease-in-out);
-            }
-        }
-        .icon-chevron-left {
-            background:{
-                image: url(../kommerce/_build/icons/icon-chevron.svg);
-                size: cover;
-                position: center;
-            }
-            height: 25px;
-            width: 12px;
-            display: block;
-
-        }
-        .icon-chevron-right {
-            background:{
-                image: url(../kommerce/_build/icons/icon-chevron.svg);
-                size: cover;
-                position: center;
-            }
-            height: 25px;
-            width: 12px;
-            display: block;
-            @include transform(rotateY(180deg));
-        }
-    }
     .item{
         height: inherit;
         width: 100vw;
@@ -58,10 +15,8 @@
         .feature-image{
             img{
                 width: 100%;
-                max-width: 1800px;
+                max-width: 100%;
                 margin-top: 0;
-                max-height: 450px;
-                min-height: 200px;
             }
         }
         .product-spec-wrapper{
@@ -72,12 +27,57 @@
                 @include justify-content(space-around);
                 .product-spec{
                     img{
-                      max-width: 120px;
-                      padding: 4vw 31px;
-                      min-width: 150px;
+                        width: 119px;
+                        padding: 5vw 20px;
                     }
                 }
             }
         }
+    }
+
+}
+
+//common owl carousel styles
+.owl-nav {
+    @include display(flex);
+    @include justify-content(space-between);
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: calc(50% - 12px);
+    div{
+        background:{
+            color: #fff;
+        }
+        padding: 10px 15px;
+        opacity: 0.9;
+        @include transition(all, 0.3s, ease-in-out);
+
+        &:hover{
+            opacity: 1;
+            @include transition(all, 0.3s, ease-in-out);
+        }
+    }
+    .icon-chevron-left {
+        background:{
+            image: url(../kommerce/_build/icons/icon-chevron.svg);
+            size: cover;
+            position: center;
+        }
+        height: 25px;
+        width: 12px;
+        display: block;
+
+    }
+    .icon-chevron-right {
+        background:{
+            image: url(../kommerce/_build/icons/icon-chevron.svg);
+            size: cover;
+            position: center;
+        }
+        height: 25px;
+        width: 12px;
+        display: block;
+        @include transform(rotateY(180deg));
     }
 }
