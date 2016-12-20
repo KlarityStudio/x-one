@@ -1752,13 +1752,17 @@ footer {
         -ms-flex-align: end; }
         .page-checkout .woocommerce #customer_details .col-1 .woocommerce-billing-fields .form-row, .page-checkout .woocommerce #customer_details .col-1 .shipping_address .form-row, .page-checkout .woocommerce #customer_details .col-2 .woocommerce-billing-fields .form-row, .page-checkout .woocommerce #customer_details .col-2 .shipping_address .form-row {
           width: 24%;
-          position: relative; }
+          position: relative;
+          padding: 0 10px 0;
+          margin: 0 0 10px; }
           .page-checkout .woocommerce #customer_details .col-1 .woocommerce-billing-fields .form-row#billing_state_field, .page-checkout .woocommerce #customer_details .col-1 .shipping_address .form-row#billing_state_field, .page-checkout .woocommerce #customer_details .col-2 .woocommerce-billing-fields .form-row#billing_state_field, .page-checkout .woocommerce #customer_details .col-2 .shipping_address .form-row#billing_state_field {
             width: 16%; }
           .page-checkout .woocommerce #customer_details .col-1 .woocommerce-billing-fields .form-row#billing_postcode_field, .page-checkout .woocommerce #customer_details .col-1 .shipping_address .form-row#billing_postcode_field, .page-checkout .woocommerce #customer_details .col-2 .woocommerce-billing-fields .form-row#billing_postcode_field, .page-checkout .woocommerce #customer_details .col-2 .shipping_address .form-row#billing_postcode_field {
             width: 12%; }
             .page-checkout .woocommerce #customer_details .col-1 .woocommerce-billing-fields .form-row#billing_postcode_field label, .page-checkout .woocommerce #customer_details .col-1 .shipping_address .form-row#billing_postcode_field label, .page-checkout .woocommerce #customer_details .col-2 .woocommerce-billing-fields .form-row#billing_postcode_field label, .page-checkout .woocommerce #customer_details .col-2 .shipping_address .form-row#billing_postcode_field label {
               display: none; }
+          .page-checkout .woocommerce #customer_details .col-1 .woocommerce-billing-fields .form-row:first-of-type, .page-checkout .woocommerce #customer_details .col-1 .woocommerce-billing-fields .form-row#billing_country_field, .page-checkout .woocommerce #customer_details .col-1 .shipping_address .form-row:first-of-type, .page-checkout .woocommerce #customer_details .col-1 .shipping_address .form-row#billing_country_field, .page-checkout .woocommerce #customer_details .col-2 .woocommerce-billing-fields .form-row:first-of-type, .page-checkout .woocommerce #customer_details .col-2 .woocommerce-billing-fields .form-row#billing_country_field, .page-checkout .woocommerce #customer_details .col-2 .shipping_address .form-row:first-of-type, .page-checkout .woocommerce #customer_details .col-2 .shipping_address .form-row#billing_country_field {
+            padding: 0; }
     .page-checkout .woocommerce #customer_details .col-2 {
       width: 100%;
       margin: 50px 0; }
@@ -2098,8 +2102,8 @@ input[type="submit"] {
     line-height: 44px;
     border: 1px solid #aaa; }
 .woocommerce-page .woocommerce form .form-row {
-  padding: 0 10px;
-  margin: 0; }
+  padding: 0;
+  margin: 0 0 25px; }
 
 .modal-open {
   overflow: hidden; }

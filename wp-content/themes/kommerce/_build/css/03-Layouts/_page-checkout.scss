@@ -35,8 +35,8 @@
                     .form-row{
                         width: 24%;
                         position: relative;
-
-
+                        padding: 0 10px 0;
+                        margin: 0 0 10px;
                         &#billing_state_field{
                             width: 16%;
                         }
@@ -47,6 +47,10 @@
                                 display: none;
                             }
                         }
+                      &:first-of-type,
+                      &#billing_country_field {
+                        padding: 0;
+                      }
                     }
                 }
             }
