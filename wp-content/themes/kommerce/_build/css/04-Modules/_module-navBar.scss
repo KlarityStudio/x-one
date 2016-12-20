@@ -147,10 +147,13 @@ header{
                 ul{
                     background-color: #fff;
                     position: absolute;
-                    padding: 10px 20px;
-                    right: 0;
+                    right: -20px;
+                    top: 46px;
                     opacity: 0;
+                    overflow: hidden;
+                    height: 0;
                     z-index: 200;
+                    width: 120px;
                     @include transition(all, 0.3s, ease-in-out);
                     li{
                         margin: 10px 0;
@@ -171,10 +174,8 @@ header{
                     &.active{
                         box-shadow: 0 0 0 rgba(000, 000, 000, 0.2);
                         opacity: 1;
-                        right: -20px;
-                        top: 46px;
                         height: initial;
-                        width: 122px;
+                        padding: 10px 18px;
                         @include transition(all, 0.3s, ease-in-out);
                     }
                 }

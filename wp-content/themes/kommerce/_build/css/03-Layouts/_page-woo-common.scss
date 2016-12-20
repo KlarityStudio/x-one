@@ -1,0 +1,44 @@
+.woocommerce-page {
+  .woocommerce .button {
+    background-color: $baseBlue;
+    color: #fff;
+    border-radius: 25px;
+    padding: 9px 25px;
+    text-transform: uppercase;
+    opacity: 1;
+  }
+  input{
+      box-shadow: none;
+      border: 1px solid $baseGreyLight;
+  }
+  label{
+      font-size: 12px;
+      position: relative;
+      top: 13px;
+      background-color: #fff;
+      z-index: 20;
+      left: 10px;
+      display: inline!important;
+      padding: 0 4px;
+      color: $textGrey;
+      font-weight: 100;
+      &[for="ship-to-different-address-checkbox"] {
+        position: static;
+      }
+  }
+  textarea{
+      border: 1px solid $baseGreyLight;
+  }
+  div.select2-container {
+      height:44px;
+      a{
+          height: inherit;
+          line-height: 44px;
+          border: 1px solid $baseGreyLight;
+      }
+  }
+  .woocommerce form .form-row {
+    padding: 0 10px;
+    margin: 0;
+  }
+}
