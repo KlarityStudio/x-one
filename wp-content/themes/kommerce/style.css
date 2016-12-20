@@ -1209,6 +1209,10 @@ footer {
         bottom: 0;
         left: 0;
         display: none; }
+        .page-faqs section > div .article-container article ul {
+          list-style: initial;
+          padding-left: 40px;
+          margin: 16px 0; }
         .page-faqs section > div .article-container article h2 {
           font-size: 22px;
           color: #23282D; }
