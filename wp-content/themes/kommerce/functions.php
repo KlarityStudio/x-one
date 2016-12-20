@@ -229,7 +229,4 @@ function woo_custom_taxonomy_in_body_class($classes){
 
 add_filter( 'body_class', 'woo_custom_taxonomy_in_body_class' );
 
-// function remove_wc_password_meter() {
-//     wp_dequeue_script( ‘wc-password-strength-meter’ );
-// }
-// add_action( ‘wp_print_scripts’, ‘remove_wc_password_meter’, 100 );
+add_action( 'wp_enqueue_scripts', 'wcqi_enqueue_polyfill' );
