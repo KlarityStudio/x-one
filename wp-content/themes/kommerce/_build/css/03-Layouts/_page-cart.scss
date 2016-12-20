@@ -68,26 +68,19 @@
                                 background-color: #fff;
                                 border-top: 1px solid #F2F2F2;
                                 border-bottom: 1px solid #F2F2F2;
-                                @include display(flex);
                                 padding: 0;
                                 input{
                                     margin: auto auto 0 auto;
                                     height: 40px;
                                     background-color: #fff;
                                     border: none;
-                                    width: 74px;
+                                    width: 100%;
+                                    border: 1px solid #dddddd;
+                                    padding: 8px;
+                                    text-align: left;
                                 }
                                 .minus, .plus{
-                                    width: 43px;
-                                    height: 40px;
-                                    background-color: $baseGrey;
-                                    position: relative;
-                                    color: #fff;
-                                    text-align: center;
-                                    line-height:40px;
-                                    margin: 0;
-                                    border-radius: 0;
-                                    outline: transparent;
+                                    display: none;
                                 }
                             }
                             .product-subtotal{
