@@ -2,7 +2,7 @@
   .product-view  {
     line-height: 1;
     .add_to_cart_button {
-      display: none;
+      display: none!important;
     }
   }
 }

@@ -3855,7 +3855,7 @@ header #mega-menu-wrap-primary #mega-menu-primary[data-effect="fade_up"] li.mega
 .mega-menu .product-view {
   line-height: 1; }
   .mega-menu .product-view .add_to_cart_button {
-    display: none; }
+    display: none !important; }
 
 .product-view,
 .woocommerce .product-view,
