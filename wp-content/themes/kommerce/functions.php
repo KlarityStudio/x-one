@@ -191,8 +191,6 @@
     ) );
   }
 
-add_filter( 'jetpack_development_mode', '__return_true' );
-
 function categoryDescriptions( $slug ){
 
     $args = array( 'taxonomy' => 'product_cat',
