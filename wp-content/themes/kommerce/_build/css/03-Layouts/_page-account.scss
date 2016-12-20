@@ -49,6 +49,9 @@
             >label{
                 float: right;
             }
+            input#billing_postcode {
+              min-width: 100px;
+            }
         }
         input[type="submit"]{
             background-color: $baseGrey;
@@ -222,4 +225,35 @@
 
 input[type="submit"]{
     outline: none;
+}
+
+.woocommerce-password-strength.strong {
+  background: none;
+  color: red;
+}
+
+.woocommerce-account div.woocommerce-password-strength {
+	background: #fafafa;
+	font-weight: normal;
+	margin-top: 10px;
+	padding: 10px;
+  &.strong {
+  	color: green;
+  }
+  &.good {
+  	color: purple;
+  }
+  &.short {
+  	color: rgb(229, 49, 21);
+  }
+  &.bad {
+  	color: orange;
+  }
+}
+
+.woocommerce form.checkout_coupon,
+.woocommerce form.login,
+.woocommerce form.register {
+  border: none;
+  padding: 0;
 }

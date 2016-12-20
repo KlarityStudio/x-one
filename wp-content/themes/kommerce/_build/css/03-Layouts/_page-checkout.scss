@@ -35,37 +35,16 @@
                     .form-row{
                         width: 24%;
                         position: relative;
-                        label{
-                            font-size: 12px;
-                            position: absolute;
-                            top: -7px;
-                            background-color: #fff;
-                            z-index: 20;
-                            left: 10px;
-                            padding: 0 4px;
-                            color: $textGrey;
-                            font-weight: 100;
-                        }
-                        input{
-                            box-shadow: none;
-                            border: 1px solid $baseGrey;
-                        }
+
+
                         &#billing_state_field{
                             width: 16%;
                         }
 
                         &#billing_postcode_field{
-                            width: 8%;
+                            width: 12%;
                             label{
                                 display: none;
-                            }
-                        }
-                        div{
-                            height:44px;
-                            a{
-                                height: inherit;
-                                line-height: 44px;
-                                border: 1px solid $baseGrey;
                             }
                         }
                     }
@@ -76,9 +55,6 @@
                 margin: 50px 0;
                 #order_comments_field{
                     margin-top: 50px;
-                }
-                textarea{
-                    border: 1px solid $baseGrey;
                 }
             }
         }
@@ -139,6 +115,8 @@
                     @include justify-content(space-between);
                     width: 100vw;
                     max-width: 1230px;
+                    background: #f9f9f9;
+                    padding: 20px;
                     tr{
                         @include display(flex);
                         @include flex-direction(column);
