@@ -1854,6 +1854,8 @@ footer {
 @media screen and (max-width: 768px) {
   .page-checkout .woocommerce {
     width: 90vw; }
+    .page-checkout .woocommerce #customer_details .col-1 .form-row, .page-checkout .woocommerce #customer_details .col-2 .form-row {
+      padding: 0px !important; }
     .page-checkout .woocommerce #customer_details .col-1 .woocommerce-billing-fields {
       display: inline-block;
       width: 100%; }

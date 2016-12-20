@@ -162,6 +162,11 @@
         .woocommerce{
             width: 90vw;
             #customer_details{
+                .col-1, .col-2{
+                  .form-row{
+                    padding: 0px!important;
+                  }
+                }
                 .col-1{
                     .woocommerce-billing-fields{
                         display: inline-block;
