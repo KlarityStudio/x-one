@@ -2779,7 +2779,7 @@ input[type="submit"] {
   -spec-justify-content: space-around;
   justify-content: space-around;
   -ms-flex-pack: distribute;
-  margin: 125px auto 50px auto; }
+  margin: 125px auto 20px auto; }
   .single-product .single-product-wrapper .icon-container {
     position: absolute;
     left: 0; }
@@ -3046,6 +3046,11 @@ input[type="submit"] {
             margin: 0;
             border-radius: 0;
             outline: transparent; }
+.single-product .product-delivery {
+  text-align: center;
+  margin-bottom: 50px; }
+  .single-product .product-delivery strong {
+    font-weight: 500; }
 .single-product #container .product .wc-tabs-wrapper .woocommerce-Tabs-panel {
   padding: 70px 75px 40px 75px; }
   .single-product #container .product .wc-tabs-wrapper .woocommerce-Tabs-panel h2 {
