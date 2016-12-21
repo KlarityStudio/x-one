@@ -2852,9 +2852,6 @@ input[type="submit"] {
       margin-bottom: 33px; }
     .single-product .single-product-wrapper .entry-summary form {
       position: relative; }
-      .single-product .single-product-wrapper .entry-summary form table {
-        background-image: url(../kommerce/_build/icons/pathArrow.png);
-        background-repeat: no-repeat; }
       .single-product .single-product-wrapper .entry-summary form tr {
         margin-bottom: 20px; }
         .single-product .single-product-wrapper .entry-summary form tr .value {
