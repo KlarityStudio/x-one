@@ -374,8 +374,8 @@
 		if (priceText.children().length === 2){
 			var price =  priceText.children().first().text();
 			priceText.html('From <span>' + price + '</span>');
-			priceText.show();
 		}
+		priceText.show();
 	}
 
 	function variablePriceInfinity(){
