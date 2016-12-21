@@ -232,25 +232,27 @@ input[type="submit"]{
   color: red;
 }
 
-.woocommerce-account div.woocommerce-password-strength {
-	background: #fafafa;
-	font-weight: normal;
-	margin-top: 10px;
-	padding: 10px;
-  &.strong {
-  	color: green;
-  }
-  &.good {
-  	color: purple;
-  }
-  &.short {
-  	color: rgb(229, 49, 21);
-  }
-  &.bad {
-  	color: orange;
-  }
-}
+.woocommerce-account, .woocommerce-checkout {
+    div.woocommerce-password-strength {
+        background: #fafafa;
+        font-weight: normal;
+        margin-top: 10px;
+        padding: 10px;
 
+        &.strong {
+            color: green;
+        }
+        &.good {
+            color: purple;
+        }
+        &.short {
+            color: rgb(229, 49, 21);
+        }
+        &.bad {
+            color: orange;
+        }
+    }
+}
 .woocommerce form.checkout_coupon,
 .woocommerce form.login,
 .woocommerce form.register {
