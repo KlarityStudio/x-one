@@ -24,6 +24,7 @@
     add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 5 );
     add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 10 );
     add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 10 );
+    add_action( 'woocommerce_single_product_summary', 'xone_delivery_text', 12 );
 
     add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
 
@@ -44,4 +45,7 @@
     add_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
     add_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 
+    function xone_delivery_text(){ ?>
+      		<p class="product-delivery" ><strong>Free Delivery</strong> on all orders! (Expect 3 - 5 days for delivery)</p>  
+   <?php  }
  ?>

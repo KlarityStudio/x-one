@@ -68,7 +68,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			?>
 
 		</div><!-- .summary -->
-		<p class="product-delivery" ><strong>Free Delivery</strong> on all orders! (Expect 3 - 5 days for delivery)</p>
 	</section>
 	<?php
 		/**

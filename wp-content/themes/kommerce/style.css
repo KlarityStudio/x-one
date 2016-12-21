@@ -3048,7 +3048,8 @@ input[type="submit"] {
             border-radius: 0;
             outline: transparent; }
 .single-product .product-delivery {
-  text-align: center;
+  text-align: left;
+  font-size: 14px;
   margin-bottom: 50px; }
 .single-product #container .product .wc-tabs-wrapper .woocommerce-Tabs-panel {
   padding: 70px 75px 40px 75px; }
@@ -4529,7 +4530,8 @@ header #mega-menu-wrap-primary #mega-menu-primary[data-effect="fade_up"] li.mega
     -ms-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
     -spec-transform: rotateY(180deg);
-    transform: rotateY(180deg); }
+    transform: rotateY(180deg);
+    -webkit-transform: rotate(180deg); }
 .owl-product-carousel .owl-dots {
   display: -webkit-box;
   display: -moz-box;
