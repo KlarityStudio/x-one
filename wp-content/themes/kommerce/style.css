@@ -2844,7 +2844,8 @@ input[type="submit"] {
       position: absolute;
       top: 0;
       right: 0;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      display: none; }
       .single-product .single-product-wrapper .entry-summary > div .price span {
         color: #006DD1; }
     .single-product .single-product-wrapper .entry-summary div p {
