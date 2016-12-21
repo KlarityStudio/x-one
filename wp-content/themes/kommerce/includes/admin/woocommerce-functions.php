@@ -96,7 +96,9 @@
 
     function custom_override_checkout_fields( $fields ) {
           unset($fields['billing']['billing_company']);
-          unset($fields['billing']['billing_address_2']);
+        //   unset($fields['billing']['billing_address_2']);
+          $fields['billing']['billing_address_2']['placeholder'] = 'Suburb';
+          $fields['billing']['billing_address_2']['label'] = 'Suburb';
           unset($fields['shipping']['shipping_company']);
 
 

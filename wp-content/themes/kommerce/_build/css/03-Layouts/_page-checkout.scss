@@ -48,8 +48,23 @@
                             }
                         }
                       &:first-of-type,
-                      &#billing_country_field {
+                      &#billing_country_field, &#billing_state_field {
                         padding: 0;
+                      }
+                      &.create-account{
+                          @include display(flex);
+                          width: 100%;
+                          align-items: center;
+                          padding-left: 0;
+                          margin-top: 20px;
+                          input{
+                              @include order(1);
+                          }
+                          label{
+                              position: initial;
+                              margin-bottom: 0;
+
+                          }
                       }
                     }
                 }

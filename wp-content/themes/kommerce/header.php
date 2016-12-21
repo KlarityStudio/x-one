@@ -35,7 +35,6 @@
             })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
         </script>
         <script type="application/ld+json">
-
             { "@context": "http://schema.org",
                 "@type": "Organization",
                 "name": "X-ONE",
@@ -60,7 +59,6 @@
                 "http://www.twitter.com/xone"
             ]}
         </script>
-
   </head>
   <body <?php body_class(); ?>>
       <div class="wrapper">
