@@ -70,6 +70,7 @@
             width: 12px;
             display: block;
             @include transform(rotateY(180deg));
+            -webkit-transform: rotate(180deg);
         }
     }
     .owl-dots{
