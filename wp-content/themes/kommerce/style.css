@@ -3000,8 +3000,6 @@ input[type="submit"] {
           right: -290px;
           top: 0;
           display: none; }
-        .single-product .single-product-wrapper .entry-summary .single_variation_wrap .woocommerce-variation-add-to-cart .single_variation {
-          display: block !important; }
         .single-product .single-product-wrapper .entry-summary .single_variation_wrap .woocommerce-variation-add-to-cart .woocommerce-variation-price {
           text-align: center;
           background-color: #006DD1;
