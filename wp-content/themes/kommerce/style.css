@@ -3848,9 +3848,7 @@ header #mega-menu-wrap-primary #mega-menu-primary[data-effect="fade_up"] li.mega
     -ms-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
     -spec-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden; }
+    transform: rotateY(180deg); }
 
 .sidebar {
   max-width: 400px;

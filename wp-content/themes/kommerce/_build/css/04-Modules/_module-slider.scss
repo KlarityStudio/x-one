@@ -79,7 +79,6 @@
         width: 12px;
         display: block;
         @include transform(rotateY(180deg));
-        backface-visibility: hidden;
-        -webkit-backface-visibility: hidden;
+
     }
 }
