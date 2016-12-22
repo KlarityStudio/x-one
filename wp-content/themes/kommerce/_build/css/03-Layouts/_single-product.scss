@@ -259,6 +259,9 @@
                         top: 0;
                         display: none;
                     }
+                    .single_variation{
+                        min-height: 50px;
+                    }
                     .woocommerce-variation-price{
                         text-align: center;
                         background-color: $baseBlue;
