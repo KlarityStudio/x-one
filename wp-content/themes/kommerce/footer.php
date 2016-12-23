@@ -26,7 +26,7 @@
             <?php endif; ?>
         </div>
         <div class="copyright">
-             <p>&copy; <?php echo date('Y');?> <?php echo get_bloginfo( 'name' );  ?> - All images and content belongs to x-one and is subject to copyright laws.</p>
+             <p>&copy; <?php echo date('Y');?> <?php echo get_bloginfo( 'name' );  ?> - All images and content belongs to <?php echo get_bloginfo( 'name' );  ?> and is subject to copyright laws.</p>
         </div>
       </footer>
     </div>
