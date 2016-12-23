@@ -3,84 +3,58 @@ $lineHeight : 50px;
 footer{
   overflow: hidden;
   background-color: $baseGrey;
-  height: 50px;
-  text-align: center;
-  margin-top: 100px;
-  @include display(flex);
-  @include outer-container(100vw);
-
-  nav{
-    @include span-columns(2 of 4);
-  }
-    .copyright{
-        @include  span-columns(1 of 4);
-        p{
-            color: #fff;
-            line-height: 50px;
-        }
-  }
-  #menu-footer{
-    padding-left: 0;
-    display: inline-block;
-    margin-bottom: 0;
-    height: 50px;
-
-    li{
-      line-height: $lineHeight;
-      float: left;
-      list-style: none;
-      margin: 0 5px;
-      position: relative;
-
-      a{
-        color: #fff;
-        text-decoration: none;
-        padding-right: 10px;
-        &:after{
-            content: "";
-            position: absolute;
-            border-right: 2px solid #fff;
-            top: calc(#{$lineHeight}/2 - 20px/2);
-            height: 20px;
-            margin-left: 10px;
-        }
+  .footer-widgets {
+    padding: 40px 0;
+    @include display(flex);
+    @include justify-content(space-around);
+    color: #fff;
+    .footer-widget {
+      max-width: 20%;
     }
-         &:last-of-type{
-            a{
-                &:after{
-                height: 0;
-                }
+  }
+
+  
+  .widgettitle {
+      color: #fff;
+      font-weight: normal;
+      border-bottom: 1px solid rgba(255,255,255,.2);
+      padding: 10px 0;
+  }
+
+  .widget_nav_menu {
+      .menu {
+        li {
+            margin: 10px 0;
+        }
+        a {
+            color: rgba(255,255,255,.5);
+            &:hover {
+                color: rgba(255,255,255,.7);
+            }
+        }
+      }
+  }
+
+  .copyright {
+      background: #1D2126;
+      color: rgba(255,255,255,.5);
+      padding: 20px 0;
+      font-size: 13px;
+      text-align: center;
+      p {
+          margin: 0;
+      }
+  }
+  
+}
+
+@media screen and (max-width:874px){
+    footer {
+        .footer-widgets {
+            flex-wrap: wrap;
+            .footer-widget {
+                min-width: 100%;
             }
         }
     }
-  }
-  @media screen and (max-width:1031px){
-      #menu-footer{
-          li{
-              a{
-                  font-size: 13px;
-              }
-          }
-      }
-  }
-  @media screen and (max-width:874px){
-      display: block;
-      height: 100%;
-      .copyright{
-          @include span-columns(4 of 4);
-      }
-      nav{
-          @include span-columns(4 of 4);
-      }
-  }
-  @media screen and (max-width:450px){
-      height: 100%;
-      #menu-footer{
-          li{
-              a{
-                  font-size: 9px;
-              }
-          }
-      }
-  }
 }
