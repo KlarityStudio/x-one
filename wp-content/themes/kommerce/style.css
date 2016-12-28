@@ -3837,18 +3837,12 @@ header #mega-menu-wrap-primary #mega-menu-primary[data-effect="fade_up"] li.mega
     width: 12px;
     display: block; }
   .owl-nav .icon-chevron-right {
-    background-image: url(../kommerce/_build/icons/icon-chevron.svg);
+    background-image: url(../kommerce/_build/icons/icon-chevron-right.svg);
     background-size: cover;
     background-position: center;
     height: 25px;
     width: 12px;
-    display: block;
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    -ms-transform: rotateY(180deg);
-    -o-transform: rotateY(180deg);
-    -spec-transform: rotateY(180deg);
-    transform: rotateY(180deg); }
+    display: block; }
 
 .sidebar {
   max-width: 400px;

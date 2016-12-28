@@ -69,14 +69,12 @@
     }
     .icon-chevron-right {
         background:{
-            image: url(../kommerce/_build/icons/icon-chevron.svg);
+            image: url(../kommerce/_build/icons/icon-chevron-right.svg);
             size: cover;
             position: center;
         }
         height: 25px;
         width: 12px;
         display: block;
-        @include transform(rotateY(180deg));
-
     }
 }
