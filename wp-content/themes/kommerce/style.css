@@ -3794,6 +3794,8 @@ header #mega-menu-wrap-primary #mega-menu-primary[data-effect="fade_up"] li.mega
       -moz-transition: all, 0.3s, ease-in-out;
       -spec-transition: all, 0.3s, ease-in-out;
       transition: all, 0.3s, ease-in-out; }
+    .owl-nav div.owl-next {
+      right: 0; }
   .owl-nav .icon-chevron-left {
     background-image: url(../kommerce/_build/icons/icon-chevron.svg);
     background-size: cover;

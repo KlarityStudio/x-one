@@ -53,6 +53,10 @@
             opacity: 1;
             @include transition(all, 0.3s, ease-in-out);
         }
+
+        &.owl-next{
+            right: 0;
+        }
     }
     .icon-chevron-left {
         background:{
