@@ -3781,7 +3781,8 @@ header #mega-menu-wrap-primary #mega-menu-primary[data-effect="fade_up"] li.mega
   position: absolute;
   left: 20px;
   right: 20px;
-  top: calc(50% - 12px); }
+  top: calc(50% - 12px);
+  z-index: -100; }
   .owl-nav div {
     background-color: #fff;
     padding: 10px 15px;
