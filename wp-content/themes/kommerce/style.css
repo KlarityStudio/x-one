@@ -617,6 +617,9 @@ article, section {
 h1 {
   font-size: 50px; }
 
+main {
+  margin-bottom: 100px; }
+
 /*
  *  Owl Carousel - Animate Plugin
  */
