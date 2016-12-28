@@ -2972,13 +2972,13 @@ input[type="submit"] {
           top: 0;
           display: none; }
         .single-product .single-product-wrapper .entry-summary .single_variation_wrap .woocommerce-variation-add-to-cart .single_variation {
-          min-height: 50px; }
+          min-height: 50px;
+          min-width: 90px; }
         .single-product .single-product-wrapper .entry-summary .single_variation_wrap .woocommerce-variation-add-to-cart .woocommerce-variation-price {
           text-align: center;
           background-color: #006DD1;
           height: 50px;
-          line-height: 50px;
-          min-width: 90px; }
+          line-height: 50px; }
           .single-product .single-product-wrapper .entry-summary .single_variation_wrap .woocommerce-variation-add-to-cart .woocommerce-variation-price span {
             color: #fff;
             font-weight: 700;

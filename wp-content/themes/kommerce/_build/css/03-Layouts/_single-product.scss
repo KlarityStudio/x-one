@@ -261,20 +261,21 @@
                     }
                     .single_variation{
                         min-height: 50px;
+                        min-width: 90px;
                     }
                     .woocommerce-variation-price{
                         text-align: center;
                         background-color: $baseBlue;
                         height: 50px;
                         line-height: 50px;
-                        min-width: 90px;
+                        
                         span{
                             color: #fff;
                             font:{
                                 weight: 700;
                                 size: 16px;
                             }
-                            
+
                             &.price{
                                 padding-left: 1em;
  
