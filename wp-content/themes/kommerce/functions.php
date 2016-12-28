@@ -180,11 +180,55 @@
  add_action( 'widgets_init', 'kommerce_widgets_init' );
   function kommerce_widgets_init() {
     register_sidebar( array(
-      'name' => __( 'Aside Sidebar', 'aside-sidebar' ),
+      'name' => __( 'Aside Sidebar' ),
       'id' => 'sidebar-1',
       'description' => __( 'A sidebar to have the product categories', 'theme-slug' ),
       'before_widget' => '<li id="%1$s" class="widget %2$s">',
     	'after_widget'  => '</li>',
+    	'before_title'  => '<h2 class="widgettitle">',
+    	'after_title'   => '</h2>',
+
+    ) );
+
+    register_sidebar( array(
+      'name' => __( 'Footer 1 Widget' ),
+      'id' => 'footer-1',
+      'description' => __( 'A footer widget', 'theme-slug' ),
+      'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    	'after_widget'  => '</div>',
+    	'before_title'  => '<h2 class="widgettitle">',
+    	'after_title'   => '</h2>',
+
+    ) );
+
+    register_sidebar( array(
+      'name' => __( 'Footer 2 Widget' ),
+      'id' => 'footer-2',
+      'description' => __( 'A footer widget', 'theme-slug' ),
+      'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    	'after_widget'  => '</div>',
+    	'before_title'  => '<h2 class="widgettitle">',
+    	'after_title'   => '</h2>',
+
+    ) );
+
+    register_sidebar( array(
+      'name' => __( 'Footer 3 Widget' ),
+      'id' => 'footer-3',
+      'description' => __( 'A footer widget', 'theme-slug' ),
+      'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    	'after_widget'  => '</div>',
+    	'before_title'  => '<h2 class="widgettitle">',
+    	'after_title'   => '</h2>',
+
+    ) );
+
+    register_sidebar( array(
+      'name' => __( 'Footer 4 Widget' ),
+      'id' => 'footer-4',
+      'description' => __( 'A footer widget', 'theme-slug' ),
+      'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    	'after_widget'  => '</div>',
     	'before_title'  => '<h2 class="widgettitle">',
     	'after_title'   => '</h2>',
 

@@ -62,7 +62,6 @@
   </head>
   <body <?php body_class(); ?>>
       <div class="wrapper">
-
         <header>
           <?php get_template_part('includes/modules/module', 'navBar'); ?>
             <?php if(is_front_page() ): ?>
