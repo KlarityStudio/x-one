@@ -2459,7 +2459,11 @@ input[type="submit"] {
   margin: auto; }
   .generic h1 {
     margin: 80px 0 40px 0; }
-
+  @media screen and (max-width:377px) {
+    .generic {
+      padding: 0px 0px;
+    }
+  }
 .error404 {
   background: url(/wp-content/themes/kommerce/_build/images/bg.jpg) no-repeat 100%;
   background-size: 100%;
